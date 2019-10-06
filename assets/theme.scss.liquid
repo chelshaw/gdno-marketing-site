@@ -1,11 +1,16 @@
-/*============================================================================
-  Debut | Built with Shopify Slate
-
-  Some things to know about this file:
-    - Sass is compiled on Shopify's server so you don't need to convert it to CSS yourself
-    - The output CSS is compressed and comments are removed
-    - You cannot use native CSS/Sass @imports in this file without a build script
-==============================================================================*/
+$black: #141925;
+$darkGray: #081a2b;
+$grass: #73b641;
+$gold: #dca31a;
+$goldTint: #fff6dd;
+$goldShade: #bd6c03;
+$rose: #ff9292;
+$roseTint: #ffe7e7;
+$roseShade: #ff5353;
+$green: #6ab638;
+$greenTint: #ecffde;
+$blue: #089bbf;
+$cyan: #41b6ac;
 
 /*================ SASS HELPERS ================*/
 /*============================================================================
@@ -4339,7 +4344,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 /*================ MODULES ================*/
 .site-header {
-  background-color: $color-body;
+  background-color: transparent;
   position: relative;
   padding: 0 $gutter-site;
 
@@ -7555,10 +7560,32 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   }
 }
 
-/* CUSTOM STYLES ALL IN ONE PLACE B/C FUCK YOU SHOPIFY */
-#home__splash {
+/* SECTIONS
+   - hero
+   - as seen in
+   - how it works
+   - offset video
+   - memberships overview
+   - curated box contents
+   - autopilot plant meals
+   - infinite lives
+   - premium app support 
+   - questions
+   - team mission
+   - join email list
+ */
+
+#home__hero {
   padding: 10em 0;
   background-color: pink;
+
+  h1 {
+    font-size: em(100px);
+
+    @include media-query($small) {
+      font-size: em(50px);
+    }
+  }
 }
 
 #shopify-section-1570134053343 {
@@ -7568,7 +7595,7 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
     padding-bottom: 0;
   }
   .custom-content {
-	justify-content: center;
+    justify-content: center;
   }
   .video-wrapper {
     transform: translateY(-140px);
@@ -7583,30 +7610,30 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 }
 
 .membership-block--green {
-    border-color: green;
-    background-color: lime;
-  }
-  
+  border-color: green;
+  background-color: lime;
+}
+
 .membership-block--rose {
-    border-color: red;
-    background-color: pink;
-  }
+  border-color: red;
+  background-color: pink;
+}
 .membership-block--gold {
-    border-color: orange;
-    background-color: yellow;
-  }
+  border-color: orange;
+  background-color: yellow;
+}
 
 .interactive-item {
   padding-left: 2em;
   border-left: 5px solid transparent;
   color: silver;
   margin-bottom: 2em;
-  
+
   &.selected {
     border-color: lime;
     color: black;
   }
-  
+
   h4 {
     padding-bottom: 0;
     margin-bottom: 0;
@@ -7629,9 +7656,9 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
     margin-bottom: 1em;
     background: white;
     padding: 10px 15px;
-    -moz-box-shadow: 0px 0px 5px rgba(68,68,68,0.3);
-	-webkit-box-shadow: 0px 0px 5px rgba(68,68,68,0.3);
-	box-shadow: 0px 0px 5px rgba(68,68,68,0.3);
+    -moz-box-shadow: 0px 0px 5px rgba(68, 68, 68, 0.3);
+    -webkit-box-shadow: 0px 0px 5px rgba(68, 68, 68, 0.3);
+    box-shadow: 0px 0px 5px rgba(68, 68, 68, 0.3);
   }
   input[type="text"] {
     width: 100%;
@@ -7654,7 +7681,6 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
     margin-bottom: 1em;
   }
 }
-
 
 a.subtle {
   color: inherit;
