@@ -7,23 +7,47 @@
    - curated box contents
    - autopilot plant meals
    - infinite lives
-   - premium app support 
+   - premium app support
    - questions
    - team mission
    - join email list
  */
 
 #home__hero {
-  padding: 10em 0;
-  background-color: pink;
+  position: relative;
+}
 
-  h1 {
-    font-size: em(100px);
+#home__hero h1 {
+  font-size: em(100px);
+  font-weight: bolder;
 
-    @include media-query($small) {
-      font-size: em(50px);
-    }
+  @include media-query($small) {
+    font-size: em(50px);
   }
+}
+
+#home__hero__image {
+  padding: em(150px) 0;
+  background-image: url("https://dummyimage.com/625x700/666666/fefefe&text=Hero+Image");
+  background-position: top right;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  @include media-query($small) {
+    padding: em(75px) 0;
+  }
+}
+
+#home__hero__leaf {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 133px;
+}
+
+#home__as-seen-in {
+  display: flex;
+  align-items: center;
 }
 
 #shopify-section-1570134053343 {

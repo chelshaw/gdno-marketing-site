@@ -401,7 +401,7 @@ $color-twitter: #00aced;
 $color-pinterest: #cb2027;
 
 /*================ Sizing Variables ================*/
-$width-site: 1200px;
+$width-site: 1100px;
 $gutter-site: 55px;
 $gutter-site-mobile: 22px;
 $section-spacing: 55px;
@@ -1791,7 +1791,7 @@ ol {
 
 /*================ #Links and Buttons ================*/
 a {
-  color: $color-text;
+  color: $blue;
   text-decoration: none;
 
   &:not([disabled]):hover,

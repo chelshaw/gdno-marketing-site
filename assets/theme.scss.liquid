@@ -12,6 +12,18 @@ $greenTint: #ecffde;
 $blue: #089bbf;
 $cyan: #41b6ac;
 
+/* FONT SIZES
+100px -- hero header
+22px -- main copy
+14px -- button text
+18px -- detail text
+32px (bold) -- section header
+14px -- badge
+32px -- content
+14px -- label
+18px -- input
+*/
+
 /*================ SASS HELPERS ================*/
 /*============================================================================
   Convert pixels to ems
@@ -415,7 +427,7 @@ $color-twitter: #00aced;
 $color-pinterest: #cb2027;
 
 /*================ Sizing Variables ================*/
-$width-site: 1200px;
+$width-site: 1100px;
 $gutter-site: 55px;
 $gutter-site-mobile: 22px;
 $section-spacing: 55px;
@@ -1805,7 +1817,7 @@ ol {
 
 /*================ #Links and Buttons ================*/
 a {
-  color: $color-text;
+  color: $blue;
   text-decoration: none;
 
   &:not([disabled]):hover,
@@ -7569,23 +7581,47 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
    - curated box contents
    - autopilot plant meals
    - infinite lives
-   - premium app support 
+   - premium app support
    - questions
    - team mission
    - join email list
  */
 
 #home__hero {
-  padding: 10em 0;
-  background-color: pink;
+  position: relative;
+}
 
-  h1 {
-    font-size: em(100px);
+#home__hero h1 {
+  font-size: em(100px);
+  font-weight: bolder;
 
-    @include media-query($small) {
-      font-size: em(50px);
-    }
+  @include media-query($small) {
+    font-size: em(50px);
   }
+}
+
+#home__hero__image {
+  padding: em(150px) 0;
+  background-image: url("https://dummyimage.com/625x700/666666/fefefe&text=Hero+Image");
+  background-position: top right;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  @include media-query($small) {
+    padding: em(75px) 0;
+  }
+}
+
+#home__hero__leaf {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 133px;
+}
+
+#home__as-seen-in {
+  display: flex;
+  align-items: center;
 }
 
 #shopify-section-1570134053343 {
@@ -7685,4 +7721,8 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 a.subtle {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
