@@ -1,21 +1,59 @@
-// Shopify SCSS Asset Helper
-// Created Friday, August 15 2014 by Joseph Bergdoll
-// www.osephj.com
-// @josephbergdoll on twitter
-/*
-@mixin font-file($asset-font-name) {
-  src: url(' {{ "#{$asset-font-name}.eot" | asset_url /\}\}/ ');
-  src: url(' {{ "#{$asset-font-name}.eot" | asset_url /\}\}/ ?#iefix ') format("embedded-opentype"),
-       url(' {{ "#{$asset-font-name}.woff" | asset_url /\}\}/ ') format("woff"),
-       url(' {{ "#{$asset-font-name}.ttf" | asset_url /\}\}/ ') format("truetype"),
-       url(' {{ "#{$asset-font-name}.svg" | asset_url /\}\}/ ') format("svg");
+@mixin padding-helpers-generator($level: 1) {
+  .p-#{$level} {
+    padding: #{$level}em;
+  }
+  .pt-#{$level} {
+    padding-top: #{$level}em;
+  }
+  .pb-#{$level} {
+    padding-bottom: #{$level}em;
+  }
+  .pl-#{$level} {
+    padding-left: #{$level}em;
+  }
+  .pr-#{$level} {
+    padding-right: #{$level}em;
+  }
+  .pv-#{$level} {
+    padding-top: #{$level}em;
+    padding-bottom: #{$level}em;
+  }
+  .ph-#{$level} {
+    padding-right: #{$level}em;
+    padding-left: #{$level}em;
+  }
 }
 
-@mixin background-file($asset-image-with-extension) {
-  background-image: url(' {{ "#{$asset-image-with-extension}" | asset_url /\}\}/ ')
+@mixin margin-helpers-generator($level: 1) {
+  /* Whole */
+  .m-#{$level} {
+    margin: #{$level}em;
+  }
+  .mt-#{$level} {
+    margin-top: #{$level}em;
+  }
+  .mb-#{$level} {
+    margin-bottom: #{$level}em;
+  }
+  .ml-#{$level} {
+    margin-left: #{$level}em;
+  }
+  .mr-#{$level} {
+    margin-right: #{$level}em;
+  }
+  .mv-#{$level} {
+    margin-top: #{$level}em;
+    margin-bottom: #{$level}em;
+  }
+  .mh-#{$level} {
+    margin-right: #{$level}em;
+    margin-left: #{$level}em;
+  }
 }
 
-@mixin list-marker($list-marker-with-extension) {
-  list-style-image: url(' {{ "#{$list-marker-with-extension}" | asset_url /\}\}/ ');
+/*================ Build padding and margin helpers ================*/
+$numbers: (1, 2, 3, 4, 5);
+@each $number in $numbers {
+  @include padding-helpers-generator($number);
+  @include margin-helpers-generator($number);
 }
-*/

@@ -24,6 +24,66 @@ $cyan: #41b6ac;
 18px -- input
 */
 
+@mixin padding-helpers-generator($level: 1) {
+  .p-#{$level} {
+    padding: #{$level}em;
+  }
+  .pt-#{$level} {
+    padding-top: #{$level}em;
+  }
+  .pb-#{$level} {
+    padding-bottom: #{$level}em;
+  }
+  .pl-#{$level} {
+    padding-left: #{$level}em;
+  }
+  .pr-#{$level} {
+    padding-right: #{$level}em;
+  }
+  .pv-#{$level} {
+    padding-top: #{$level}em;
+    padding-bottom: #{$level}em;
+  }
+  .ph-#{$level} {
+    padding-right: #{$level}em;
+    padding-left: #{$level}em;
+  }
+}
+
+@mixin margin-helpers-generator($level: 1) {
+  /* Whole */
+  .m-#{$level} {
+    margin: #{$level}em;
+  }
+  .mt-#{$level} {
+    margin-top: #{$level}em;
+  }
+  .mb-#{$level} {
+    margin-bottom: #{$level}em;
+  }
+  .ml-#{$level} {
+    margin-left: #{$level}em;
+  }
+  .mr-#{$level} {
+    margin-right: #{$level}em;
+  }
+  .mv-#{$level} {
+    margin-top: #{$level}em;
+    margin-bottom: #{$level}em;
+  }
+  .mh-#{$level} {
+    margin-right: #{$level}em;
+    margin-left: #{$level}em;
+  }
+}
+
+/*================ Build padding and margin helpers ================*/
+$numbers: (1, 2, 3, 4, 5);
+@each $number in $numbers {
+  @include padding-helpers-generator($number);
+  @include margin-helpers-generator($number);
+}
+
 /*================ SASS HELPERS ================*/
 /*============================================================================
   Convert pixels to ems
