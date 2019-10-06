@@ -1,84 +1,66 @@
 {
   "current": {
-    "color_text": "#162950",
-    "color_body_text": "#6d6d6d",
-    "color_sale_text": "#DA2F0C",
-    "color_borders": "#e4e4e4",
-    "color_button": "#DA2F0C",
+    "color_text": "#000000",
+    "color_body_text": "#000000",
+    "color_sale_text": "#da2f0c",
+    "color_button": "#3fff00",
     "color_button_text": "#ffffff",
     "color_small_button_text_border": "#162950",
-    "color_text_field": "#ffffff",
-    "color_text_field_text": "#162950",
+    "color_text_field_text": "#000000",
     "color_text_field_border": "#909090",
+    "color_text_field": "#ffffff",
     "color_image_overlay_text": "#ffffff",
-    "color_image_overlay": "#3d3d3d",
-    "image_overlay_opacity": 40,
-    "color_body_bg": "#f8f8f8",
-    "type_header_font": "muli_n6",
+    "color_image_overlay": "rgba(0,0,0,0)",
+    "image_overlay_opacity": 38,
+    "color_borders": "#e4e4e4",
+    "color_body_bg": "#ffffff",
+    "type_header_font": "roboto_n4",
     "type_header_base_size": 26,
-    "type_base_font": "muli_n4",
-    "type_base_size": 18,
+    "type_base_font": "roboto_n4",
+    "type_base_size": 16,
     "type_bold_product_titles": true,
+    "share_image": "",
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/facebook.com\/gardenio",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/instagram.com\/gardenio",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/gardenio",
+    "social_vimeo_link": "",
+    "favicon": "",
+    "enable_ajax": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "small",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#e8f3f6",
+    "checkout_heading_font": "Roboto",
+    "checkout_body_font": "Source Sans Pro",
+    "checkout_accent_color": "#1990c6",
+    "checkout_button_color": "#23314e",
+    "checkout_error_color": "#ff6d6d",
     "sections": {
       "header": {
         "type": "header",
         "settings": {
           "align_logo": "left",
-          "logo": "",
-          "logo_max_width": 135,
+          "logo": "shopify:\/\/shop_images\/icon-transparent.png",
+          "logo_max_width": 50,
           "main_linklist": "main-menu",
           "message": true,
-          "color_bg": "#162950",
+          "home_page_only": true,
+          "message_text": "Sign up today and recieve 20% off",
+          "message_link": "",
+          "color_bg": "#3fff00",
           "color_text": "#ffffff"
-        }
-      },
-      "hero": {
-        "type": "hero",
-        "settings": {
-          "alignment": "center",
-          "hero_size": "x-large",
-          "text_size": "large"
-        }
-      },
-      "slideshow": {
-        "type": "slideshow",
-        "blocks": {
-          "slideshow-0": {
-            "type": "image",
-            "settings": {
-              "image": "",
-              "alignment": "center center"
-            }
-          },
-          "1492095993817": {
-            "type": "image",
-            "settings": {
-              "image": "",
-              "alignment": "center"
-            }
-          }
-        },
-        "block_order": [
-          "slideshow-0",
-          "1492095993817"
-        ],
-        "settings": {
-          "slideshow_height": "medium",
-          "text_size": "medium",
-          "autorotate": false,
-          "autorotate_speed": 5
-        }
-      },
-      "featured-collections": {
-        "type": "collection",
-        "settings": {
-          "grid": 3,
-          "rows": 1,
-          "show_vendor": true,
-          "show_view_all": true
         }
       },
       "product-template": {
@@ -89,6 +71,7 @@
           "show_variant_labels": true,
           "show_vendor": false,
           "enable_zoom": true,
+          "enable_payment_button": true,
           "show_share_buttons": true
         }
       },
@@ -104,65 +87,95 @@
           "tags_enable": true
         }
       },
-      "1492033809691": {
-        "type": "map",
-        "settings": {}
-      },
-      "1492033877875": {
-        "type": "quotes",
-        "blocks": {
-          "1492033877875-0": {
-            "type": "quote",
-            "settings": {}
-          }
-        },
-        "block_order": [
-          "1492033877875-0"
-        ],
-        "settings": {}
-      },
       "1492033924902": {
         "type": "custom-content",
         "blocks": {
-          "1492033924902-0": {
+          "1570151056202": {
+            "type": "html",
+            "settings": {
+              "code": "<span class=\"membership badge membership-badge--gold\">Gold<\/span>\n<h3>First, we throw a curated box at your front door, every season<\/h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis ipsum vitae aliquam scelerisque. Aenean tincidunt ipsum ligula.<\/p>",
+              "width": "50%"
+            }
+          },
+          "1570151161792": {
             "type": "text",
             "settings": {
-              "width": "100%",
+              "title": "",
+              "text": "",
+              "width": "50%",
               "alignment": "center",
-              "align_text": "center"
+              "align_text": "left"
+            }
+          },
+          "1570151185296": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/single-sprout-in-a-pot.jpg",
+              "width": "33%",
+              "alignment": "center"
+            }
+          },
+          "1570151236847": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/fresh-basil-plant.jpg",
+              "width": "33%",
+              "alignment": "center"
+            }
+          },
+          "1570151262024": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/earth-written-in-dirt.jpg",
+              "width": "33%",
+              "alignment": "center"
+            }
+          },
+          "1570151291490": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/close-up-on-hay-texture.jpg",
+              "width": "33%",
+              "alignment": "center"
+            }
+          },
+          "1570151343291": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/woman-sits-on-the-floor-reading.jpg",
+              "width": "33%",
+              "alignment": "center"
+            }
+          },
+          "1570151444405": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brown-packing-being-shipped.jpg",
+              "width": "33%",
+              "alignment": "center"
+            }
+          },
+          "1570151526370": {
+            "type": "html",
+            "settings": {
+              "code": "<hr>",
+              "width": "100%"
             }
           }
         },
         "block_order": [
-          "1492033924902-0"
+          "1570151056202",
+          "1570151161792",
+          "1570151185296",
+          "1570151236847",
+          "1570151262024",
+          "1570151291490",
+          "1570151343291",
+          "1570151444405",
+          "1570151526370"
         ],
         "settings": {
           "title": ""
-        }
-      },
-      "1492096252560": {
-        "type": "collection-list",
-        "blocks": {
-          "1492096252560-0": {
-            "type": "featured_collection",
-            "settings": {}
-          },
-          "1492096252560-1": {
-            "type": "featured_collection",
-            "settings": {}
-          },
-          "1492096252560-2": {
-            "type": "featured_collection",
-            "settings": {}
-          }
-        },
-        "block_order": [
-          "1492096252560-0",
-          "1492096252560-1",
-          "1492096252560-2"
-        ],
-        "settings": {
-          "grid": 3
         }
       },
       "blog-template": {
@@ -184,6 +197,7 @@
       "cart-template": {
         "type": "cart-template",
         "settings": {
+          "cart_ajax_enable": true,
           "cart_notes_enable": false
         }
       },
@@ -192,57 +206,333 @@
         "blocks": {
           "link_list": {
             "type": "link_list",
-            "settings": {}
-          },
-          "text": {
-            "type": "text",
-            "settings": {}
-          },
-          "newsletter": {
-            "type": "newsletter",
-            "settings": {}
+            "settings": {
+              "title": "",
+              "menu": "footer"
+            }
           }
         },
         "block_order": [
-          "link_list",
-          "text",
-          "newsletter"
+          "link_list"
         ],
-        "settings": {}
+        "settings": {
+          "show_payment_icons": false,
+          "color_footer_bg": "#f5f5f5",
+          "color_footer_text": "#3d4246"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/shiny-green-gumball-candy.jpg",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "medium",
+          "text_size": "medium",
+          "title": "But hey, what is this Gardenio thing? How does it work?",
+          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "1570134053343": {
+        "type": "custom-content",
+        "blocks": {
+          "1570150574029": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=FJqhIATq0wM",
+              "width": "66%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "1570150574029"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "1570134826490": {
+        "type": "custom-content",
+        "blocks": {
+          "1570134992307": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"membership-block membership-block--green\">\n<h3>Green<\/h3>\n<p>App access, free for life\n<\/p>\n<a class=\"subtle\">Get it free<\/a>\n<\/div>",
+              "width": "33%"
+            }
+          },
+          "1570134879724": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"membership-block membership-block--rose\">\n<h3>Rose<\/h3>\n<p>Monthly recurring access to <strong>Premium App<\/strong>\n<\/p>\n<a class=\"subtle\">Learn more<\/a>\n<\/div>",
+              "width": "33%"
+            }
+          },
+          "1570134945560": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"membership-block membership-block--gold\">\n<h3>Gold<\/h3>\n<p>All the stuff, and more\n<\/p>\n<a class=\"subtle\">Learn more<\/a>\n<\/div>",
+              "width": "33%"
+            }
+          },
+          "1570135489788": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": "<p><a href=\"\/pages\/home\" title=\"Bullshit page\">Compare Memberships<\/a><\/p>",
+              "width": "100%",
+              "alignment": "bottom-middle",
+              "align_text": "center"
+            }
+          }
+        },
+        "block_order": [
+          "1570134992307",
+          "1570134879724",
+          "1570134945560",
+          "1570135489788"
+        ],
+        "settings": {
+          "title": "Memberships"
+        }
+      },
+      "1570151560292": {
+        "type": "custom-content",
+        "blocks": {
+          "1570151560292-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/sofa-and-coffee-table-on-large-balcony.jpg",
+              "width": "50%",
+              "alignment": "center"
+            }
+          },
+          "1570151568554": {
+            "type": "html",
+            "settings": {
+              "code": "<span class=\"membership-badge membership-badge--gold\">Gold<\/span>\n<h3>Then, we'll send you plant meals on autopilot<\/h3>\n<p>Curabitur in odio nec arcu viverra condimentum. Duis cursus, metus quis dictum congue, massa lorem mollis sapien, ac gravida sapien neque vitae dui. Quisque vehicula neque sapien, nec fringilla libero molestie id.<\/p>",
+              "width": "50%"
+            }
+          }
+        },
+        "block_order": [
+          "1570151568554",
+          "1570151560292-1"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "1570151788361": {
+        "type": "custom-content",
+        "blocks": {
+          "1570151848933": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"text-center\">\n<span class=\"membership-badge membership-badge--gold\">Gold<\/span>\n<h3>Oh, you get infinite lives<\/h3>\n<p>Cras ut metus ac augue porttitor vehicula vitae a nisi. Mauris quis diam eget elit tristique rutrum a non ante. Integer pellentesque turpis ac ornare iaculis. Curabitur auctor aliquet dui nec euismod.<\/p>\n<\/div>",
+              "width": "50%"
+            }
+          },
+          "1570152619671": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": "",
+              "width": "25%",
+              "alignment": "center",
+              "align_text": "left"
+            }
+          },
+          "1570152641908": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/leafy-plant-on-white-wall.jpg",
+              "width": "100%",
+              "alignment": "bottom-middle"
+            }
+          }
+        },
+        "block_order": [
+          "1570152619671",
+          "1570151848933",
+          "1570152641908"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "1570152747459": {
+        "type": "custom-content",
+        "blocks": {
+          "1570152774466": {
+            "type": "html",
+            "settings": {
+              "code": "<span class=\"membership-badge membership-badge--rose\">Rose<\/span> • <span class=\"membership-badge membership-badge--rose\">Gold<\/span>\n<h3>Lastly, we hook you up with premium app support to help you as you grow<\/h3>\n<p>Integer ullamcorper, enim eget dignissim fringilla, risus massa congue sem, sed sagittis odio eros sit amet elit. Ut neque velit, ullamcorper at felis non, suscipit pretium urna.<\/p>\n<div id=\"interactive__app-support\">\n<div class=\"interactive-item selected\">\n<h4>Contextual plant advice<\/h4>\n<p>Sed laoreet, velit et consequat mollis, nibh ipsum tempor urna, eu dictum sapien ante eget eros. Fusce vel cursus lacus, a volutpat neque.<\/p>\n<\/div>\n<div class=\"interactive-item\">\n<h4>Digital tools for the home gardener<\/h4>\n<p>Sed laoreet, velit et consequat mollis, nibh ipsum tempor urna, eu dictum sapien ante eget eros. Fusce vel cursus lacus, a volutpat neque.<\/p>\n<\/div>\n<div class=\"interactive-item\">\n<h4>Connect with local growers<\/h4>\n<p>Sed laoreet, velit et consequat mollis, nibh ipsum tempor urna, eu dictum sapien ante eget eros. Fusce vel cursus lacus, a volutpat neque.<\/p>\n<\/div>\n<\/div>",
+              "width": "50%"
+            }
+          },
+          "1570153524673": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2019-10-03_at_8.46.24_PM.png",
+              "width": "50%",
+              "alignment": "top-right"
+            }
+          }
+        },
+        "block_order": [
+          "1570152774466",
+          "1570153524673"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "1570153682611": {
+        "type": "custom-content",
+        "blocks": {
+          "1570153682611-0": {
+            "type": "text",
+            "settings": {
+              "title": "You have the time — it's 30 seconds a day",
+              "text": "",
+              "width": "33%",
+              "alignment": "top-middle",
+              "align_text": "left"
+            }
+          },
+          "1570153779588": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"background: silver; height: 50px\"><\/div>",
+              "width": "66%"
+            }
+          },
+          "1570153933702": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"background: silver; height: 50px\"><\/div>",
+              "width": "50%"
+            }
+          },
+          "1570153941073": {
+            "type": "text",
+            "settings": {
+              "title": "You have the space — grow on a porch, patio, or balcony",
+              "text": "",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "left"
+            }
+          },
+          "1570153989788": {
+            "type": "text",
+            "settings": {
+              "title": "You have a friend — get started instantly and we'll help you",
+              "text": "",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "left"
+            }
+          },
+          "1570154031000": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"background: silver; height: 50px\"><\/div>",
+              "width": "50%"
+            }
+          },
+          "1570154052971": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"text-center\">\n<button>Get started now<\/button>\n<button>Explore our FAQ<\/button>\n<\/div>",
+              "width": "100%"
+            }
+          }
+        },
+        "block_order": [
+          "1570153682611-0",
+          "1570153779588",
+          "1570153933702",
+          "1570153941073",
+          "1570153989788",
+          "1570154031000",
+          "1570154052971"
+        ],
+        "settings": {
+          "title": "\"I don't know, I'm nervous!\""
+        }
+      },
+      "1570154119668": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/greenhouse-gardening.jpg",
+          "alignment": "top",
+          "hero_layout": "full_width",
+          "hero_size": "medium",
+          "text_size": "large",
+          "title": "",
+          "text": "<p><strong>We're a scrappy team on a mission to create the next generation of lifelong at-home food gardeners. Check out our story<\/strong><\/p>",
+          "button_label": "Watch Video",
+          "button_link": "shopify:\/\/pages\/home"
+        }
+      },
+      "1570154363956": {
+        "type": "custom-content",
+        "blocks": {
+          "1570154363956-0": {
+            "type": "text",
+            "settings": {
+              "title": "Join our email list",
+              "text": "<p>Not ready to be a member but want to be on our shortlist for deals, tips, and new offerings? Put us in your DMs.<\/p>",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "center"
+            }
+          },
+          "1570154709888": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": "",
+              "width": "25%",
+              "alignment": "center",
+              "align_text": "left"
+            }
+          },
+          "1570156989697": {
+            "type": "html",
+            "settings": {
+              "code": "<form class=\"flex-form\">\n  <fieldgroup class=\"flex-field\">\n    <label for=\"name\">Name<\/label>\n    <input id=\"name\" type=\"text\" name=\"name\">\n  <\/fieldgroup>\n  <fieldgroup class=\"flex-field\">\n    <label for=\"email\">Email<\/label>\n    <input id=\"email\" type=\"text\" name=\"email\">\n  <\/fieldgroup>\n  <fieldgroup class=\"flex-field\">\n    <label for=\"zip\">Zipcode<\/label>\n    <input id=\"zip\" type=\"text\" name=\"zip\">\n  <\/fieldgroup>\n<input type=\"submit\" value=\"Subscribe\">\n<\/form>",
+              "width": "100%"
+            }
+          }
+        },
+        "block_order": [
+          "1570154709888",
+          "1570154363956-0",
+          "1570156989697"
+        ],
+        "settings": {
+          "title": ""
+        }
       }
     },
     "content_for_index": [
       "hero",
-      "featured-collections",
-      "slideshow",
+      "1570134053343",
+      "1570134826490",
       "1492033924902",
-      "1492096252560",
-      "1492033877875",
-      "1492033809691"
-    ],
-    "social_twitter_link": "",
-    "social_facebook_link": "",
-    "social_pinterest_link": "",
-    "social_instagram_link": "",
-    "social_tumblr_link": "",
-    "social_snapchat_link": "",
-    "social_youtube_link": "",
-    "social_vimeo_link": "",
-    "favicon": "",
-    "checkout_header_image": "",
-    "checkout_logo_image": "",
-    "checkout_logo_position": "left",
-    "checkout_logo_size": "small",
-    "checkout_body_background_image": "",
-    "checkout_body_background_color": "#ffffff",
-    "checkout_input_background_color_mode": "white",
-    "checkout_sidebar_background_image": "",
-    "checkout_sidebar_background_color": "#e8f3f6",
-    "checkout_heading_font": "Roboto",
-    "checkout_body_font": "Source Sans Pro",
-    "checkout_accent_color": "#1990c6",
-    "checkout_button_color": "#23314e",
-    "checkout_error_color": "#ff6d6d"
+      "1570151560292",
+      "1570151788361",
+      "1570152747459",
+      "1570153682611",
+      "1570154119668",
+      "1570154363956"
+    ]
   },
   "presets": {
     "Default": {
