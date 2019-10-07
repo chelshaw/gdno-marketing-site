@@ -52,7 +52,7 @@
 }
 
 /*================ Build padding and margin helpers ================*/
-$numbers: (1, 2, 3, 4, 5);
+$numbers: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 @each $number in $numbers {
   @include padding-helpers-generator($number);
   @include margin-helpers-generator($number);

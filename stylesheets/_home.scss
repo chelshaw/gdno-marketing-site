@@ -50,39 +50,15 @@
   align-items: center;
 }
 
-#shopify-section-1570134053343 {
-  /* Video section */
-  &.index-section {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .custom-content {
-    justify-content: center;
-  }
-  .video-wrapper {
-    transform: translateY(-140px);
-  }
+#home__green-bg {
+  background-image: url({{"example.svg"|asset_url}});
+  background-size: 100% auto;
+  background-position: bottom center;
+  background-color: $green;
 }
 
-.membership-block {
-  padding: 2.5em;
-  border-radius: 10px;
-  border: 2px solid gray;
-  background: #f6f6f6;
-}
-
-.membership-block--green {
-  border-color: green;
-  background-color: lime;
-}
-
-.membership-block--rose {
-  border-color: red;
-  background-color: pink;
-}
-.membership-block--gold {
-  border-color: orange;
-  background-color: yellow;
+#how-does-it-work-video {
+  margin-top: -120px;
 }
 
 .interactive-item {

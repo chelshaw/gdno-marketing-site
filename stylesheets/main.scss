@@ -2,6 +2,7 @@
 @import "mixins";
 @import "theme";
 @import "home";
+@import "memberships";
 
 a.subtle {
   color: inherit;
@@ -10,4 +11,19 @@ a.subtle {
 
 img {
   max-width: 100%;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #aeafb2;
+}
+.border-top {
+  border-top: 1px solid #aeafb2;
+}
+
+.centered-content {
+  margin: 0 auto;
+}
+
+.text-white {
+  color: white;
 }

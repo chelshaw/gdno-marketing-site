@@ -1,0 +1,32 @@
+.memberships-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-basis: 150px;
+}
+
+.membership-block {
+  padding: 40px 90px 24px 40px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.membership-block--green {
+  border-color: $green;
+  background-color: $greenTint;
+}
+
+.membership-block--rose {
+  border-color: $rose;
+  background-color: $roseTint;
+}
+.membership-block--gold {
+  border-color: $gold;
+  background-color: $goldTint;
+}
