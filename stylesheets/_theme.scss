@@ -1840,10 +1840,6 @@ a[href^="tel"] {
   white-space: normal;
   font-size: $font-size-base - 2;
 
-  @include media-query($medium-up) {
-    padding: $input-padding-top-bottom $input-padding-left-right;
-  }
-
   &:not([disabled]):hover,
   &:focus {
     color: $color-btn-primary-text;

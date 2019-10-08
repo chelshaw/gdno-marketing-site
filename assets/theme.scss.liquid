@@ -1926,10 +1926,6 @@ a[href^="tel"] {
   white-space: normal;
   font-size: $font-size-base - 2;
 
-  @include media-query($medium-up) {
-    padding: $input-padding-top-bottom $input-padding-left-right;
-  }
-
   &:not([disabled]):hover,
   &:focus {
     color: $color-btn-primary-text;
@@ -7694,14 +7690,27 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 }
 
 #home__green-bg {
-  background-image: url({{"example.svg"|asset_url}});
-  background-size: 100% auto;
+  background-image: url({{"illo_greenbr_withlines.png"|asset_url}});
+  background-size: auto 100%;
   background-position: bottom center;
-  background-color: $green;
+  background-repeat: no-repeat;
+  padding-bottom: 6%;
+
+  @include media-query($medium-up) {
+    background-size: cover;
+  }
+
+  .how-it-works-content {
+    padding: 150px 0;
+    @include media-query($medium-up) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
 }
 
 #how-does-it-work-video {
-  margin-top: -120px;
+  margin-top: -180px;
 }
 
 .interactive-item {
