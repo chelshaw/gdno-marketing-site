@@ -1,7 +1,7 @@
 .memberships-container {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   flex-basis: 150px;
 }
@@ -13,8 +13,11 @@
   background-position: bottom right;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 310px;
+  margin: 0 10px 10px;
 }
 
 .membership-block--green {
@@ -29,4 +32,27 @@
 .membership-block--gold {
   border-color: $gold;
   background-color: $goldTint;
+}
+
+.membership-block__details {
+  margin-bottom: 55px;
+}
+
+.membership-badge {
+  font-size: em(14);
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: em(18);
+}
+
+.membership-badge--gold {
+  color: $goldShade;
+}
+
+.membership-badge--rose {
+  color: $roseShade;
+}
+
+.membership-badge--green {
+  color: $green;
 }

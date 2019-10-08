@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 /*================ SASS HELPERS ================*/
 /*============================================================================
   Convert pixels to ems
@@ -333,7 +336,7 @@ $color-text-field: {{ settings.color_text_field }};
 $color-text-field-text: {{ settings.color_text_field_text }};
 $color-navigation-text: {{ settings.color_text }};
 
-// Button colors
+// Button colors & padding
 $color-btn-primary: {{ settings.color_button }};
 $color-btn-primary-text: {{ settings.color_button_text }};
 
@@ -407,6 +410,8 @@ $gutter-site-mobile: 22px;
 $section-spacing: 55px;
 $section-spacing-small: 35px;
 $border-radius: 2px;
+$btn-padding-vertical: 31px;
+$btn-padding-horizontal: 24px;
 
 /*================ Footer Variables ================*/
 $footer-spacing-extra-small: 5px;
@@ -1394,9 +1399,10 @@ h2 {
 }
 
 h3 {
-  font-size: em($font-size-header);
+  font-size: em(24);
   text-transform: none;
   letter-spacing: 0;
+  font-weight: bold;
 
   @include media-query($small) {
     font-size: em(floor($font-size-header * 0.78));
@@ -1404,7 +1410,7 @@ h3 {
 }
 
 h4 {
-  font-size: em(floor($font-size-header * 0.68));
+  font-size: em(22);
 
   @include media-query($small) {
     font-size: em(floor(($font-size-header * 0.68) * 0.9));
@@ -1412,7 +1418,7 @@ h4 {
 }
 
 h5 {
-  font-size: em(floor($font-size-header * 0.58));
+  font-size: em(18);
 
   @include media-query($small) {
     font-size: em(floor(($font-size-header * 0.58) * 0.9));
@@ -1420,7 +1426,7 @@ h5 {
 }
 
 h6 {
-  font-size: em(floor($font-size-header * 0.54));
+  font-size: em(14);
 
   @include media-query($small) {
     font-size: em(floor(($font-size-header * 0.54) * 0.9));
@@ -1794,7 +1800,7 @@ ol {
 
 /*================ #Links and Buttons ================*/
 a {
-  color: $blue;
+  color: $color-text;
   text-decoration: none;
 
   &:not([disabled]):hover,
@@ -1823,7 +1829,7 @@ a[href^="tel"] {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: $border-radius;
-  padding: $input-padding-top-bottom-small $input-padding-left-right-small;
+  padding: $btn-padding-vertical $btn-padding-horizontal;
   background-color: $color-btn-primary;
   color: $color-btn-primary-text;
   font-family: $font-stack-header;

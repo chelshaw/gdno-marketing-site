@@ -84,6 +84,9 @@ $numbers: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
   @include margin-helpers-generator($number);
 }
 
+* {
+  box-sizing: border-box;
+}
 /*================ SASS HELPERS ================*/
 /*============================================================================
   Convert pixels to ems
@@ -419,7 +422,7 @@ $color-text-field: {{ settings.color_text_field }};
 $color-text-field-text: {{ settings.color_text_field_text }};
 $color-navigation-text: {{ settings.color_text }};
 
-// Button colors
+// Button colors & padding
 $color-btn-primary: {{ settings.color_button }};
 $color-btn-primary-text: {{ settings.color_button_text }};
 
@@ -493,6 +496,8 @@ $gutter-site-mobile: 22px;
 $section-spacing: 55px;
 $section-spacing-small: 35px;
 $border-radius: 2px;
+$btn-padding-vertical: 31px;
+$btn-padding-horizontal: 24px;
 
 /*================ Footer Variables ================*/
 $footer-spacing-extra-small: 5px;
@@ -1480,9 +1485,10 @@ h2 {
 }
 
 h3 {
-  font-size: em($font-size-header);
+  font-size: em(24);
   text-transform: none;
   letter-spacing: 0;
+  font-weight: bold;
 
   @include media-query($small) {
     font-size: em(floor($font-size-header * 0.78));
@@ -1490,7 +1496,7 @@ h3 {
 }
 
 h4 {
-  font-size: em(floor($font-size-header * 0.68));
+  font-size: em(22);
 
   @include media-query($small) {
     font-size: em(floor(($font-size-header * 0.68) * 0.9));
@@ -1498,7 +1504,7 @@ h4 {
 }
 
 h5 {
-  font-size: em(floor($font-size-header * 0.58));
+  font-size: em(18);
 
   @include media-query($small) {
     font-size: em(floor(($font-size-header * 0.58) * 0.9));
@@ -1506,7 +1512,7 @@ h5 {
 }
 
 h6 {
-  font-size: em(floor($font-size-header * 0.54));
+  font-size: em(14);
 
   @include media-query($small) {
     font-size: em(floor(($font-size-header * 0.54) * 0.9));
@@ -1880,7 +1886,7 @@ ol {
 
 /*================ #Links and Buttons ================*/
 a {
-  color: $blue;
+  color: $color-text;
   text-decoration: none;
 
   &:not([disabled]):hover,
@@ -1909,7 +1915,7 @@ a[href^="tel"] {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: $border-radius;
-  padding: $input-padding-top-bottom-small $input-padding-left-right-small;
+  padding: $btn-padding-vertical $btn-padding-horizontal;
   background-color: $color-btn-primary;
   color: $color-btn-primary-text;
   font-family: $font-stack-header;
@@ -7760,7 +7766,7 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 .memberships-container {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   flex-basis: 150px;
 }
@@ -7772,8 +7778,11 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   background-position: bottom right;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 310px;
+  margin: 0 10px 10px;
 }
 
 .membership-block--green {
@@ -7788,6 +7797,29 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 .membership-block--gold {
   border-color: $gold;
   background-color: $goldTint;
+}
+
+.membership-block__details {
+  margin-bottom: 55px;
+}
+
+.membership-badge {
+  font-size: em(14);
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: em(18);
+}
+
+.membership-badge--gold {
+  color: $goldShade;
+}
+
+.membership-badge--rose {
+  color: $roseShade;
+}
+
+.membership-badge--green {
+  color: $green;
 }
 
 a.subtle {
@@ -7812,4 +7844,28 @@ img {
 
 .text-white {
   color: white;
+}
+
+a.button-text {
+  font-size: em(14);
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: em(18);
+  text-transform: uppercase;
+
+  &.right-arrow:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    margin-bottom: 2px;
+    margin-left: 3px;
+  }
+}
+
+a.link {
+  color: $blue;
 }

@@ -27,3 +27,27 @@ img {
 .text-white {
   color: white;
 }
+
+a.button-text {
+  font-size: em(14);
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: em(18);
+  text-transform: uppercase;
+
+  &.right-arrow:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    margin-bottom: 2px;
+    margin-left: 3px;
+  }
+}
+
+a.link {
+  color: $blue;
+}
