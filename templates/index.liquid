@@ -91,3 +91,17 @@
 </div>
 
 {{ content_for_index }}
+
+<script>
+  function initFlourishes() {
+    console.log('begin flourish build');
+    const flourish = document.createElement('div');
+    flourish.id='autopilot-meals-illo';
+    const parentSection = document.getElementById('shopify-section-1492033924902');
+    parentSection.insertBefore(flourish, parentSection.firstChild);
+    // autopilot-meals-illo
+    // shopify-section-1492033924902
+  }
+
+  initFlourishes();
+</script>

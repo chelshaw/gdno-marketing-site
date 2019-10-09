@@ -8,7 +8,7 @@
    - autopilot plant meals
    - infinite lives
    - premium app support
-   - questions
+   - get with green
    - team mission
    - join email list
  */
@@ -59,6 +59,8 @@
 
   @include media-query($medium-up) {
     background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 165px;
   }
 
   .how-it-works-content {
@@ -130,5 +132,30 @@
     padding-right: 20px;
     min-height: 50px;
     margin-bottom: 1em;
+  }
+}
+
+#shopify-section-1492033924902 {
+  position: relative;
+  margin-top: 6em;
+
+  hr {
+    margin: 85px 0 0 0;
+  }
+}
+
+#autopilot-meals-illo {
+  height: 104%;
+  width: 50%;
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background-image: url({{"illo_gardenio_growyourownfood_fuckhomedepot_box.png"|asset}});
+
+  @include media-query($medium-up) {
+    top: -150px;
   }
 }

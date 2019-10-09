@@ -43,16 +43,36 @@
   font-weight: bold;
   letter-spacing: 1px;
   line-height: em(18);
+  text-transform: uppercase;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 
 .membership-badge--gold {
   color: $goldShade;
+  &:before {
+    background-image: url({{"gold-symbol--placeholder.png"|asset_url}});
+  }
 }
 
 .membership-badge--rose {
   color: $roseShade;
+  &:before {
+    background-image: url({{"rose-symbol--placeholder.png"|asset_url}});
+  }
 }
 
 .membership-badge--green {
   color: $green;
+  &:before {
+    background-image: url({{"green-symbol--placeholder.png"|asset_url}});
+  }
 }

@@ -4426,7 +4426,6 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   padding: 0 $gutter-site;
 
   @include media-query($small) {
-    border-bottom: 1px solid $color-border;
     padding: 0;
   }
 
@@ -7647,7 +7646,7 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
    - autopilot plant meals
    - infinite lives
    - premium app support
-   - questions
+   - get with green
    - team mission
    - join email list
  */
@@ -7698,6 +7697,8 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 
   @include media-query($medium-up) {
     background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 165px;
   }
 
   .how-it-works-content {
@@ -7772,6 +7773,31 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   }
 }
 
+#shopify-section-1492033924902 {
+  position: relative;
+  margin-top: 6em;
+
+  hr {
+    margin: 85px 0 0 0;
+  }
+}
+
+#autopilot-meals-illo {
+  height: 104%;
+  width: 50%;
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background-image: url({{"illo_gardenio_growyourownfood_fuckhomedepot_box.png"|asset}});
+
+  @include media-query($medium-up) {
+    top: -150px;
+  }
+}
+
 .memberships-container {
   display: flex;
   align-items: stretch;
@@ -7817,18 +7843,38 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   font-weight: bold;
   letter-spacing: 1px;
   line-height: em(18);
+  text-transform: uppercase;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 
 .membership-badge--gold {
   color: $goldShade;
+  &:before {
+    background-image: url({{"gold-symbol--placeholder.png"|asset_url}});
+  }
 }
 
 .membership-badge--rose {
   color: $roseShade;
+  &:before {
+    background-image: url({{"rose-symbol--placeholder.png"|asset_url}});
+  }
 }
 
 .membership-badge--green {
   color: $green;
+  &:before {
+    background-image: url({{"green-symbol--placeholder.png"|asset_url}});
+  }
 }
 
 a.subtle {

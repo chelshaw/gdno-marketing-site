@@ -4340,7 +4340,6 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   padding: 0 $gutter-site;
 
   @include media-query($small) {
-    border-bottom: 1px solid $color-border;
     padding: 0;
   }
 
