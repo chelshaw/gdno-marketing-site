@@ -12,6 +12,7 @@ $greenTint: #ecffde;
 $blue: #089bbf;
 $cyan: #41b6ac;
 
+$box-shadow: 0 15px 21px 0 rgba(0, 0, 0, 0.1);
 /* FONT SIZES
 100px -- hero header
 22px -- main copy
@@ -1915,7 +1916,7 @@ a[href^="tel"] {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: $border-radius;
-  padding: $btn-padding-vertical $btn-padding-horizontal;
+  padding: $input-padding-top-bottom $input-padding-left-right;
   background-color: $color-btn-primary;
   color: $color-btn-primary-text;
   font-family: $font-stack-header;
@@ -7818,6 +7819,7 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   box-sizing: border-box;
   max-width: 310px;
   margin: 0 10px 10px;
+  box-shadow: $box-shadow;
 }
 
 .membership-block--green {
@@ -7901,6 +7903,16 @@ img {
   color: white;
 }
 
+.button {
+  @extend .btn;
+  padding: $btn-padding-vertical $btn-padding-horizontal;
+  font-size: em(14);
+  font-weight: bold;
+  letter-spacing: 1px;
+  // line-height: em(18);
+  text-transform: uppercase;
+}
+
 a.button-text {
   font-size: em(14);
   font-weight: bold;
@@ -7923,4 +7935,8 @@ a.button-text {
 
 a.link {
   color: $blue;
+}
+
+.box-shadow {
+  box-shadow: $box-shadow;
 }

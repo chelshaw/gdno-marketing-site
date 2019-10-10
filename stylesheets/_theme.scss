@@ -1419,6 +1419,7 @@ h4 {
 
 h5 {
   font-size: em(18);
+  font-weight: bold;
 
   @include media-query($small) {
     font-size: em(floor(($font-size-header * 0.58) * 0.9));
@@ -1829,7 +1830,7 @@ a[href^="tel"] {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: $border-radius;
-  padding: $btn-padding-vertical $btn-padding-horizontal;
+  padding: $input-padding-top-bottom $input-padding-left-right;
   background-color: $color-btn-primary;
   color: $color-btn-primary-text;
   font-family: $font-stack-header;

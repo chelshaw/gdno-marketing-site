@@ -28,6 +28,16 @@ img {
   color: white;
 }
 
+.button {
+  @extend .btn;
+  padding: $btn-padding-vertical $btn-padding-horizontal;
+  font-size: em(14);
+  font-weight: bold;
+  letter-spacing: 1px;
+  // line-height: em(18);
+  text-transform: uppercase;
+}
+
 a.button-text {
   font-size: em(14);
   font-weight: bold;
@@ -50,4 +60,8 @@ a.button-text {
 
 a.link {
   color: $blue;
+}
+
+.box-shadow {
+  box-shadow: $box-shadow;
 }

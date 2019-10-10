@@ -13,7 +13,7 @@
   </div>
 
   <div class="page-width text-center pv-5 border-bottom">
-    <p>See if we <a href="#">service your area</a></p>
+    <p>See if we <a class="link" href="#">service your area</a></p>
   </div>
 </div>
 
@@ -86,13 +86,34 @@
     </div>
   </div>
   <div class="pv-2 text-center">
-    <a class="btn">Compare Memberships</a>
+    <a class="button">Compare Memberships</a>
   </div>
 </div>
 
 {{ content_for_index }}
 
 <script>
+  const targetClass = '.interactive-item';
+  
+  function switchSelectedForTargetElement(el) {
+    const intWrapper = document.getElementById('interactive__app-support');
+    const oldSelected = intWrapper.querySelector('.selected');
+    oldSelected.classList.remove('selected');
+    const newSelected = event.target.matches(targetClass) ? event.target : event.target.parentNode;
+    newSelected.classList.add('selected');
+  }
+
+  function initInteractiveAppSupport() {
+    document.addEventListener('click', function (event) {
+    	// If the clicked element doesn't have the right selector, bail
+    	if (!event.target.matches(targetClass) && !event.target.parentNode.matches(targetClass)) return;
+    	// Don't follow the link
+    	event.preventDefault();
+      console.log('switch');
+      switchSelectedForTargetElement(event.target);
+    }, false);
+  }
+
   function initFlourishes() {
     console.log('begin flourish build');
     const flourish = document.createElement('div');
@@ -104,4 +125,5 @@
   }
 
   initFlourishes();
+  initInteractiveAppSupport();
 </script>
