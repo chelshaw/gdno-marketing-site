@@ -332,76 +332,43 @@
       "1570153682611": {
         "type": "custom-content",
         "blocks": {
-          "1570153682611-0": {
-            "type": "text",
-            "settings": {
-              "title": "You have the time — it's 30 seconds a day",
-              "text": "",
-              "width": "33%",
-              "alignment": "top-middle",
-              "align_text": "left"
-            }
-          },
-          "1570153779588": {
+          "1570665463484": {
             "type": "html",
             "settings": {
-              "code": "<div style=\"background: silver; height: 50px\"><\/div>",
-              "width": "66%"
-            }
-          },
-          "1570153933702": {
-            "type": "html",
-            "settings": {
-              "code": "<div style=\"background: silver; height: 50px\"><\/div>",
-              "width": "50%"
-            }
-          },
-          "1570153941073": {
-            "type": "text",
-            "settings": {
-              "title": "You have the space — grow on a porch, patio, or balcony",
-              "text": "",
-              "width": "50%",
-              "alignment": "center",
-              "align_text": "left"
-            }
-          },
-          "1570153989788": {
-            "type": "text",
-            "settings": {
-              "title": "You have a friend — get started instantly and we'll help you",
-              "text": "",
-              "width": "50%",
-              "alignment": "center",
-              "align_text": "left"
-            }
-          },
-          "1570154031000": {
-            "type": "html",
-            "settings": {
-              "code": "<div style=\"background: silver; height: 50px\"><\/div>",
-              "width": "50%"
-            }
-          },
-          "1570154052971": {
-            "type": "html",
-            "settings": {
-              "code": "<div class=\"text-center\">\n<button>Get started now<\/button>\n<button>Explore our FAQ<\/button>\n<\/div>",
+              "code": "<div class=\"text-center\">\n<span class=\"membership-badge membership-badge--green\">Green<\/span>\n<h2>Get Started Free<\/h2>\n<\/div>",
               "width": "100%"
+            }
+          },
+          "1570665546172": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"get-started__image one-app\"><\/div>\n<div class=\"get-started__content text-center\">\n<h5>We’ll keep all your plant care information in one damn app.<\/h5>\n<p>No more scouring google for how much to water, what kind of sun it needs, what kind of soil it needs.<\/p>\n<\/div>",
+              "width": "33%"
+            }
+          },
+          "1570666323236": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"get-started__image we-help\"><\/div>\n<div class=\"get-started__content text-center\">\n<h5>We’ll help you when \nthings get weird<\/h5>\n<p>For a limited time, get full email support for issues you’re running into in your garden.<\/p>\n<\/div>",
+              "width": "33%"
+            }
+          },
+          "1570666385034": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"get-started__image we-help\"><\/div>\n<div class=\"get-started__content text-center\">\n<h5>We’ll tell you how to do delicious things with plants <\/h5>\n<p>We connect you to crafty entree, side, and cocktail recipes to stand out at the potluck.<\/p>\n<\/div>",
+              "width": "33%"
             }
           }
         },
         "block_order": [
-          "1570153682611-0",
-          "1570153779588",
-          "1570153933702",
-          "1570153941073",
-          "1570153989788",
-          "1570154031000",
-          "1570154052971"
+          "1570665463484",
+          "1570665546172",
+          "1570666323236",
+          "1570666385034"
         ],
         "settings": {
-          "title": "\"I don't know, I'm nervous!\""
+          "title": ""
         }
       },
       "1570154119668": {

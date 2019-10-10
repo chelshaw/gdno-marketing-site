@@ -12,7 +12,8 @@ $greenTint: #ecffde;
 $blue: #089bbf;
 $cyan: #41b6ac;
 
-$box-shadow: 0 15px 21px 0 rgba(0, 0, 0, 0.1);
+// $box-shadow: 0 15px 21px 0 rgba(0, 0, 0, 0.1);
+$box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.09);
 /* FONT SIZES
 100px -- hero header
 22px -- main copy
@@ -1506,6 +1507,7 @@ h4 {
 
 h5 {
   font-size: em(18);
+  font-weight: bold;
 
   @include media-query($small) {
     font-size: em(floor(($font-size-header * 0.58) * 0.9));
@@ -7797,6 +7799,24 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   @include media-query($medium-up) {
     top: -150px;
   }
+}
+
+.get-started__image {
+  height: 200px;
+  background-size: cover;
+
+  &.one-app {
+    background-image: url({{"example.svg"|asset}});
+  }
+  &.we-help {
+    background-image: url({{"example.svg"|asset}});
+  }
+  &.delicious {
+    background-image: url({{"example.svg"|asset}});
+  }
+}
+.get-started__content {
+  padding: 24px 20px;
 }
 
 .memberships-container {

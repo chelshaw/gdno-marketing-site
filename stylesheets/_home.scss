@@ -159,3 +159,21 @@
     top: -150px;
   }
 }
+
+.get-started__image {
+  height: 200px;
+  background-size: cover;
+
+  &.one-app {
+    background-image: url({{"example.svg"|asset}});
+  }
+  &.we-help {
+    background-image: url({{"example.svg"|asset}});
+  }
+  &.delicious {
+    background-image: url({{"example.svg"|asset}});
+  }
+}
+.get-started__content {
+  padding: 24px 20px;
+}
