@@ -92,9 +92,11 @@
 
 {{ content_for_index }}
 
+{%- include 'section-our-story' -%}
+
 <script>
   const targetClass = '.interactive-item';
-  
+
   function switchSelectedForTargetElement(el) {
     const intWrapper = document.getElementById('interactive__app-support');
     const oldSelected = intWrapper.querySelector('.selected');

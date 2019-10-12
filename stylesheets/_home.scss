@@ -177,3 +177,9 @@
 .get-started__content {
   padding: 24px 20px;
 }
+
+#our-story {
+  background-image: url({{"example-team.jpg"|asset}});
+  background-size: cover;
+  padding: 100px 1em;
+}

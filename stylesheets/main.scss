@@ -34,8 +34,12 @@ img {
   font-size: em(14);
   font-weight: bold;
   letter-spacing: 1px;
-  // line-height: em(18);
   text-transform: uppercase;
+}
+
+.has-addon {
+  display: inline-flex;
+  align-items: center;
 }
 
 a.button-text {
@@ -64,4 +68,31 @@ a.link {
 
 .box-shadow {
   box-shadow: $box-shadow;
+}
+
+.play-icon-circle {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: $color-btn-primary;
+  border-radius: 50%;
+  background: white;
+  padding: 6px;
+
+  &:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-right: 5px solid $color-btn-primary;
+    border-top: 5px solid $color-btn-primary;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 42%;
+    top: 32%;
+  }
 }
