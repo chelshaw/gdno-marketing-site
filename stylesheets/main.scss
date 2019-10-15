@@ -3,6 +3,7 @@
 @import "theme";
 @import "home";
 @import "memberships";
+@import "as-seen-in-list";
 
 a.subtle {
   color: inherit;
@@ -14,10 +15,10 @@ img {
 }
 
 .border-bottom {
-  border-bottom: 1px solid #aeafb2;
+  border-bottom: 1px solid $medGray;
 }
 .border-top {
-  border-top: 1px solid #aeafb2;
+  border-top: 1px solid $medGray;
 }
 
 .centered-content {
@@ -64,6 +65,10 @@ a.button-text {
 
 a.link {
   color: $blue;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .box-shadow {

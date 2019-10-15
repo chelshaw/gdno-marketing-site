@@ -13,28 +13,48 @@
    - join email list
  */
 
+.home-splash__wrapper,
+#home__splash,
 #home__hero {
   position: relative;
 }
 
-#home__hero h1 {
-  font-size: em(100px);
-  font-weight: bolder;
-
-  @include media-query($small) {
-    font-size: em(50px);
-  }
+.home-splash__content {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-#home__hero__image {
-  padding: em(150px) 0;
-  background-image: url("https://dummyimage.com/625x700/666666/fefefe&text=Hero+Image");
-  background-position: top right;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
+.home-splash__image-wrapper {
+  position: relative;
+}
 
-  @include media-query($small) {
-    padding: em(75px) 0;
+.coming-in-2020 {
+  padding: $input-padding-top-bottom 24px;
+  display: inline-block;
+  background: #fff8eb;
+}
+
+.splash-content {
+  padding-bottom: 80px;
+}
+
+.relative-image-wrapper {
+  position: relative;
+  overflow: visible;
+
+  .top-right-sun {
+    position: absolute;
+    top: 10px;
+    right: -80px;
+    max-width: 160px;
+  }
+
+  .bottom-right-loop {
+    position: absolute;
+    bottom: -32px;
+    right: -60px;
+    max-width: 130px;
   }
 }
 
