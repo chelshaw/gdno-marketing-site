@@ -1,0 +1,174 @@
+<div class="page-width">
+  <div class="{% if section.settings.classes %}{{ section.settings.classes }}{% endif %}">
+    {% if section.blocks.size > 0 %}
+      <ul class="as-seen-in-list">
+        {% if section.settings.intro != blank %}
+          <li class="as-seen-in-list__item as-seen-in-list__intro">
+            <h5>{{ section.settings.intro | escape }}</h5>
+          </li>
+        {% endif %}
+        {% for block in section.blocks %}
+          <li class="as-seen-in-list__item" {{ block.shopify_attributes }}>
+            {% if block.settings.link != blank %}
+              <a href="{{ block.settings.link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.image != blank %}
+              {{ block.settings.image | img_url: '160x160', scale: 2 | img_tag: block.settings.image.alt, 'logo-bar__image' }}
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.link != blank %}
+              </a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if section.blocks.size == 0 %}
+      {% include 'no-blocks' %}
+    {% endif %}
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Seen In List",
+  "class": "index-section",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "text",
+      "id": "intro",
+      "label": "Intro Text",
+      "default": "As seen in:"
+    },
+    {
+      "type": "text",
+      "id": "classes",
+      "label": "Custom Classes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": {
+        "da": "Logo",
+        "de": "Logo",
+        "en": "Logo",
+        "es": "Logotipo",
+        "fi": "Logo",
+        "fr": "Logo",
+        "hi": "लोगो",
+        "it": "Logo",
+        "ja": "ロゴ",
+        "ko": "로고",
+        "ms": "Logo",
+        "nb": "Logo",
+        "nl": "Logo",
+        "pt-BR": "Logotipo",
+        "pt-PT": "Logótipo",
+        "sv": "Logotyp",
+        "th": "โลโก้",
+        "zh-CN": "logo",
+        "zh-TW": "商標"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image",
+            "es": "Imagen",
+            "fi": "Kuva",
+            "fr": "Image",
+            "hi": "इमेज",
+            "it": "Immagine",
+            "ja": "画像",
+            "ko": "이미지",
+            "ms": "Imej",
+            "nb": "Bilde",
+            "nl": "Afbeelding",
+            "pt-BR": "Imagem",
+            "pt-PT": "Imagem",
+            "sv": "Bild",
+            "th": "รูปภาพ",
+            "zh-CN": "图片",
+            "zh-TW": "圖片"
+          }
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": {
+            "da": "Link",
+            "de": "Link",
+            "en": "Link",
+            "es": "Enlace",
+            "fi": "Linkki",
+            "fr": "Lien",
+            "hi": "लिंक",
+            "it": "Link",
+            "ja": "リンク",
+            "ko": "링크",
+            "ms": "Pautan",
+            "nb": "Kobling",
+            "nl": "Link",
+            "pt-BR": "Link",
+            "pt-PT": "Ligação",
+            "sv": "Länk",
+            "th": "ลิงก์",
+            "zh-CN": "链接",
+            "zh-TW": "連結"
+          },
+          "info": {
+            "da": "Valgfri",
+            "de": "Optional",
+            "en": "Optional",
+            "es": "Opcional",
+            "fi": "Valinnainen",
+            "fr": "Facultatif",
+            "hi": "वैकल्पिक",
+            "it": "Facoltativo",
+            "ja": "オプション",
+            "ko": "선택 사항",
+            "ms": "Opsyenal",
+            "nb": "Valgfritt",
+            "nl": "Optioneel",
+            "pt-BR": "Opcional",
+            "pt-PT": "Opcional",
+            "sv": "Valfritt",
+            "th": "ไม่จำเป็น",
+            "zh-CN": "可选",
+            "zh-TW": "(選填)"
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "As seen in list",
+      "category": "Advanced layout",
+      "blocks": [
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

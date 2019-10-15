@@ -1,0 +1,67 @@
+<div id="home__splash">
+  <div id="home__hero__leaf" aria-hidden="true">
+    {{ 'gardenio_growyourownfood_hero_topleftleafschwoopy.png' | asset_url | img_tag: 'Leaf illustration' }}
+  </div>
+
+  <div class="page-width splash-content">
+    <div class="one-whole home-splash__wrapper">
+      <div class="home-splash__image-wrapper small--push-five-twelfths medium-up--push-five-twelfths seven-twelfths text-right">
+        {% if section.settings.image != blank %}
+        <div class="relative-image-wrapper">
+          {{ section.settings.image | img_url: '600x600' | img_tag: section.settings.image.alt, 'splash__main-image' }}
+          <div class="top-right-sun" aria-hidden="true">
+            {{ 'gardenio_growyourownfood_hero_sun.png' | asset_url | img_tag: 'Leaf illustration' }}
+          </div>
+          <div class="bottom-right-loop" aria-hidden="true">
+            {{ 'gardenio_growyourownfood_hero_redloop.png' | asset_url | img_tag: 'Leaf illustration' }}
+          </div>
+        </div>
+        {% else %}
+          <div class="relative-image-wrapper">
+            <img src="https://dummyimage.com/625x700/666666/fefefe&text=Hero+Image" />
+            <div class="top-right-sun">{{ 'gardenio_growyourownfood_hero_sun.png' | asset_url | img_tag: 'Leaf illustration' }}</div>
+            <div class="bottom-right-loop">{{ 'gardenio_growyourownfood_hero_redloop.png' | asset_url | img_tag: 'Leaf illustration' }}</div>
+          </div>
+        {% endif %}
+      </div>
+      <div id="home__splash-content" class="home-splash__content one-half small--two-thirds">
+        {{ section.settings.splash_content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Splash Section",
+  "class": "gdno--splash-section",
+  "settings": [
+    {
+      "type": "html",
+      "id": "splash_content",
+      "label": "HTML content (left)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Splash Section",
+      "category": "Advanced layout"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+function(
+  const textHeight = document.getElementById('home__splash-content').clientHeight;
+  const mainHeight = document.getElementById('home__splash').clientHeight;
+  if (textHeight > mainHeight) {
+    document.getElementById('home__splash').style.clientHeight = textHeight.toString() + 'px';
+  }
+)();
+{% endjavascript %}
