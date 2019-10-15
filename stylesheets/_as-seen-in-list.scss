@@ -1,0 +1,23 @@
+ul.as-seen-in-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li.as-seen-in-list__item {
+  flex-basis: 150px;
+  margin-bottom: 1em;
+}
+
+li.as-seen-in-list__item.as-seen-in-list__intro {
+  flex-basis: 90px;
+
+  h5 {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 18px;
+    margin: 0;
+  }
+}
