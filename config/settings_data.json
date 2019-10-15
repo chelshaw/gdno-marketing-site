@@ -3,7 +3,7 @@
     "color_text": "#000000",
     "color_body_text": "#000000",
     "color_sale_text": "#da2f0c",
-    "color_button": "#3fff00",
+    "color_button": "#73b641",
     "color_button_text": "#ffffff",
     "color_small_button_text_border": "#162950",
     "color_text_field_text": "#000000",
@@ -32,7 +32,7 @@
     "social_youtube_link": "https:\/\/www.youtube.com\/gardenio",
     "social_vimeo_link": "",
     "favicon": "",
-    "enable_ajax": true,
+    "enable_ajax": false,
     "checkout_header_image": "",
     "checkout_logo_image": "",
     "checkout_logo_position": "left",
@@ -55,11 +55,11 @@
           "logo": "shopify:\/\/shop_images\/icon-transparent.png",
           "logo_max_width": 50,
           "main_linklist": "main-menu",
-          "message": true,
-          "home_page_only": true,
+          "message": false,
+          "home_page_only": false,
           "message_text": "Sign up today and recieve 20% off",
           "message_link": "",
-          "color_bg": "#3fff00",
+          "color_bg": "#73b641",
           "color_text": "#ffffff"
         }
       },
@@ -89,6 +89,7 @@
       },
       "1492033924902": {
         "type": "custom-content",
+        "disabled": true,
         "blocks": {
           "1570151056202": {
             "type": "html",
@@ -103,6 +104,7 @@
               "title": "",
               "text": "",
               "width": "50%",
+              "smallWidth": "100%",
               "alignment": "center",
               "align_text": "left"
             }
@@ -223,6 +225,7 @@
       },
       "1570151560292": {
         "type": "custom-content",
+        "disabled": true,
         "blocks": {
           "1570151568554": {
             "type": "html",
@@ -258,6 +261,7 @@
       },
       "1570151788361": {
         "type": "custom-content",
+        "disabled": true,
         "blocks": {
           "1570152619671": {
             "type": "text",
@@ -265,6 +269,7 @@
               "title": "",
               "text": "",
               "width": "25%",
+              "smallWidth": "100%",
               "alignment": "center",
               "align_text": "left"
             }
@@ -304,6 +309,7 @@
       },
       "1570152747459": {
         "type": "custom-content",
+        "disabled": true,
         "blocks": {
           "1570152774466": {
             "type": "html",
@@ -331,6 +337,7 @@
       },
       "1570153682611": {
         "type": "custom-content",
+        "disabled": true,
         "blocks": {
           "1570665463484": {
             "type": "html",
@@ -371,22 +378,9 @@
           "title": ""
         }
       },
-      "1570154119668": {
-        "type": "hero",
-        "settings": {
-          "image": "shopify:\/\/shop_images\/greenhouse-gardening.jpg",
-          "alignment": "top",
-          "hero_layout": "full_width",
-          "hero_size": "medium",
-          "text_size": "large",
-          "title": "",
-          "text": "<p><strong>We're a scrappy team on a mission to create the next generation of lifelong at-home food gardeners. Check out our story<\/strong><\/p>",
-          "button_label": "Watch Video",
-          "button_link": "shopify:\/\/pages\/home"
-        }
-      },
       "1570154363956": {
         "type": "custom-content",
+        "disabled": true,
         "blocks": {
           "1570154709888": {
             "type": "text",
@@ -394,6 +388,7 @@
               "title": "",
               "text": "",
               "width": "25%",
+              "smallWidth": "100%",
               "alignment": "center",
               "align_text": "left"
             }
@@ -404,6 +399,7 @@
               "title": "Join our email list",
               "text": "<p>Not ready to be a member but want to be on our shortlist for deals, tips, and new offerings? Put us in your DMs.<\/p>",
               "width": "50%",
+              "smallWidth": "100%",
               "alignment": "center",
               "align_text": "center"
             }
@@ -424,16 +420,94 @@
         "settings": {
           "title": ""
         }
+      },
+      "1571099321905": {
+        "type": "custom-content",
+        "blocks": {
+          "1571099511395": {
+            "type": "html",
+            "settings": {
+              "code": "<div id=\"insta-feed\"><\/div>",
+              "width": "100%"
+            }
+          }
+        },
+        "block_order": [
+          "1571099511395"
+        ],
+        "settings": {
+          "title": "Follow us on Instagram"
+        }
+      },
+      "1571110074053": {
+        "type": "gdno_splash",
+        "settings": {
+          "splash_content": "<div class=\"coming-in-2020 mb-2\">Spring 2020<\/div>\n      <h1>A new kind of garden club<\/h1>\n      <div class=\"two-thirds small--one-whole\">\n        <h4>Zero waste, organic food gardening in pots outdoors. We’ll send you all you need with an app and community to help as you grow. We’re besties now.<\/h4>\n<a class=\"button\" href=\"\/early-access\">Get Early Access\n<\/a>\n      <\/div>",
+          "image": "shopify:\/\/shop_images\/hero_stopgap_image_fbb37935-1307-46c0-a3bd-8d16d3db7134.png"
+        }
+      },
+      "1571110161714": {
+        "type": "gdno_logo-list",
+        "blocks": {
+          "1571110161714-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gardenio_growyourownfood_asseeinin_austineconetwork.png",
+              "link": ""
+            }
+          },
+          "1571110161714-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gardenio_growyourownfood_asseeinin_austininno.png",
+              "link": ""
+            }
+          },
+          "1571110161714-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gardenio_growyourownfood_asseeinin_builtinaustin.png",
+              "link": ""
+            }
+          },
+          "1571110161714-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gardenio_growyourownfood_asseeinin_culturemap.png",
+              "link": ""
+            }
+          },
+          "1571110194786": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gardenio_growyourownfood_asseeinin_siliconhills.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1571110161714-0",
+          "1571110161714-1",
+          "1571110161714-2",
+          "1571110161714-3",
+          "1571110194786"
+        ],
+        "settings": {
+          "intro": "As seen in:",
+          "classes": "border-bottom border-top pt-3 pb-3"
+        }
       }
     },
     "content_for_index": [
+      "1571110074053",
+      "1571110161714",
       "1492033924902",
       "1570151560292",
       "1570151788361",
       "1570152747459",
       "1570153682611",
-      "1570154119668",
-      "1570154363956"
+      "1570154363956",
+      "1571099321905"
     ]
   },
   "presets": {
