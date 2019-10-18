@@ -55,6 +55,7 @@
           "logo": "shopify:\/\/shop_images\/icon-transparent.png",
           "logo_max_width": 50,
           "main_linklist": "main-menu",
+          "hide_nav": true,
           "message": false,
           "home_page_only": false,
           "message_text": "Sign up today and recieve 20% off",
@@ -442,8 +443,10 @@
       "1571110074053": {
         "type": "gdno_splash",
         "settings": {
-          "splash_content": "<div class=\"coming-in-2020 mb-2\">Spring 2020<\/div>\n      <h1>A new kind of garden club<\/h1>\n      <div class=\"two-thirds small--one-whole\">\n        <h4>Zero waste, organic food gardening in pots outdoors. We’ll send you all you need with an app and community to help as you grow. We’re besties now.<\/h4>\n<a class=\"button\" href=\"\/early-access\">Get Early Access\n<\/a>\n      <\/div>",
-          "image": "shopify:\/\/shop_images\/hero_stopgap_image_fbb37935-1307-46c0-a3bd-8d16d3db7134.png"
+          "splash_content": "<div class=\"coming-in-2020 mb-2\">Spring 2020<\/div>\n      <h1>A new kind of garden club<\/h1>\n      <div class=\"two-thirds small--one-whole\">\n        <h4 class=\"mb-2\">Zero waste, organic food gardening in pots outdoors. We’ll send you all you need with an app and community to help as you grow. We’re besties now.<\/h4>\n      <\/div>",
+          "image": "shopify:\/\/shop_images\/hero_stopgap_image_fbb37935-1307-46c0-a3bd-8d16d3db7134.png",
+          "overlay_content": "",
+          "cta": "<a class=\"button\" id=\"open-early-access-modal\">Get Early Access\n<\/a>"
         }
       },
       "1571110161714": {
@@ -496,6 +499,14 @@
           "intro": "As seen in:",
           "classes": "border-bottom border-top pt-3 pb-3"
         }
+      },
+      "1571365935823": {
+        "type": "overlay",
+        "settings": {
+          "overlayId": "early-access-modal",
+          "backgroundColor": "rgba(65,182,172,0.96)",
+          "overlay_content": "<!-- Begin Mailchimp Signup Form -->\n<div id=\"early-access-signup-form\">\n<form action=\"https:\/\/growgardenio.us17.list-manage.com\/subscribe\/post?u=60273978af6c7f5765a55d626&amp;id=8ea4d4e0dd\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate=\"\">\n    <div id=\"mc_embed_signup_scroll\">\n\t<div class=\"flex-field-group-container\">\n<div class=\"mc-field-group\">\n\t<label for=\"mce-FNAME\">First Name <\/label>\n\t<input type=\"text\" value=\"\" name=\"FNAME\" class=\"\" id=\"mce-FNAME\">\n<\/div>\n<div class=\"mc-field-group\">\n\t<label for=\"mce-LNAME\">Last Name <\/label>\n\t<input type=\"text\" value=\"\" name=\"LNAME\" class=\"\" id=\"mce-LNAME\">\n<\/div>\n<\/div>\n<div class=\"mc-field-group\">\n\t<label for=\"mce-EMAIL\">Email Address <\/label>\n\t<input type=\"email\" value=\"\" name=\"EMAIL\" class=\"required email\" id=\"mce-EMAIL\">\n<\/div>\n<div class=\"mc-field-group\">\n\t<label for=\"mce-MMERGE5\">Zip Code <\/label>\n\t<input type=\"text\" value=\"\" name=\"MMERGE5\" class=\"required\" id=\"mce-MMERGE5\">\n<\/div>\n\t<div id=\"mce-responses\" class=\"clear\">\n\t\t<div class=\"response\" id=\"mce-error-response\" style=\"display:none\"><\/div>\n\t\t<div class=\"response\" id=\"mce-success-response\" style=\"display:none\"><\/div>\n\t<\/div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n    <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_60273978af6c7f5765a55d626_8ea4d4e0dd\" tabindex=\"-1\" value=\"\"><\/div>\n    <div class=\"clear text-center\"><input type=\"submit\" value=\"Get me on that list!\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button button--white text--cyan\"><\/div>\n    <\/div>\n<\/form>\n<\/div>\n\n<!--End mc_embed_signup-->"
+        }
       }
     },
     "content_for_index": [
@@ -507,7 +518,8 @@
       "1570152747459",
       "1570153682611",
       "1570154363956",
-      "1571099321905"
+      "1571099321905",
+      "1571365935823"
     ]
   },
   "presets": {

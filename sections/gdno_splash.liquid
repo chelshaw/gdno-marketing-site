@@ -7,15 +7,15 @@
     <div class="one-whole home-splash__wrapper">
       <div class="home-splash__image-wrapper small--push-five-twelfths medium-up--push-five-twelfths seven-twelfths text-right">
         {% if section.settings.image != blank %}
-        <div class="relative-image-wrapper">
-          {{ section.settings.image | img_url: '600x600' | img_tag: section.settings.image.alt, 'splash__main-image' }}
-          <div class="top-right-sun" aria-hidden="true">
-            {{ 'gardenio_growyourownfood_hero_sun.png' | asset_url | img_tag: 'Leaf illustration' }}
+          <div class="relative-image-wrapper small--hide">
+            {{ section.settings.image | img_url: '600x600' | img_tag: section.settings.image.alt, 'splash__main-image' }}
+            <div class="top-right-sun" aria-hidden="true">
+              {{ 'gardenio_growyourownfood_hero_sun.png' | asset_url | img_tag: 'Leaf illustration' }}
+            </div>
+            <div class="bottom-right-loop" aria-hidden="true">
+              {{ 'gardenio_growyourownfood_hero_redloop.png' | asset_url | img_tag: 'Leaf illustration' }}
+            </div>
           </div>
-          <div class="bottom-right-loop" aria-hidden="true">
-            {{ 'gardenio_growyourownfood_hero_redloop.png' | asset_url | img_tag: 'Leaf illustration' }}
-          </div>
-        </div>
         {% else %}
           <div class="relative-image-wrapper">
             <img src="https://dummyimage.com/625x700/666666/fefefe&text=Hero+Image" />
@@ -24,8 +24,12 @@
           </div>
         {% endif %}
       </div>
-      <div id="home__splash-content" class="home-splash__content one-half small--two-thirds">
+      <div id="home__splash-content" class="home-splash__content one-half small--one-whole">
         {{ section.settings.splash_content }}
+        <div class="medium-up--hide text-center pv-2">
+          {{ section.settings.image | img_url: '600x600' | img_tag: section.settings.image.alt, 'splash__main-image' }}
+        </div>
+        {{ section.settings.cta}}
       </div>
     </div>
   </div>
@@ -45,6 +49,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "Hero Image"
+    },
+    {
+      "type": "html",
+      "id": "cta",
+      "label": "Call to action"
     }
   ],
   "presets": [
@@ -57,11 +66,16 @@
 {% endschema %}
 
 {% javascript %}
-function(
-  const textHeight = document.getElementById('home__splash-content').clientHeight;
-  const mainHeight = document.getElementById('home__splash').clientHeight;
-  if (textHeight > mainHeight) {
-    document.getElementById('home__splash').style.clientHeight = textHeight.toString() + 'px';
+(function() {
+  function fixSplashHeight() {
+    const textHeight = document.getElementById('home__splash-content').clientHeight;
+    const mainHeight = document.getElementById('home__splash').clientHeight;
+    if (textHeight > mainHeight) {
+      document.getElementById('home__splash').style.clientHeight = `${textHeight}px`;
+      console.log(`update #home__splash to ${textHeight}px`);
+    }
   }
-)();
+
+  fixSplashHeight();
+})();
 {% endjavascript %}

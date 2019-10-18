@@ -1383,7 +1383,7 @@ h1 {
   font-weight: bolder;
 
   @include media-query($small) {
-    font-size: em(60);
+    font-size: em(40);
   }
 }
 
