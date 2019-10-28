@@ -2729,7 +2729,7 @@ textarea {
   @include media-query($medium-up) {
     // Prevent mobile menu inline styles from overriding desktop styles
     // sass-lint:disable no-important
-    @include transform(translate3d(0, 0, 0));
+    // @include transform(translate3d(0, 0, 0));
   }
 }
 
@@ -8132,5 +8132,30 @@ a.link {
     position: absolute;
     right: 42%;
     top: 32%;
+  }
+}
+
+.inline-label-group {
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  box-shadow: 0 7px 13px 0 rgba(221, 221, 221, 0.5);
+  margin-bottom: 1em;
+  padding: 0.8em;
+
+  input[type="email"],
+  input[type="text"] {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  label {
+    padding: 0;
+    margin: 0;
+    color: #95999c;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
   }
 }
