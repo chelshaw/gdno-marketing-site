@@ -1,0 +1,137 @@
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item medium-up--one-half medium-up--push-one-quarter">
+      <div class="section-header text-center">
+        <h1 class="h2">{{ page.title }}</h1>
+      </div>
+
+      {% if page.content.size > 0 %}
+        <div class="rte">
+          {{ page.content }}
+        </div>
+      {% endif %}
+
+      <div class="contact-form form-vertical">
+        {%- assign formId = 'InviteForm' -%}
+        {% form 'contact', id: formId %}
+          {%- if form.posted_successfully? -%}
+            <p class="form-message form-message--success text-center" tabindex="-1" data-form-status>
+              Thanks for helping us spread the word! May your flower buds always bloom.
+            </p>
+          {%- else -%}
+          {% include 'form-status', form_id: formId %}
+            <div class="grid grid--half-gutters">
+              <input type="hidden" id="ContactFormInviteFriends" name="contact[invite]" value="Invite my friends" />
+              <div class="grid__item">
+                <div class="inline-label-group">
+                  <label for="{{ formId }}-name">Your Name (so we can say who sent us)</label>
+                  <input
+                    aria-required="true"
+                    type="text"
+                    id="{{ formId }}-name"
+                    name="contact[name]"
+                    value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                  >
+                </div>
+
+              </div>
+              <div class="grid__item">
+                <div class="inline-label-group">
+                  <label for="{{ formId }}-invite1">Email</label>
+                  <input
+                    type="email"
+                    id="{{ formId }}-invite1"
+                    name="contact[email]"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    aria-required="true"
+                    value="{% if form[email] %}{{ form[email] }}{% endif %}"
+                    {%- if form.errors contains 'email' -%}
+                      class="input--error"
+                      aria-invalid="true"
+                      aria-describedby="{{ formId }}-email-error"
+                    {%- endif -%}
+                  >
+                </div>
+                {%- if form.errors contains 'Invite1' -%}
+                  <span id="{{ formId}}-email-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                    {% include 'icon-error' %}
+                    <span>That email doesn't look right.</span>
+                  </span>
+                {%- endif -%}
+              </div>
+              <div class="grid__item">
+                <div class="inline-label-group">
+                  <label for="{{ formId }}-invite2">Email</label>
+                  <input
+                    type="email"
+                    id="{{ formId }}-invite2"
+                    name="contact[Invite2]"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    value="{% if form[Invite2] %}{{ form[Invite2] }}{% endif %}"
+                    {%- if form.errors contains 'Invite2' -%}
+                      class="input--error"
+                      aria-invalid="true"
+                      aria-describedby="{{ formId }}-email-error"
+                    {%- endif -%}
+                  >
+                </div>
+                {%- if form.errors contains 'Invite2' -%}
+                  <span id="{{ formId}}-email-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                    {% include 'icon-error' %}
+                    <span>That email doesn't look right.</span>
+                  </span>
+                {%- endif -%}
+              </div>
+              <div class="grid__item">
+                <div class="inline-label-group">
+                  <label for="{{ formId }}-invite3">Email</label>
+                  <input
+                    type="email"
+                    id="{{ formId }}-invite3"
+                    name="contact[Invite3]"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    value="{% if form[Invite3] %}{{ form[Invite3] }}{% endif %}"
+                    {%- if form.errors contains 'Invite3' -%}
+                      class="input--error"
+                      aria-invalid="true"
+                      aria-describedby="{{ formId }}-email-error"
+                    {%- endif -%}
+                  >
+                </div>
+                {%- if form.errors contains 'Invite3' -%}
+                  <span id="{{ formId}}-email-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                    {% include 'icon-error' %}
+                    <span>That email doesn't look right.</span>
+                  </span>
+                {%- endif -%}
+              </div>
+            </div>
+
+            <div class="text-center">
+              {% if form.errors %}
+                <input
+                  type="submit"
+                  class="button"
+                  value="Send Invites"
+                  disabled
+                >
+              {% else %}
+                <input
+                  type="submit"
+                  class="button"
+                  value="Send Invites"
+                >
+              {% endif %}
+            </div>
+          {%- endif -%}
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
