@@ -1,3 +1,34 @@
+@font-face {
+  font-family: "Circular Air";
+  src: url('{{ "CircularAirPro-Medium.otf" | asset_url }}');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Air";
+  src: url('{{ "CircularAirPro-Black.otf" | asset_url }}');
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Air";
+  src: url('{{ "CircularAirPro-Bold.otf" | asset_url }}');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Air";
+  src: url('{{ "CircularAirPro-Light.otf" | asset_url }}');
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Air";
+  src: url('{{ "CircularAirPro-LightItalic.otf" | asset_url }}');
+  font-weight: lighter;
+  font-style: italic;
+}
+
 $black: #141925;
 $darkGray: #081a2b;
 $medGray: #aeafb2;
@@ -554,11 +585,11 @@ $font-weight-body--bold: {{ base_font_bold.weight | default: 700 }};
 $font-weight-body--bolder: {{ base_font_bolder.weight | default: 700 }};
 $font-weight-header--bold: {{ header_font_bold.weight | default: 700 }};
 
-$font-stack-header: {{ header_font.family }}, {{ header_font.fallback_families }};
+$font-stack-header: "Circular Air", {{ header_font.family }}, {{ header_font.fallback_families }};
 $font-style-header: {{ header_font.style }};
 $font-weight-header: {{ header_font.weight }};
 
-$font-stack-body: {{ base_font.family }}, {{ base_font.fallback_families }};
+$font-stack-body: "Circular Air", {{ base_font.family }}, {{ base_font.fallback_families }};
 $font-style-body: {{ base_font.style }};
 $font-weight-body: {{ base_font.weight }};
 
@@ -567,7 +598,7 @@ $font-bold-titles: {{ settings.type_bold_product_titles }};
 
 $font-size-base: {{ settings.type_base_size }}px; // Henceforth known as 1em
 
-$font-stack-cart-notification: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-cart-notification: "Circular Air", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $font-size-mobile-input: 16px; // min 16px to prevent zooming
 
@@ -1465,7 +1496,7 @@ h6 {
 }
 
 h1 {
-  font-size: em(100);
+  font-size: em(94);
   text-transform: none;
   letter-spacing: 0;
   line-height: 1;
@@ -7661,6 +7692,10 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   position: relative;
 }
 
+.home-splash__content h4 {
+  line-height: 1.5;
+}
+
 @include media-query($medium-up) {
   .home-splash__content {
     position: absolute;
@@ -7911,6 +7946,21 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   background-image: url({{"example-team.jpg"|asset}});
   background-size: cover;
   padding: 100px 1em;
+}
+
+.resp-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .memberships-container {

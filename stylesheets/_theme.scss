@@ -465,11 +465,11 @@ $font-weight-body--bold: {{ base_font_bold.weight | default: 700 }};
 $font-weight-body--bolder: {{ base_font_bolder.weight | default: 700 }};
 $font-weight-header--bold: {{ header_font_bold.weight | default: 700 }};
 
-$font-stack-header: {{ header_font.family }}, {{ header_font.fallback_families }};
+$font-stack-header: "Circular Air", {{ header_font.family }}, {{ header_font.fallback_families }};
 $font-style-header: {{ header_font.style }};
 $font-weight-header: {{ header_font.weight }};
 
-$font-stack-body: {{ base_font.family }}, {{ base_font.fallback_families }};
+$font-stack-body: "Circular Air", {{ base_font.family }}, {{ base_font.fallback_families }};
 $font-style-body: {{ base_font.style }};
 $font-weight-body: {{ base_font.weight }};
 
@@ -478,7 +478,7 @@ $font-bold-titles: {{ settings.type_bold_product_titles }};
 
 $font-size-base: {{ settings.type_base_size }}px; // Henceforth known as 1em
 
-$font-stack-cart-notification: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-cart-notification: "Circular Air", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $font-size-mobile-input: 16px; // min 16px to prevent zooming
 
@@ -1376,7 +1376,7 @@ h6 {
 }
 
 h1 {
-  font-size: em(100);
+  font-size: em(94);
   text-transform: none;
   letter-spacing: 0;
   line-height: 1;
