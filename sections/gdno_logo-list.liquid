@@ -10,7 +10,7 @@
         {% for block in section.blocks %}
           <li class="as-seen-in-list__item" {{ block.shopify_attributes }}>
             {% if block.settings.link != blank %}
-              <a href="{{ block.settings.link }}" class="logo-bar__link">
+              <a href="{{ block.settings.link }}" target="_blank" rel="noopener noreferrer" class="logo-bar__link">
             {% endif %}
             {% if block.settings.image != blank %}
               {{ block.settings.image | img_url: '160x160', scale: 2 | img_tag: block.settings.image.alt, 'logo-bar__image' }}
@@ -36,7 +36,7 @@
 {% schema %}
 {
   "name": "Seen In List",
-  "class": "index-section",
+  "class": "logo-list-section",
   "max_blocks": 20,
   "settings": [
     {
