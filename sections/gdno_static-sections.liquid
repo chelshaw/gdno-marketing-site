@@ -1,0 +1,330 @@
+{% if section.settings.type == 'none' %}
+<div id="placeholder" class="text-center">
+  <h2>{{ section.settings.title | escape }}</h2>
+</div>
+{% endif %}
+
+{% if section.settings.type == 'memberships-overview' %}
+<section id="home__memberships-overview" class="pb-4">
+  <div class="memberships-container page-width pt-2">
+    <div class="one-whole text-center pb-2">
+      <h2>
+        {{ section.settings.title | escape }}
+        <!-- Memberships -->
+      </h2>
+    </div>
+    <div class="membership-block membership-block--green">
+      <div class="membership-block__details">
+        <h3>Green</h3>
+        <p>Access the app for forever and a day.</p>
+      </div>
+      <div class="pt-3"></div>
+      {% comment %}
+      <a class="button-text right-arrow">Get it free</a>
+      {% endcomment %}
+    </div>
+    <div class="membership-block membership-block--rose">
+      <div class="membership-block__details">
+        <h3>Rose</h3>
+        <p>Monthly recurring access to <strong>Premium app</strong>.</p>
+      </div>
+      <div class="pt-3"></div>
+      {% comment %}
+      <a class="button-text right-arrow">Learn more</a>
+      {% endcomment %}
+    </div>
+    <div class="membership-block membership-block--gold">
+      <div class="membership-block__details">
+        <h3>Gold</h3>
+        <p>Seasonal membership to <strong>Premium app</strong> + we send you stuff</p>
+      </div>
+      <div class="pt-3"></div>
+      {% comment %}
+      <a class="button-text right-arrow">Learn more</a>
+      {% endcomment %}
+    </div>
+  </div>
+  {% comment %}
+  <div class="pv-2 text-center">
+    <a class="button">Compare Memberships</a>
+  </div>
+  {% endcomment %}
+</section>
+{% endif %}
+
+{% if section.settings.type == 'memberships-overview-curated-box' %}
+<section id="memberships-overview-curated-box">
+  <div id="curated-box-illo"></div>
+  <div class="page-width">
+    <div class="one-whole medium-up--one-half">
+      <span class="membership-badge membership-badge--gold">Gold</span>
+      <h3>
+        {{ section.settings.title | escape }}
+        <!-- First, we throw a curated box at your front door, every season -->
+      </h3>
+      <p>We make it dang near impossible to make the wrong first step. Go Gold and every season you get a box with all this plant stuff in it for a single plant - right for your location, setup, and time of year. Pick your plant and container color. Customize it before your next order ships.</p>
+    </div>
+  </div>
+  <div class="page-width pt-3 pos-rel">
+    <div class="grid">
+      <div class="grid__item one-half medium-up--one-third mb-1">
+        <img src="https://dummyimage.com/354x250/666666/fefefe&text=Eco-Container" />
+      </div>
+      <div class="grid__item one-half medium-up--one-third mb-1">
+        <img src="https://dummyimage.com/354x250/666666/fefefe&text=Live+Organic+Plant" />
+      </div>
+      <div class="grid__item one-half medium-up--one-third mb-1">
+        <img src="https://dummyimage.com/354x250/666666/fefefe&text=Custom+soil" />
+      </div>
+      <div class="grid__item one-half medium-up--one-third mb-1">
+        <img src="https://dummyimage.com/354x250/666666/fefefe&text=Mulch" />
+      </div>
+      <div class="grid__item one-half medium-up--one-third mb-1">
+        <img src="https://dummyimage.com/354x250/666666/fefefe&text=Care+Guide" />
+      </div>
+      <div class="grid__item one-half medium-up--one-third mb-1">
+        <img src="https://dummyimage.com/354x250/666666/fefefe&text=Eco-packaging" />
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+{% endif %}
+
+{% if section.settings.type == 'memberships-overview-plant-meals' %}
+<section id="memberships-overview-plant-meals">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item one-whole medium-up--one-half">
+        <span class="membership-badge membership-badge--gold">Gold</span>
+        <h3>
+          {{ section.settings.title | escape }}
+          <!-- Then, we'll send you plant meals on autopilot -->
+        </h3>
+        <p>Plants eat nutrients in the soil, so ya gotta feed them to get the most out of them! Folks don’t know what to feed their plant, when to feed it, how much to feed it, or how to feed it. We do. So, we send you plant meals, when you need it, in the amount you need it, and tell ya how to feed it. Easy as it gets.</p>
+      </div>
+      <div class="grid__item one-half push-one-fourth medium-up--five-twelfths medium-up--push-one-twelfth">
+        <img src="https://dummyimage.com/550x650/666666/fefefe&text=Lifestyle-Shot" />
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+{% endif %}
+
+{% if section.settings.type == 'memberships-overview-infinite-lives' %}
+<section id="memberships-overview-infinite-lives" class="relative-image-wrapper">
+  <div class="hidden medium-up--show blue-splash absolute-child"></div>
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item eight-tenths push-one-eighth medium-up--one-half medium-up--push-one-quarter text-center relative-image-wrapper">
+        <img class="absolute-child infinity-sign" src="{{'gardenio_growyourownfood_infinitysign.svg'|asset_url}}" />
+        <span class="membership-badge membership-badge--gold">Gold</span>
+        <h3>
+          {{ section.settings.title | escape }}
+          <!-- Oh, you get infinite lives -->
+        </h3>
+        <p>
+          Listen, we don’t want you getting wound up in whether one specific plant lives or dies. <em>Gardeners grow</em> - that’s science. If your plant dies for any reason, we’ll send you a new one so you can keep the growin’ goin’ as long as you’re a member.<br />
+          We. Have. Your. Back.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="page-width pt-3">
+    <div class="grid">
+      <div class="grid__item one-whole">
+        <div class="relative-image-wrapper">
+          <img src="https://dummyimage.com/1100x350/666666/fefefe&text=Lifestyle-Shot" />
+          <img class="absolute-child infinite-lives-hearts" src="{{'gardenio_growyourownfood_infinitelives_hearts.png'|asset_url}}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+{% endif %}
+
+{% if section.settings.type == 'memberships-overview-premium-app-support' %}
+<section id="memberships-overview-premium-app-support">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item one-whole medium-up--five-twelfths">
+        <span class="membership-badge membership-badge--rose">Rose</span>
+        <span class="membership-badge__divider"> • </span>
+        <span class="membership-badge membership-badge--gold">Gold</span>
+        <h3>
+          {{ section.settings.title | escape }}
+          <!-- Lastly, we hook you up with premium app support to help you as you grow -->
+        </h3>
+        <p>Get connected to the world’s best localized knowledge base; to problem solving tools and supplies; and to other nearby growers on and offline. Got your own plantstuff? Cool, you want the Rose membership.</p>
+        <div id="interactive__app-support">
+          <div class="interactive-item selected" data-interactive="plantAdvice">
+            <h4>Contextual plant advice</h4>
+            <p>Get advice based on where you live like “It’s gonna freeze! Bring your plamts inside!” or “Hey, it’s hot! Did you water your plants?”</p>
+          </div>
+          <div class="interactive-item" data-interactive="digitalTools">
+            <h4>Digital tools for the home gardener</h4>
+            <p>We’re building tools to help you identify bad bugs, weird diseases, sick plants, and what to do about it organically and sustainably.</p>
+          </div>
+          <div class="interactive-item" data-interactive="connectLocal">
+            <h4>Connect with local growers</h4>
+            <p>Post photos and videos of what’s up with your plant and connect to other folks growing who can help. Growing is and always has been a community effort.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-quarter pb-1"></div>
+      <div class="grid__item hidden medium-up--show medium-up--one-third">
+        <img id="interactive__app-support__image" src="https://dummyimage.com/3560x770/666666/fefefe&text=Plant-Advice" />
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+{% endif %}
+
+{% if section.settings.type == 'memberships-overview-start-free' %}
+<section id="memberships-overview-start-free">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item one-whole text-center">
+        <span class="membership-badge membership-badge--green">Green</span>
+        <h2>
+          {{ section.settings.title | escape }}
+          <!-- Get Started Free -->
+        </h2>
+      </div>
+      <div class="grid__item one-whole medium-up--one-third">
+        <div class="get-started__image one-app"></div>
+        <div class="get-started__content text-center">
+          <h5>We’ll keep all your plant care information in one damn app.</h5>
+          <p>No more scouring google for how much to water, what kind of sun it needs, what kind of soil it needs.</p>
+        </div>
+      </div>
+      <div class="grid__item one-whole medium-up--one-third">
+        <div class="get-started__image we-help"></div>
+          <div class="get-started__content text-center">
+          <h5>We’ll help you when
+          things get weird</h5>
+          <p>For a limited time, get full email support for issues you’re running into in your garden.</p>
+        </div>
+      </div>
+      <div class="grid__item one-whole medium-up--one-third">
+        <div class="get-started__image we-help"></div>
+        <div class="get-started__content text-center">
+          <h5>We’ll tell you how to do delicious things with plants </h5>
+          <p>We connect you to crafty entree, side, and cocktail recipes to stand out at the potluck.</p>
+        </div>
+      </div>
+      <div class="grid__item one-whole text-center pv-4">
+        <a class="button" href="#">Become a member</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if section.settings.type == 'our-story' %}
+<section id="our-story">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item one-half medium-up--three-fifths text-white">
+        <h2>
+          {{ section.settings.title | escape }}
+          <!-- We&apos;re a scrappy team on a mission to create the next generation
+           of lifelong at-home food gardeners. Check out our story. -->
+        </h2>
+        <a class="button has-addon">
+          <span class="play-icon-circle mr-1" aria-hidden="true"></span>
+          Watch Video
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% javascript %}
+  const targetClass = '.interactive-item';
+
+  function switchSelectedForTargetElement(el) {
+    const intWrapper = document.getElementById('interactive__app-support');
+    const oldSelected = intWrapper.querySelector('.selected');
+    oldSelected.classList.remove('selected');
+    const newSelected = event.target.matches(targetClass) ? event.target : event.target.parentNode;
+    newSelected.classList.add('selected');
+  }
+
+  function initInteractiveAppSupport() {
+    document.addEventListener('click', function (event) {
+    	// If the clicked element doesn't have the right selector, bail
+    	if (!event.target.matches(targetClass) && !event.target.parentNode.matches(targetClass)) return;
+    	// Don't follow the link
+    	event.preventDefault();
+      switchSelectedForTargetElement(event.target);
+    }, false);
+  }
+
+  // initInteractiveAppSupport();
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "GDNO Static Section",
+  "class": "gdno--static-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "type",
+      "label": "Section",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "memberships-overview",
+          "label": "Memberships Overview"
+        },
+        {
+          "value": "our-story",
+          "label": "Our Story"
+        },
+        {
+          "value": "memberships-overview-curated-box",
+          "label": "Curated box delivered"
+        },
+        {
+          "value": "memberships-overview-plant-meals",
+          "label": "Plant Meals"
+        },
+        {
+          "value": "memberships-overview-infinite-lives",
+          "label": "Infinite Lives"
+        },
+        {
+          "value": "memberships-overview-premium-app-support",
+          "label": "Premium App Support"
+        },
+        {
+          "value": "memberships-overview-start-free",
+          "label": "Get Started Free"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Section Title Goes Here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "GDNO Static Section",
+      "category": "Advanced layout"
+    }
+  ]
+}
+{% endschema %}

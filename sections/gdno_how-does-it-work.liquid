@@ -1,0 +1,87 @@
+<div id="home__how-does-it-work" class="mb-4">
+  <div id="home__green-bg">
+    <div class="page-width text-white text-center how-it-works-content">
+      {% if section.settings.title != blank %}
+        <div class="one-half small-one-whole centered-content">
+          <h2>
+          {{ section.settings.title | escape }}
+          </h2>
+        </div>
+      {% endif %}
+      <div class="four-fifths small-one-whole centered-content ph-2">
+        <p class="text-white">
+          {{ section.settings.text }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="how-does-it-work-video" class="page-width">
+    <div class="four-fifths small-one-whole centered-content pb-2">
+      {%- if section.settings.video_link != blank -%}
+        {% if section.settings.video_link.type == "youtube" %}
+          <div class="resp-container">
+            <iframe src="//www.youtube.com/embed/{{ section.settings.video_link.id }}?rel=0&showinfo=0&vq=720" frameborder="0" allowfullscreen class="resp-iframe"></iframe>
+          </div>
+        {% elsif section.settings.video_link.type == "vimeo" %}
+          <div class="resp-container">
+            <iframe src="//player.vimeo.com/video/{{ section.settings.video_link.id }}?byline=0&portrait=0&badge=0" frameborder="0" allowfullscreen class="resp-iframe"></iframe>
+          </div>
+        {% endif %}
+      {% elsif section.settings.image != blank %}
+        <div class="relative-image-wrapper small--hide">
+          {{ section.settings.image | img_url | img_tag: section.settings.image.alt, 'lifestyle-image' }}
+          <div class="top-right-sun" aria-hidden="true">
+            {{ 'gardenio_growyourownfood_hero_sun.png' | asset_url | img_tag: 'Leaf illustration' }}
+          </div>
+          <div class="bottom-right-loop" aria-hidden="true">
+            {{ 'gardenio_growyourownfood_hero_redloop.png' | asset_url | img_tag: 'Leaf illustration' }}
+          </div>
+        </div>
+      {% else %}
+        <img src="https://dummyimage.com/1100x700/666666/fefefe&text=Lifestyle+Image+or+Video" />
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Gardenio How Does It Work",
+  "class": "gdno--static-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "But hey, what is this Gardenio thing? How does it work?"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Well buddy, we have three memberships. The first one is free and lets you access the free app, the second gives you monthly access to our premium app, and the third gives you the premium app *and* we send you everything you need each full season. Here’s what your life could look like:"
+    },
+    {
+      "type": "video_url",
+      "id": "video_link",
+      "label": "Video Link",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "GDNO How Does It Work",
+      "category": "Advanced layout"
+    }
+  ]
+}
+{% endschema %}
