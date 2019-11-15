@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Full Color Mark</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="/home-copy" transform="translate(-250.000000, -5376.000000)" fill="#FF9292" fill-rule="nonzero">
+            <g id="Group-7-Copy-2" transform="translate(250.000000, 5375.000000)">
+                <g id="Full-Color-Mark" transform="translate(9.000000, 9.500000) rotate(-90.000000) translate(-9.000000, -9.500000) translate(0.000000, 1.000000)">
+                    <path d="M7.33581661,17 L13.9220536,17 C17.9735133,17 18.6344495,14.7785244 15.3969013,12.0370142 L5.86096899,4.38763861 C2.6240452,1.64665726 0,3.1197338 0,7.67680089 L0,8.74785198 C0,13.3053875 3.28445211,17 7.33581661,17" id="Rectangle" style="mix-blend-mode: multiply;"></path>
+                    <path d="M7.33581661,0 L13.9220536,0 C17.9735133,0 18.6344495,2.2214756 15.3969013,4.96298579 L5.86096899,12.6123613 C2.6240452,15.3533428 0,13.8802662 0,9.32319911 L0,8.25214803 C0,3.69461252 3.28445211,0 7.33581661,0" id="Rectangle-Copy" style="mix-blend-mode: multiply;"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

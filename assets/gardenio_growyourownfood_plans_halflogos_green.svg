@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="113px" height="69px" viewBox="0 0 113 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Group 41</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="/home-copy" transform="translate(-491.000000, -2434.000000)" fill-rule="nonzero">
+            <g id="Group-15" transform="translate(250.000000, 2196.000000)">
+                <g id="Group-2" transform="translate(0.000000, 81.000000)">
+                    <g id="Group-41" transform="translate(240.500000, 157.000000)">
+                        <rect id="Rectangle" fill-opacity="0" fill="#FFFFFF" x="0.5" y="0" width="113" height="69"></rect>
+                        <g id="Full-Color-Mark" transform="translate(57.000000, 58.000000) rotate(-90.000000) translate(-57.000000, -58.000000) translate(-1.000000, 1.500000)">
+                            <path d="M48.7616045,113 L92.5407092,113 C119.471,113 123.864282,98.2337209 102.344108,80.0107416 L38.9582056,29.1648919 C17.4421828,10.9454277 0,20.7370541 0,51.0281471 L0,58.1474867 C0,88.4416933 21.8319464,113 48.7616045,113" id="Rectangle" fill="#41B6AC" style="mix-blend-mode: multiply;"></path>
+                            <path d="M48.7616045,0 L92.5407092,0 C119.471,0 123.864282,14.766279 102.344108,32.9892585 L38.9582056,83.8351075 C17.4421828,102.054573 0,92.2629461 0,61.9718529 L0,54.8525134 C0,24.5583068 21.8319464,0 48.7616045,0" id="Rectangle-Copy" fill="#73B641" style="mix-blend-mode: multiply;"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
