@@ -57,3 +57,20 @@ $box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.09);
 14px -- label
 18px -- input
 */
+
+/*
+ * per caniuse, these should be display set so that IE uses them
+ */
+section,
+article,
+aside,
+header,
+footer,
+nav,
+figure,
+figcaption,
+time,
+mark,
+main {
+  display: block;
+}

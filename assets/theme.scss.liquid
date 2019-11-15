@@ -58,6 +58,23 @@ $box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.09);
 18px -- input
 */
 
+/*
+ * per caniuse, these should be display set so that IE uses them
+ */
+section,
+article,
+aside,
+header,
+footer,
+nav,
+figure,
+figcaption,
+time,
+mark,
+main {
+  display: block;
+}
+
 @mixin padding-helpers-generator($level: 1) {
   .p-#{$level} {
     padding: #{$level}em;
@@ -355,6 +372,46 @@ $numbers: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 @mixin default-focus-ring() {
   outline: 1px dotted #212121;
   outline: 5px auto -webkit-focus-ring-color;
+}
+
+/*
+ * should be used when wrapped around items
+ * with gutter padding so that it still aligns
+ */
+@mixin pull-left() {
+  margin-left: -$grid-gutter;
+  @include media-query($small) {
+    margin-left: -$grid-gutter-mobile;
+  }
+}
+
+@mixin responsive-gutter($position) {
+  @if $position == left {
+    padding-left: $grid-gutter;
+    @include media-query($small) {
+      padding-left: $grid-gutter-mobile;
+    }
+  } @else if $position == right {
+    padding-right: $grid-gutter;
+    @include media-query($small) {
+      padding-right: $grid-gutter-mobile;
+    }
+  } @else if $position == top {
+    padding-top: $grid-gutter;
+    @include media-query($small) {
+      padding-top: $grid-gutter-mobile;
+    }
+  } @else if $position == bottom {
+    padding-bottom: $grid-gutter;
+    @include media-query($small) {
+      padding-bottom: $grid-gutter-mobile;
+    }
+  } @else  {
+    padding: $grid-gutter;
+    @include media-query($small) {
+      padding: $grid-gutter-mobile;
+    }
+  }
 }
 
 /*============================================================================
@@ -7671,21 +7728,6 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   }
 }
 
-/* SECTIONS
-   - hero
-   - as seen in
-   - how it works
-   - offset video
-   - memberships overview
-   - curated box contents
-   - autopilot plant meals
-   - infinite lives
-   - premium app support
-   - get with green
-   - team mission
-   - join email list
- */
-
 .home-splash__wrapper,
 #home__splash,
 #home__hero {
@@ -7718,6 +7760,10 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   padding-bottom: 80px;
 }
 
+.absolute-child {
+  position: absolute;
+}
+
 .relative-image-wrapper {
   position: relative;
   overflow: visible;
@@ -7735,34 +7781,54 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
     right: -60px;
     max-width: 130px;
   }
-}
 
-#early-access-modal {
-  background: rgba($cyan, 0.96);
-  color: white;
-  padding: 3em;
-  overflow: scroll;
-}
+  .infinite-lives-hearts {
+    bottom: -26px;
+    right: -36px;
+    max-width: 270px;
+  }
 
-.overlay {
-  position: fixed;
-  background: white;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
-  overflow: hidden;
+  .infinity-sign {
+    right: -250px;
+    top: -40px;
+  }
 
-  &.open {
-    opacity: 1;
-    visibility: visible;
-    height: 100%;
-    z-index: 1000;
+  .blue-splash {
+    left: 0;
+    top: -270px;
+    height: 200%;
+    width: 30%;
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-image: url({{"illo_gardenio_growyourownfood_fuckhomedepot_waterblue.png"|asset}});
   }
 }
+
+#home__hero__leaf {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 133px;
+  @include media-query($small) {
+    opacity: 0.3;
+  }
+}
+
+/* SECTIONS
+   - splash
+   - as seen in
+   - how it works
+   - offset video
+   - memberships overview
+   - curated box contents
+   - autopilot plant meals
+   - infinite lives
+   - premium app support
+   - get with green
+   - team mission
+   - join email list
+ */
 
 #early-access-signup-form {
   max-width: 540px;
@@ -7797,21 +7863,6 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
       padding: 0;
     }
   }
-}
-
-#home__hero__leaf {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 133px;
-  @include media-query($small) {
-    opacity: 0.3;
-  }
-}
-
-#home__as-seen-in {
-  display: flex;
-  align-items: center;
 }
 
 #home__green-bg {
@@ -7861,6 +7912,10 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   }
 }
 
+.no-js .interactive-item {
+  color: inherit;
+}
+
 .flex-form {
   display: flex;
   padding: 20px;
@@ -7899,16 +7954,14 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   }
 }
 
-#shopify-section-1492033924902 {
+// parent of
+// #shopify-section-1573524541947 {
+#memberships-overview-curated-box {
+  margin-top: 115px;
   position: relative;
-  margin-top: 6em;
-
-  hr {
-    margin: 85px 0 0 0;
-  }
 }
 
-#autopilot-meals-illo {
+#curated-box-illo {
   height: 104%;
   width: 50%;
   background-size: contain;
@@ -7948,19 +8001,12 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   padding: 100px 1em;
 }
 
-.resp-container {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-}
-
-.resp-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+/* -------- OVERLAY MODAL ------- */
+#early-access-modal {
+  background: rgba($cyan, 0.96);
+  color: white;
+  padding: 3em;
+  overflow: scroll;
 }
 
 .memberships-container {
@@ -7984,24 +8030,26 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   max-width: 310px;
   margin: 0 10px 10px;
   box-shadow: $box-shadow;
+  background-size: 116px auto; // width height
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }
 
 .membership-block--green {
   border-color: $green;
   background-color: $greenTint;
+  background-image: url({{"gardenio_growyourownfood_plans_halflogos_green.svg"|asset_url}});
 }
 
 .membership-block--rose {
   border-color: $rose;
   background-color: $roseTint;
+  background-image: url({{"gardenio_growyourownfood_plans_halflogos_rose.svg"|asset_url}});
 }
 .membership-block--gold {
   border-color: $gold;
   background-color: $goldTint;
-}
-
-.membership-block__details {
-  margin-bottom: 55px;
+  background-image: url({{"gardenio_growyourownfood_plans_halflogos_gold.svg"|asset_url}});
 }
 
 .membership-badge {
@@ -8025,22 +8073,32 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 .membership-badge--gold {
   color: $goldShade;
   &:before {
-    background-image: url({{"gold-symbol--placeholder.png"|asset_url}});
+    background-image: url({{"gardenio_growyourownfood_logo_gold.svg"|asset_url}});
   }
 }
 
 .membership-badge--rose {
   color: $roseShade;
   &:before {
-    background-image: url({{"rose-symbol--placeholder.png"|asset_url}});
+    background-image: url({{"gardenio_growyourownfood_logo_rose.svg"|asset_url}});
   }
 }
 
 .membership-badge--green {
   color: $green;
   &:before {
-    background-image: url({{"green-symbol--placeholder.png"|asset_url}});
+    background-image: url({{"gardenio_growyourownfood_logo_green.svg"|asset_url}});
   }
+}
+
+.membership-badge__divider {
+  color: $medGray;
+  padding: 0 1em;
+}
+
+#home__as-seen-in {
+  display: flex;
+  align-items: center;
 }
 
 ul.as-seen-in-list {
@@ -8053,10 +8111,12 @@ ul.as-seen-in-list {
 li.as-seen-in-list__item {
   flex-basis: 150px;
   margin-bottom: 1em;
+  padding-left: 1em;
 }
 
 li.as-seen-in-list__item.as-seen-in-list__intro {
-  flex-basis: 90px;
+  flex-basis: 120px;
+  text-transform: uppercase;
 
   h5 {
     font-size: 14px;
@@ -8064,6 +8124,24 @@ li.as-seen-in-list__item.as-seen-in-list__intro {
     letter-spacing: 1px;
     line-height: 18px;
     margin: 0;
+  }
+}
+
+
+.pos-rel,
+section {
+  position: relative;
+}
+
+.section-divider {
+  border-bottom: 1px solid $medGray;
+  width: $width-site - ($gutter-site * 2);
+  height: 0;
+  margin: 5em auto;
+
+  @include media-query($small) {
+    width: auto;
+    margin: 5em $gutter-site-mobile;
   }
 }
 
@@ -8154,6 +8232,10 @@ a.link {
   text-align: right;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .box-shadow {
   box-shadow: $box-shadow;
 }
@@ -8185,6 +8267,26 @@ a.link {
   }
 }
 
+.flex-parent {
+  @include display-flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+}
+
+.grid-parent {
+  @include display-flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include pull-left;
+
+  .grid-item {
+    flex: 0 0 auto;
+    @include responsive-gutter(bottom);
+    @include responsive-gutter(left);
+    max-width: 100%;
+  }
+}
+
 .inline-label-group {
   border: 1px solid #e2e2e2;
   border-radius: 2px;
@@ -8207,5 +8309,41 @@ a.link {
     font-weight: 500;
     letter-spacing: 0.7px;
     text-transform: uppercase;
+  }
+}
+
+// Responsive video containers
+.resp-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.overlay {
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    z-index: 1000;
   }
 }

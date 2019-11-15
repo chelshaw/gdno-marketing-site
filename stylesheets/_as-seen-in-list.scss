@@ -1,3 +1,8 @@
+#home__as-seen-in {
+  display: flex;
+  align-items: center;
+}
+
 ul.as-seen-in-list {
   display: flex;
   justify-content: space-between;
@@ -8,10 +13,12 @@ ul.as-seen-in-list {
 li.as-seen-in-list__item {
   flex-basis: 150px;
   margin-bottom: 1em;
+  padding-left: 1em;
 }
 
 li.as-seen-in-list__item.as-seen-in-list__intro {
-  flex-basis: 90px;
+  flex-basis: 120px;
+  text-transform: uppercase;
 
   h5 {
     font-size: 14px;

@@ -1,0 +1,86 @@
+.home-splash__wrapper,
+#home__splash,
+#home__hero {
+  position: relative;
+}
+
+.home-splash__content h4 {
+  line-height: 1.5;
+}
+
+@include media-query($medium-up) {
+  .home-splash__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.home-splash__image-wrapper {
+  position: relative;
+}
+
+.coming-in-2020 {
+  padding: $input-padding-top-bottom 24px;
+  display: inline-block;
+  background: #fff8eb;
+}
+
+.splash-content {
+  padding-bottom: 80px;
+}
+
+.absolute-child {
+  position: absolute;
+}
+
+.relative-image-wrapper {
+  position: relative;
+  overflow: visible;
+
+  .top-right-sun {
+    position: absolute;
+    top: 10px;
+    right: -80px;
+    max-width: 160px;
+  }
+
+  .bottom-right-loop {
+    position: absolute;
+    bottom: -32px;
+    right: -60px;
+    max-width: 130px;
+  }
+
+  .infinite-lives-hearts {
+    bottom: -26px;
+    right: -36px;
+    max-width: 270px;
+  }
+
+  .infinity-sign {
+    right: -250px;
+    top: -40px;
+  }
+
+  .blue-splash {
+    left: 0;
+    top: -270px;
+    height: 200%;
+    width: 30%;
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-image: url({{"illo_gardenio_growyourownfood_fuckhomedepot_waterblue.png"|asset}});
+  }
+}
+
+#home__hero__leaf {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 133px;
+  @include media-query($small) {
+    opacity: 0.3;
+  }
+}

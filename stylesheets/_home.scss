@@ -1,5 +1,6 @@
+@import "splash";
 /* SECTIONS
-   - hero
+   - splash
    - as seen in
    - how it works
    - offset video
@@ -12,84 +13,6 @@
    - team mission
    - join email list
  */
-
-.home-splash__wrapper,
-#home__splash,
-#home__hero {
-  position: relative;
-}
-
-.home-splash__content h4 {
-  line-height: 1.5;
-}
-
-@include media-query($medium-up) {
-  .home-splash__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
-.home-splash__image-wrapper {
-  position: relative;
-}
-
-.coming-in-2020 {
-  padding: $input-padding-top-bottom 24px;
-  display: inline-block;
-  background: #fff8eb;
-}
-
-.splash-content {
-  padding-bottom: 80px;
-}
-
-.relative-image-wrapper {
-  position: relative;
-  overflow: visible;
-
-  .top-right-sun {
-    position: absolute;
-    top: 10px;
-    right: -80px;
-    max-width: 160px;
-  }
-
-  .bottom-right-loop {
-    position: absolute;
-    bottom: -32px;
-    right: -60px;
-    max-width: 130px;
-  }
-}
-
-#early-access-modal {
-  background: rgba($cyan, 0.96);
-  color: white;
-  padding: 3em;
-  overflow: scroll;
-}
-
-.overlay {
-  position: fixed;
-  background: white;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
-  overflow: hidden;
-
-  &.open {
-    opacity: 1;
-    visibility: visible;
-    height: 100%;
-    z-index: 1000;
-  }
-}
 
 #early-access-signup-form {
   max-width: 540px;
@@ -124,21 +47,6 @@
       padding: 0;
     }
   }
-}
-
-#home__hero__leaf {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 133px;
-  @include media-query($small) {
-    opacity: 0.3;
-  }
-}
-
-#home__as-seen-in {
-  display: flex;
-  align-items: center;
 }
 
 #home__green-bg {
@@ -188,6 +96,10 @@
   }
 }
 
+.no-js .interactive-item {
+  color: inherit;
+}
+
 .flex-form {
   display: flex;
   padding: 20px;
@@ -226,16 +138,14 @@
   }
 }
 
-#shopify-section-1492033924902 {
+// parent of
+// #shopify-section-1573524541947 {
+#memberships-overview-curated-box {
+  margin-top: 115px;
   position: relative;
-  margin-top: 6em;
-
-  hr {
-    margin: 85px 0 0 0;
-  }
 }
 
-#autopilot-meals-illo {
+#curated-box-illo {
   height: 104%;
   width: 50%;
   background-size: contain;
@@ -275,17 +185,10 @@
   padding: 100px 1em;
 }
 
-.resp-container {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-}
-
-.resp-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+/* -------- OVERLAY MODAL ------- */
+#early-access-modal {
+  background: rgba($cyan, 0.96);
+  color: white;
+  padding: 3em;
+  overflow: scroll;
 }

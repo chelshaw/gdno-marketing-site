@@ -237,6 +237,46 @@
   outline: 5px auto -webkit-focus-ring-color;
 }
 
+/*
+ * should be used when wrapped around items
+ * with gutter padding so that it still aligns
+ */
+@mixin pull-left() {
+  margin-left: -$grid-gutter;
+  @include media-query($small) {
+    margin-left: -$grid-gutter-mobile;
+  }
+}
+
+@mixin responsive-gutter($position) {
+  @if $position == left {
+    padding-left: $grid-gutter;
+    @include media-query($small) {
+      padding-left: $grid-gutter-mobile;
+    }
+  } @else if $position == right {
+    padding-right: $grid-gutter;
+    @include media-query($small) {
+      padding-right: $grid-gutter-mobile;
+    }
+  } @else if $position == top {
+    padding-top: $grid-gutter;
+    @include media-query($small) {
+      padding-top: $grid-gutter-mobile;
+    }
+  } @else if $position == bottom {
+    padding-bottom: $grid-gutter;
+    @include media-query($small) {
+      padding-bottom: $grid-gutter-mobile;
+    }
+  } @else  {
+    padding: $grid-gutter;
+    @include media-query($small) {
+      padding: $grid-gutter-mobile;
+    }
+  }
+}
+
 /*============================================================================
   Flexbox prefix mixins from Bourbon
     https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_flex-box.scss

@@ -19,24 +19,26 @@
   max-width: 310px;
   margin: 0 10px 10px;
   box-shadow: $box-shadow;
+  background-size: 116px auto; // width height
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }
 
 .membership-block--green {
   border-color: $green;
   background-color: $greenTint;
+  background-image: url({{"gardenio_growyourownfood_plans_halflogos_green.svg"|asset_url}});
 }
 
 .membership-block--rose {
   border-color: $rose;
   background-color: $roseTint;
+  background-image: url({{"gardenio_growyourownfood_plans_halflogos_rose.svg"|asset_url}});
 }
 .membership-block--gold {
   border-color: $gold;
   background-color: $goldTint;
-}
-
-.membership-block__details {
-  margin-bottom: 55px;
+  background-image: url({{"gardenio_growyourownfood_plans_halflogos_gold.svg"|asset_url}});
 }
 
 .membership-badge {
@@ -60,20 +62,25 @@
 .membership-badge--gold {
   color: $goldShade;
   &:before {
-    background-image: url({{"gold-symbol--placeholder.png"|asset_url}});
+    background-image: url({{"gardenio_growyourownfood_logo_gold.svg"|asset_url}});
   }
 }
 
 .membership-badge--rose {
   color: $roseShade;
   &:before {
-    background-image: url({{"rose-symbol--placeholder.png"|asset_url}});
+    background-image: url({{"gardenio_growyourownfood_logo_rose.svg"|asset_url}});
   }
 }
 
 .membership-badge--green {
   color: $green;
   &:before {
-    background-image: url({{"green-symbol--placeholder.png"|asset_url}});
+    background-image: url({{"gardenio_growyourownfood_logo_green.svg"|asset_url}});
   }
+}
+
+.membership-badge__divider {
+  color: $medGray;
+  padding: 0 1em;
 }
