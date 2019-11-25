@@ -190,6 +190,10 @@ a.link {
   }
 }
 
+form input:focus {
+  outline: none;
+}
+
 // Responsive video containers
 .resp-container {
   position: relative;

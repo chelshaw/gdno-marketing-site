@@ -7785,7 +7785,10 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   .infinite-lives-hearts {
     bottom: -26px;
     right: -36px;
-    max-width: 270px;
+    max-width: 170px;
+    @include media-query($medium-up) {
+      max-width: 270px;
+    }
   }
 
   .infinity-sign {
@@ -7795,13 +7798,17 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 
   .blue-splash {
     left: 0;
-    top: -270px;
-    height: 200%;
-    width: 30%;
+    top: 0;
+    height: 150%;
+    width: 50%;
     background-size: contain;
     background-position: top left;
     background-repeat: no-repeat;
     background-image: url({{"illo_gardenio_growyourownfood_fuckhomedepot_waterblue.png"|asset}});
+    @include media-query($medium-up) {
+      top: -270px;
+      height: 200%;
+    }
   }
 }
 
@@ -7893,12 +7900,17 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 
 .interactive-item {
   padding-left: 2em;
-  border-left: 5px solid transparent;
-  color: silver;
+  border-left: 5px solid $grass;
   margin-bottom: 2em;
 
+  @include media-query($medium-up) {
+    cursor: pointer;
+    color: silver;
+    border-left: 5px solid transparent;
+  }
+
   &.selected {
-    border-color: lime;
+    border-color: $grass;
     color: black;
   }
 
@@ -8093,7 +8105,7 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 
 .membership-badge__divider {
   color: $medGray;
-  padding: 0 1em;
+  padding: 0 0.5em;
 }
 
 #home__as-seen-in {
@@ -8310,6 +8322,10 @@ a.link {
     letter-spacing: 0.7px;
     text-transform: uppercase;
   }
+}
+
+form input:focus {
+  outline: none;
 }
 
 // Responsive video containers

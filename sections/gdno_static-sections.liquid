@@ -54,7 +54,7 @@
 
 {% if section.settings.type == 'memberships-overview-curated-box' %}
 <section id="memberships-overview-curated-box">
-  <div id="curated-box-illo"></div>
+  <div id="curated-box-illo small--hide"></div>
   <div class="page-width">
     <div class="one-whole medium-up--one-half">
       <span class="membership-badge membership-badge--gold">Gold</span>
@@ -103,7 +103,7 @@
         </h3>
         <p>Plants eat nutrients in the soil, so ya gotta feed them to get the most out of them! Folks don’t know what to feed their plant, when to feed it, how much to feed it, or how to feed it. We do. So, we send you plant meals, when you need it, in the amount you need it, and tell ya how to feed it. Easy as it gets.</p>
       </div>
-      <div class="grid__item one-half push-one-fourth medium-up--five-twelfths medium-up--push-one-twelfth">
+      <div class="grid__item one-half push-one-quarter medium-up--five-twelfths medium-up--push-one-twelfth">
         <img src="https://dummyimage.com/550x650/666666/fefefe&text=Lifestyle-Shot" />
       </div>
     </div>
@@ -117,7 +117,7 @@
   <div class="hidden medium-up--show blue-splash absolute-child"></div>
   <div class="page-width">
     <div class="grid">
-      <div class="grid__item eight-tenths push-one-eighth medium-up--one-half medium-up--push-one-quarter text-center relative-image-wrapper">
+      <div class="grid__item one-whole medium-up--one-half medium-up--push-one-quarter text-center relative-image-wrapper">
         <img class="absolute-child infinity-sign" src="{{'gardenio_growyourownfood_infinitysign.svg'|asset_url}}" />
         <span class="membership-badge membership-badge--gold">Gold</span>
         <h3>
@@ -146,40 +146,7 @@
 {% endif %}
 
 {% if section.settings.type == 'memberships-overview-premium-app-support' %}
-<section id="memberships-overview-premium-app-support">
-  <div class="page-width">
-    <div class="grid">
-      <div class="grid__item one-whole medium-up--five-twelfths">
-        <span class="membership-badge membership-badge--rose">Rose</span>
-        <span class="membership-badge__divider"> • </span>
-        <span class="membership-badge membership-badge--gold">Gold</span>
-        <h3>
-          {{ section.settings.title | escape }}
-          <!-- Lastly, we hook you up with premium app support to help you as you grow -->
-        </h3>
-        <p>Get connected to the world’s best localized knowledge base; to problem solving tools and supplies; and to other nearby growers on and offline. Got your own plantstuff? Cool, you want the Rose membership.</p>
-        <div id="interactive__app-support">
-          <div class="interactive-item selected" data-interactive="plantAdvice">
-            <h4>Contextual plant advice</h4>
-            <p>Get advice based on where you live like “It’s gonna freeze! Bring your plamts inside!” or “Hey, it’s hot! Did you water your plants?”</p>
-          </div>
-          <div class="interactive-item" data-interactive="digitalTools">
-            <h4>Digital tools for the home gardener</h4>
-            <p>We’re building tools to help you identify bad bugs, weird diseases, sick plants, and what to do about it organically and sustainably.</p>
-          </div>
-          <div class="interactive-item" data-interactive="connectLocal">
-            <h4>Connect with local growers</h4>
-            <p>Post photos and videos of what’s up with your plant and connect to other folks growing who can help. Growing is and always has been a community effort.</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid__item medium-up--one-quarter pb-1"></div>
-      <div class="grid__item hidden medium-up--show medium-up--one-third">
-        <img id="interactive__app-support__image" src="https://dummyimage.com/3560x770/666666/fefefe&text=Plant-Advice" />
-      </div>
-    </div>
-  </div>
-</section>
+{% render 'gdno-premium-app-support' with section.settings.title as sectionTitle %}
 <div class="section-divider"></div>
 {% endif %}
 
@@ -216,9 +183,9 @@
           <p>We connect you to crafty entree, side, and cocktail recipes to stand out at the potluck.</p>
         </div>
       </div>
-      <div class="grid__item one-whole text-center pv-4">
+      <!-- <div class="grid__item one-whole text-center pv-4">
         <a class="button" href="#">Become a member</a>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -244,29 +211,40 @@
 </section>
 {% endif %}
 
-{% javascript %}
-  const targetClass = '.interactive-item';
-
-  function switchSelectedForTargetElement(el) {
-    const intWrapper = document.getElementById('interactive__app-support');
-    const oldSelected = intWrapper.querySelector('.selected');
-    oldSelected.classList.remove('selected');
-    const newSelected = event.target.matches(targetClass) ? event.target : event.target.parentNode;
-    newSelected.classList.add('selected');
-  }
-
-  function initInteractiveAppSupport() {
-    document.addEventListener('click', function (event) {
-    	// If the clicked element doesn't have the right selector, bail
-    	if (!event.target.matches(targetClass) && !event.target.parentNode.matches(targetClass)) return;
-    	// Don't follow the link
-    	event.preventDefault();
-      switchSelectedForTargetElement(event.target);
-    }, false);
-  }
-
-  // initInteractiveAppSupport();
-{% endjavascript %}
+{% if section.settings.type == 'join-our-email-list' %}
+<section id="sign-up-form">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item one-whole medium-up--one-half medium-up--push-one-quarter">
+        <h2>
+          {{ section.settings.title | escape }}
+          <!-- Join Our Email List -->
+        </h2>
+        <p>
+          Not ready to be a member but want to be on our shortlist for deals, tips, and new offerings? Put us in your DMs.
+        </p>
+      </div>
+      <div class="grid__item one-whole">
+        <form class="flex-form">
+          <fieldgroup class="flex-field">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name">
+          </fieldgroup>
+          <fieldgroup class="flex-field">
+            <label for="email">Email</label>
+            <input id="email" type="text" name="email">
+          </fieldgroup>
+          <fieldgroup class="flex-field">
+            <label for="zip">Zipcode</label>
+            <input id="zip" type="text" name="zip">
+          </fieldgroup>
+          <input type="submit" value="Subscribe">
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 {% schema %}
 {
@@ -310,6 +288,10 @@
         {
           "value": "memberships-overview-start-free",
           "label": "Get Started Free"
+        },
+        {
+          "value": "join-our-email-list",
+          "label": "Join Our Email List"
         }
       ]
     },

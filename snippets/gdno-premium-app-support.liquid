@@ -1,0 +1,69 @@
+<section id="memberships-overview-premium-app-support">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item one-whole medium-up--five-twelfths">
+        <span class="membership-badge membership-badge--rose">Rose</span>
+        <span class="membership-badge__divider"> • </span>
+        <span class="membership-badge membership-badge--gold">Gold</span>
+        <h3>
+          {{ sectionTitle | escape }}
+          <!-- Lastly, we hook you up with premium app support to help you as you grow -->
+        </h3>
+        <p>Get connected to the world’s best localized knowledge base; to problem solving tools and supplies; and to other nearby growers on and offline. Got your own plantstuff? Cool, you want the Rose membership.</p>
+        <div id="interactive__app-support">
+          <div class="interactive-item selected" data-interactive="plantAdviceImage">
+            <h4>Contextual plant advice</h4>
+            <p>Get advice based on where you live like “It’s gonna freeze! Bring your plamts inside!” or “Hey, it’s hot! Did you water your plants?”</p>
+          </div>
+          <div class="interactive-item" data-interactive="digitalToolsImage">
+            <h4>Digital tools for the home gardener</h4>
+            <p>We’re building tools to help you identify bad bugs, weird diseases, sick plants, and what to do about it organically and sustainably.</p>
+          </div>
+          <div class="interactive-item" data-interactive="localGrowersImage">
+            <h4>Connect with local growers</h4>
+            <p>Post photos and videos of what’s up with your plant and connect to other folks growing who can help. Growing is and always has been a community effort.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-quarter pb-1"></div>
+      <div class="grid__item small--hidden medium-up--show medium-up--one-third">
+        <img id="interactive__app-support__image" src="https://dummyimage.com/356x770/666666/fefefe&text=Plant-Advice" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var targetClass = '.interactive-item';
+  var imageUrls = {
+    plantAdviceImage: '{{"illo_gardenio_growyourownfood_fuckhomedepot_box.png"|asset_url}}',
+    digitalToolsImage: '{{"illo_gardenio_growyourownfood_fuckhomedepot_box.png"|asset_url}}',
+    localGrowersImage: '{{"illo_gardenio_growyourownfood_fuckhomedepot_waterblue.png"|asset_url}}',
+  };
+
+  function switchSelectedForTargetElement(el) {
+    const intWrapper = document.getElementById('interactive__app-support');
+    const oldSelected = intWrapper.querySelector('.selected');
+    oldSelected.classList.remove('selected');
+    const newSelected = event.target.matches(targetClass) ? event.target : event.target.parentNode;
+    newSelected.classList.add('selected');
+  }
+
+  function switchInteractiveImage(assetUrl) {
+    document.getElementById('interactive__app-support__image').src = assetUrl;
+  }
+
+  function initInteractiveAppSupport() {
+    document.addEventListener('click', function (event) {
+    	if (!event.target.matches(targetClass) && !event.target.parentNode.matches(targetClass)) return;
+    	event.preventDefault();
+      switchSelectedForTargetElement(event.target);
+      const imageKey = event.target.parentNode.getAttribute('data-interactive');
+      switchInteractiveImage(imageUrls[imageKey]);
+    }, false);
+  }
+
+  initInteractiveAppSupport();
+})();
+</script>
