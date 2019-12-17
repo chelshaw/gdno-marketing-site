@@ -53,8 +53,10 @@
   }
 
   .infinite-lives-hearts {
-    bottom: -26px;
-    right: -36px;
+    // bottom: -26px;
+    // right: -36px;
+    left: -42px;
+    bottom: -36px;
     max-width: 170px;
     @include media-query($medium-up) {
       max-width: 270px;
@@ -62,8 +64,10 @@
   }
 
   .infinity-sign {
-    right: -250px;
-    top: -40px;
+    bottom: -26px;
+    right: -36px;
+    // right: -250px;
+    // top: -40px;
   }
 
   .blue-splash {

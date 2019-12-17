@@ -121,8 +121,12 @@
         </h3>
         <p>Plants eat nutrients in the soil, so ya gotta feed them to get the most out of them! Folks don’t know what to feed their plant, when to feed it, how much to feed it, or how to feed it. We do. So, we send you plant meals, when you need it, in the amount you need it, and tell ya how to feed it. Easy as it gets.</p>
       </div>
-      <div class="grid__item one-half push-one-quarter medium-up--five-twelfths medium-up--push-one-twelfth">
-        <img src="https://dummyimage.com/550x650/666666/fefefe&text=Lifestyle-Shot" />
+
+      <div class="grid__item one-half push-one-quarter medium-up--five-twelfths medium-up--push-one-twelfth align-center">
+        <div class="relative-image-wrapper">
+          {{ 'plantfood_img.jpg' | asset_url | img_tag: 'Close-up of a plant being fed the exact right amount of nutrients to flourish.' }}
+          <img class="absolute-child infinite-lives-hearts" src="{{'gardenio_growyourownfood_infinitelives_hearts.png'|asset_url}}" />
+        </div>
       </div>
     </div>
   </div>
@@ -136,7 +140,6 @@
   <div class="page-width">
     <div class="grid">
       <div class="grid__item one-whole medium-up--one-half medium-up--push-one-quarter text-center relative-image-wrapper">
-        <img class="absolute-child infinity-sign" src="{{'gardenio_growyourownfood_infinitysign.svg'|asset_url}}" />
         <span class="membership-badge membership-badge--gold">Gold</span>
         <h3>
           {{ section.settings.title | escape }}
@@ -153,8 +156,10 @@
     <div class="grid">
       <div class="grid__item one-whole">
         <div class="relative-image-wrapper">
-          <img src="https://dummyimage.com/1100x350/666666/fefefe&text=Lifestyle-Shot" />
-          <img class="absolute-child infinite-lives-hearts" src="{{'gardenio_growyourownfood_infinitelives_hearts.png'|asset_url}}" />
+          {{ 'gold_infinitelives_gardenio_growyourownfood_homegardening.jpg' | asset_url | img_tag: 'Photo of a woman, surrounded by plants, elated that she can garden worry-free' }}
+          <!-- <img src="https://dummyimage.com/1100x350/666666/fefefe&text=Lifestyle-Shot" /> -->
+          <!-- <img class="absolute-child infinite-lives-hearts" src="{{'gardenio_growyourownfood_infinitelives_hearts.png'|asset_url}}" /> -->
+          <img class="absolute-child infinity-sign" src="{{'gardenio_growyourownfood_infinitysign.svg'|asset_url}}" />
         </div>
       </div>
     </div>
