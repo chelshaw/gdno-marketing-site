@@ -84,3 +84,21 @@
   color: $medGray;
   padding: 0 0.5em;
 }
+
+figure.memberships-overview__in-the-box {
+  position: relative;
+  margin: 0;
+  min-width: 150px;
+}
+
+label.memberships-overview__in-the-box-description {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  display: inline-block;
+  background: white;
+  color: $darkGray;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  border: 1px solid #e8e8e8;
+}

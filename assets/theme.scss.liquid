@@ -7728,6 +7728,35 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   }
 }
 
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -30px;
+}
+
+.flex-grid--stretch {
+  align-content: stretch;
+}
+
+.flex-grid--justify-start {
+  justify-content: flex-start;
+}
+
+.flex-item {
+  padding-left: 30px;
+}
+
+.flex-item--one-half {
+  flex-basis: 50%;
+}
+
+.flex-item--one-third {
+  flex-basis: 33.3%;
+}
+
 .gdno-sticky-header {
   position: fixed;
   top: 0;
@@ -8121,6 +8150,24 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
 .membership-badge__divider {
   color: $medGray;
   padding: 0 0.5em;
+}
+
+figure.memberships-overview__in-the-box {
+  position: relative;
+  margin: 0;
+  min-width: 150px;
+}
+
+label.memberships-overview__in-the-box-description {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  display: inline-block;
+  background: white;
+  color: $darkGray;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  border: 1px solid #e8e8e8;
 }
 
 #home__as-seen-in {
