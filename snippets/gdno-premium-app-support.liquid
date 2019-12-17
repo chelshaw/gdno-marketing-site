@@ -2,8 +2,8 @@
   <div class="page-width">
     <div class="grid">
       <div class="grid__item one-whole medium-up--five-twelfths">
-        <span class="membership-badge membership-badge--rose">Rose</span>
-        <span class="membership-badge__divider"> • </span>
+        <!-- <span class="membership-badge membership-badge--rose">Rose</span> -->
+        <!-- <span class="membership-badge__divider"> • </span> -->
         <span class="membership-badge membership-badge--gold">Gold</span>
         <h3>
           {{ sectionTitle | escape }}
@@ -27,7 +27,7 @@
       </div>
       <div class="grid__item medium-up--one-quarter pb-1"></div>
       <div class="grid__item small--hidden medium-up--show medium-up--one-third">
-        <img id="interactive__app-support__image" src="https://dummyimage.com/356x770/666666/fefefe&text=Plant-Advice" />
+        <img id="interactive__app-support__image" class="floating" src="{{'gardenio_app_concept_gardening_growyourownfood_community.jpg'|asset_url}}" />
       </div>
     </div>
   </div>
@@ -37,9 +37,9 @@
 (function(){
   var targetClass = '.interactive-item';
   var imageUrls = {
-    plantAdviceImage: '{{"illo_gardenio_growyourownfood_fuckhomedepot_box.png"|asset_url}}',
-    digitalToolsImage: '{{"illo_gardenio_growyourownfood_fuckhomedepot_box.png"|asset_url}}',
-    localGrowersImage: '{{"illo_gardenio_growyourownfood_fuckhomedepot_waterblue.png"|asset_url}}',
+    plantAdviceImage: '{{"gardenio_app_concept_gardening_growyourownfood_community.jpg"|asset_url}}',
+    digitalToolsImage: '{{"gardenio_app_concept_gardening_growyourownfood_digitaltools.jpg"|asset_url}}',
+    localGrowersImage: '{{"gardenio_app_concept_gardening_growyourownfood_community.jpg"|asset_url}}',
   };
 
   function switchSelectedForTargetElement(el) {

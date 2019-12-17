@@ -23,7 +23,7 @@
       <a class="button-text right-arrow">Get it free</a>
       {% endcomment %}
     </div>
-    <div class="membership-block membership-block--rose">
+    <!-- <div class="membership-block membership-block--rose">
       <div class="membership-block__details">
         <h3>Rose</h3>
         <p>Monthly recurring access to <strong>Premium app</strong>.</p>
@@ -32,11 +32,11 @@
       {% comment %}
       <a class="button-text right-arrow">Learn more</a>
       {% endcomment %}
-    </div>
+    </div> -->
     <div class="membership-block membership-block--gold">
       <div class="membership-block__details">
         <h3>Gold</h3>
-        <p>Seasonal membership to <strong>Premium app</strong> + we send you stuff</p>
+        <p>We send you everything you need, every season. With plenty of support along the way.</p>
       </div>
       <div class="pt-3"></div>
       {% comment %}
@@ -54,7 +54,7 @@
 
 {% if section.settings.type == 'memberships-overview-curated-box' %}
 <section id="memberships-overview-curated-box">
-  <div id="curated-box-illo small--hide"></div>
+  <div id="curated-box-illo" class="small--hide"></div>
   <div class="page-width">
     <div class="one-whole medium-up--one-half">
       <span class="membership-badge membership-badge--gold">Gold</span>
@@ -113,7 +113,7 @@
 <section id="memberships-overview-plant-meals">
   <div class="page-width">
     <div class="grid">
-      <div class="grid__item one-whole medium-up--one-half">
+      <div class="grid__item one-whole medium-up--one-half mb-2">
         <span class="membership-badge membership-badge--gold">Gold</span>
         <h3>
           {{ section.settings.title | escape }}
@@ -218,6 +218,7 @@
     </div>
   </div>
 </section>
+<div class="section-divider"></div>
 {% endif %}
 
 {% if section.settings.type == 'our-story' %}
