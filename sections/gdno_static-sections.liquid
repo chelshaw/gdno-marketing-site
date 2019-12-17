@@ -180,14 +180,18 @@
         </h2>
       </div>
       <div class="grid__item one-whole medium-up--one-third">
-        <div class="get-started__image one-app"></div>
+        <div class="get-started__image-wrapper">
+          {{ 'green_01.jpg' | asset_url | img_tag: 'Download the app for both Android and iOS' }}
+        </div>
         <div class="get-started__content text-center">
           <h5>We’ll keep all your plant care information in one damn app.</h5>
           <p>No more scouring google for how much to water, what kind of sun it needs, what kind of soil it needs.</p>
         </div>
       </div>
       <div class="grid__item one-whole medium-up--one-third">
-        <div class="get-started__image we-help"></div>
+        <div class="get-started__image-wrapper">
+          {{ 'green_02_gardenio_growyourownfood_homegardening.jpg' | asset_url | img_tag: 'Image of someone harvesting a basil leaf' }}
+        </div>
           <div class="get-started__content text-center">
           <h5>We’ll help you when
           things get weird</h5>
@@ -195,7 +199,9 @@
         </div>
       </div>
       <div class="grid__item one-whole medium-up--one-third">
-        <div class="get-started__image we-help"></div>
+        <div class="get-started__image-wrapper">
+          {{ 'green_03_gardenio_growyourownfood_homegardening.jpg' | asset_url | img_tag: 'Image of basil mixed into yummy homemade meal' }}
+        </div>
         <div class="get-started__content text-center">
           <h5>We’ll tell you how to do delicious things with plants </h5>
           <p>We connect you to crafty entree, side, and cocktail recipes to stand out at the potluck.</p>
