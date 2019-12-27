@@ -1553,11 +1553,19 @@ h6 {
 }
 
 h1 {
-  font-size: em(94);
+  font-size: em(48);
   text-transform: none;
   letter-spacing: 0;
   line-height: 1;
   font-weight: bolder;
+
+  @include media-query($small) {
+    font-size: em(36);
+  }
+}
+
+h1.splash-title {
+  font-size: em(94);
 
   @include media-query($small) {
     font-size: em(40);
