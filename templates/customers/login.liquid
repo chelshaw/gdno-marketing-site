@@ -8,7 +8,7 @@
 
       <div id="CustomerLoginForm" class="form-vertical">
 
-        <h1 id="LoginHeading" class="text-center">{{ 'customer.login.title' | t }}</h1>
+        <h1 id="LoginHeading" class="text-center mb-1">{{ 'customer.login.title' | t }}</h1>
 
         {% form 'customer_login', novalidate: 'novalidate' %}
 
@@ -19,32 +19,36 @@
             </div>
           {%- endif -%}
 
-          <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
-          <input
-            type="email"
-            name="customer[email]"
-            id="CustomerEmail"
-            autocomplete="email"
-            autocorrect="off"
-            autocapitalize="off"
-            {%- if form.errors contains 'form' -%}
-              class="input--error"
-              aria-invalid="true"
-            {%- endif -%}
-            >
-
-          {% if form.password_needed %}
-            <label for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
+          <fieldset class="floating-field mt-1">
+            <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
             <input
-              type="password"
-              value=""
-              name="customer[password]"
-              id="CustomerPassword"
+              type="email"
+              name="customer[email]"
+              id="CustomerEmail"
+              autocomplete="email"
+              autocorrect="off"
+              autocapitalize="off"
               {%- if form.errors contains 'form' -%}
                 class="input--error"
                 aria-invalid="true"
               {%- endif -%}
-            >
+              >
+          </fieldset>
+
+          {% if form.password_needed %}
+            <fieldset class="floating-field">
+              <label for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
+              <input
+                type="password"
+                value=""
+                name="customer[password]"
+                id="CustomerPassword"
+                {%- if form.errors contains 'form' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                {%- endif -%}
+              >
+            </fieldset>
           {% endif %}
 
           <div class="text-center">
@@ -64,7 +68,7 @@
 
       <div id="RecoverPasswordForm" class="hide">
 
-        <div class="text-center">
+        <div class="text-center mb-1">
           <h2 id="RecoverHeading">{{ 'customer.recover_password.title' | t }}</h2>
           <p>{{ 'customer.recover_password.subtext' | t }}</p>
         </div>
@@ -79,20 +83,23 @@
               <span class="hide reset-password-success"></span>
             {% endif %}
 
-            <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
-            <input
-              type="email"
-              value=""
-              name="email"
-              id="RecoverEmail"
-              class="input-full{% if form.errors %} input--error{% endif %}"
-              autocorrect="off"
-              autocapitalize="off"
-              {% if form.errors %}
-                aria-invalid="true"
-                aria-describedby="RecoverEmail-email-error"
-              {%- endif -%}
-              >
+            <fieldset class="floating-field">
+              <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
+              <input
+                type="email"
+                value=""
+                name="email"
+                id="RecoverEmail"
+                class="input-full{% if form.errors %} input--error{% endif %}"
+                autocorrect="off"
+                autocapitalize="off"
+                {% if form.errors %}
+                  aria-invalid="true"
+                  aria-describedby="RecoverEmail-email-error"
+                {%- endif -%}
+                >
+            </fieldset>
+
             {%- if form.errors -%}
               <span id="RecoverEmail-email-error" class="input-error-message">
                 <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
@@ -103,7 +110,7 @@
 
             <div class="text-center">
               <p>
-                <input type="submit" class="btn" value="{{ 'customer.recover_password.submit' | t }}">
+                <input type="submit" class="btn btn--wide" value="{{ 'customer.recover_password.submit' | t }}">
               </p>
 
               <a href="#LoginHeading" id="HideRecoverPasswordLink">{{ 'customer.recover_password.cancel' | t }}</a>
@@ -123,7 +130,7 @@
           <h2>{{ 'customer.login.guest_title' | t }}</h2>
 
           {% form 'guest_login' %}
-            <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+            <input type="submit" class="btn btn--wide" value="{{ 'customer.login.guest_continue' | t }}">
           {% endform %}
         </div>
       {% endif %}

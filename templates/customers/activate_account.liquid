@@ -1,7 +1,7 @@
 <div class="page-width text-center">
   <div class="grid">
     <div class="grid__item medium-up--one-half medium-up--push-one-quarter">
-      <div class="section-header">
+      <div class="section-header mb-1">
         <h1>{{ 'customer.activate_account.title' | t }}</h1>
         <p>{{ 'customer.activate_account.subtext' | t }}</p>
       </div>
@@ -15,11 +15,15 @@
             </div>
           {%- endif -%}
 
-          <label for="CustomerPassword" class="label--hidden">{{ 'customer.activate_account.password' | t }}</label>
-          <input type="password" value="" name="customer[password]" id="CustomerPassword" placeholder="{{ 'customer.activate_account.password' | t }}">
+          <fieldset class="floating-field">
+            <label for="CustomerPassword" class="label--hidden">{{ 'customer.activate_account.password' | t }}</label>
+            <input type="password" value="" name="customer[password]" id="CustomerPassword" placeholder="{{ 'customer.activate_account.password' | t }}">
+          </fieldset>
 
-          <label for="CustomerPasswordConfirmation" class="label--hidden">{{ 'customer.activate_account.password_confirm' | t }}</label>
-          <input type="password" value="" name="customer[password_confirmation]" id="CustomerPasswordConfirmation" placeholder="{{ 'customer.activate_account.password_confirm' | t }}">
+          <fieldset class="floating-field">
+            <label for="CustomerPasswordConfirmation" class="label--hidden">{{ 'customer.activate_account.password_confirm' | t }}</label>
+            <input type="password" value="" name="customer[password_confirmation]" id="CustomerPasswordConfirmation" placeholder="{{ 'customer.activate_account.password_confirm' | t }}">
+          </fieldset>
 
           <input type="submit" class="btn" value="{{ 'customer.activate_account.submit' | t }}">
           <div><input type="submit" name="decline" value="{{ 'customer.activate_account.cancel' | t }}"></div>
