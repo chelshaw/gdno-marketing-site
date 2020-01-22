@@ -8,6 +8,7 @@
 
         {%- assign formId = 'RegisterForm' -%}
         {% form 'create_customer', id: formId, novalidate: 'novalidate' %}
+          <input type="hidden" name="return_to" value="/products/early-sprout-membership">
           {% include 'form-status', form_id: formId %}
 
           <fieldset class="floating-field">
