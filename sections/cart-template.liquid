@@ -1,3 +1,5 @@
+{% include 'bold-cart' %}
+
 <div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template" data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
 
   <div {% if cart.item_count == 0 %}class="hide" {% endif %}data-cart-wrapper>
@@ -18,6 +20,7 @@
         </thead>
         <tbody data-cart-line-items>
           {%- for item in cart.items -%}
+          {% include 'bold-cart-item' with item %}
             <tr class="cart__row" data-cart-item data-cart-item-key="{{ item.key }}" data-cart-item-url="{{ item.url }}" data-cart-item-title="{{ item.title }}" data-cart-item-index="{{ forloop.index }}" data-cart-item-quantity="{{ item.quantity }}">
               <td class="cart__meta small--text-left" data-cart-table-cell>
                 <div class="cart__product-information">
@@ -35,6 +38,9 @@
                     {%- if item.product.has_only_default_variant != true -%}
                       {%- assign variant_options = item.options_with_values -%}
                     {%- endif -%}
+                    
+                    {{ bold_item_properties }}
+                    {{ bold_recurring_desc }}
                     {%- assign property_size = item.properties | size -%}
 
                     <ul class="product-details{% if item.product.has_only_default_variant and property_size == 0 %} hide{% endif %}" data-cart-item-details aria-label="{{ 'cart.label.product_details' | t }}">
@@ -284,7 +290,7 @@
                 <span class="cart__error-message" data-cart-error-message></span>
               </div>
 
-              {%- if additional_checkout_buttons -%}
+              {% if additional_checkout_buttons and show_paypal %}
                 <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
               {%- endif -%}
             </div>

@@ -48,7 +48,7 @@
     </div>
     <div class="grid__item myaccount__account-details">
       <h2>{{ 'customer.account.details' | t }}</h2>
-
+	  <p><a href="/tools/checkout/api/manage/subscription/app" class="text-link">Manage Subscription</a></p>
       {{ customer.default_address | format_address }}
 
       <p><a href="{{ routes.account_addresses_url }}" class="btn btn--small">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a></p>
