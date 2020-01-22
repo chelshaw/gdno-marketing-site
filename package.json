@@ -8,6 +8,9 @@
   "scripts": {
     "style": "prettier --write stylesheets/*; gulp styles",
     "push": "theme deploy --env=development",
-    "deploy": "theme deploy --env=production"
+    "deploy": "theme deploy --env=production",
+    "pull-dev": "theme download --env=development",
+    "pull-prod": "theme download --env=production",
+    "watch-dev": "theme watch --env=development"
   }
 }
