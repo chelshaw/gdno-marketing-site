@@ -3520,7 +3520,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     margin-bottom: 10px;
 
     &:hover {
-      background-color: $color-btn-primary-focus !important;
+      background-color: $color-btn-primary-focus;
     }
   }
   .shopify-payment-button__button--branded {

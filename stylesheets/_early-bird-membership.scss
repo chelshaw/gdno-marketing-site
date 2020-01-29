@@ -1,4 +1,74 @@
-.product-single__description--alt {
-  margin-top: 0;
-  margin-bottom: 100px;
+.early-bird__ship-date {
+  background-color: $goldShade;
+  color: white;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+
+.early-bird__details {
+  background-color: $goldTint;
+  padding: 1.2em 2em;
+}
+
+.early-bird__details .shopify-payment-button__button--hidden {
+  display: none;
+}
+
+.early-bird__price {
+  border-bottom: 1px solid $goldShade;
+  padding: 0.8em 0;
+  margin: 0.8em 0;
+}
+
+.early-bird__price .price .price-item {
+  font-size: 1.8em;
+}
+
+.early-bird__details button.shopify-payment-button__button--unbranded {
+  @extend .btn;
+  padding: $btn-padding-vertical $btn-padding-horizontal;
+  font-size: em(14);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: $cyan;
+  color: white;
+  &:hover {
+    background-color: darken($cyan, 10);
+    color: white;
+  }
+}
+
+.early-bird__seasonal-billing {
+  display: block;
+  font-weight: lighter;
+  font-size: 0.8em;
+}
+
+.membership-info__tiny-header {
+  weight: bold;
+  text-transform: uppercase;
+  color: $gray;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+}
+
+#membership-info__organic-sustainable {
+  background-image: url("https://picsum.photos/1280/600");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.membership-info__plant-option {
+  flex-basis: 160px;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 5em;
+  background: $lightGray;
+  font-weight: bold;
+  font-size: 2em;
+  border-bottom: 1px solid black;
 }

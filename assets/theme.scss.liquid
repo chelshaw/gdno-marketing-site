@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Circular Air";
   src: url('{{ "CircularAirPro-Medium.otf" | asset_url }}');
@@ -31,6 +32,7 @@
 
 $black: #141925;
 $darkGray: #081a2b;
+$gray: #666;
 $medGray: #aeafb2;
 $lightGray: #e2e2e2;
 $grass: #73b641;
@@ -3658,7 +3660,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     margin-bottom: 10px;
 
     &:hover {
-      background-color: $color-btn-primary-focus !important;
+      background-color: $color-btn-primary-focus;
     }
   }
   .shopify-payment-button__button--branded {
@@ -7759,6 +7761,10 @@ $transition-controls-video: color 0.2s $ease-transition, background-color 0.2s $
   justify-content: flex-start;
 }
 
+.flex-grid--justify-center {
+  justify-content: center;
+}
+
 .flex-item {
   padding-left: 30px;
 }
@@ -8226,6 +8232,81 @@ label.memberships-overview__in-the-box-description {
   border: 1px solid #e8e8e8;
 }
 
+.early-bird__ship-date {
+  background-color: $goldShade;
+  color: white;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+
+.early-bird__details {
+  background-color: $goldTint;
+  padding: 1.2em 2em;
+}
+
+.early-bird__details .shopify-payment-button__button--hidden {
+  display: none;
+}
+
+.early-bird__price {
+  border-bottom: 1px solid $goldShade;
+  padding: 0.8em 0;
+  margin: 0.8em 0;
+}
+
+.early-bird__price .price .price-item {
+  font-size: 1.8em;
+}
+
+.early-bird__details button.shopify-payment-button__button--unbranded {
+  @extend .btn;
+  padding: $btn-padding-vertical $btn-padding-horizontal;
+  font-size: em(14);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: $cyan;
+  color: white;
+  &:hover {
+    background-color: darken($cyan, 10);
+    color: white;
+  }
+}
+
+.early-bird__seasonal-billing {
+  display: block;
+  font-weight: lighter;
+  font-size: 0.8em;
+}
+
+.membership-info__tiny-header {
+  weight: bold;
+  text-transform: uppercase;
+  color: $gray;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+}
+
+#membership-info__organic-sustainable {
+  background-image: url("https://picsum.photos/1280/600");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.membership-info__plant-option {
+  flex-basis: 100px;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 5em;
+  background: $lightGray;
+  font-weight: bold;
+  font-size: 2em;
+  border-bottom: 1px solid black;
+}
+
 #home__as-seen-in {
   display: flex;
   align-items: center;
@@ -8257,11 +8338,6 @@ li.as-seen-in-list__item.as-seen-in-list__intro {
   }
 }
 
-
-.product-single__description--alt {
-  margin-top: 0;
-  margin-bottom: 100px;
-}
 
 .pos-rel,
 section {
@@ -8322,6 +8398,15 @@ img {
     &:hover {
       background-color: darken(white, 10);
       color: $medGray;
+    }
+  }
+
+  &.button--cyan {
+    background-color: $cyan;
+    color: white;
+    &:hover {
+      background-color: darken($cyan, 10);
+      color: white;
     }
   }
 }
