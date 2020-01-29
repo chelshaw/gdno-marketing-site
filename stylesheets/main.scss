@@ -6,9 +6,9 @@
 @import "forms";
 @import "home";
 @import "memberships";
+@import "early-bird-membership";
 @import "as-seen-in-list";
 @import "static-sections";
-@import "early-bird-membership";
 
 .pos-rel,
 section {
@@ -69,6 +69,15 @@ img {
     &:hover {
       background-color: darken(white, 10);
       color: $medGray;
+    }
+  }
+
+  &.button--cyan {
+    background-color: $cyan;
+    color: white;
+    &:hover {
+      background-color: darken($cyan, 10);
+      color: white;
     }
   }
 }
