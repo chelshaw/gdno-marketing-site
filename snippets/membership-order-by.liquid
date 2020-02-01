@@ -1,0 +1,79 @@
+<section id="membership-info__order-by">
+  <div class="page-width pb-2">
+    <div class="membership-info__order-by-container">
+      <h5 class="h2 text-center">Order by February 28 for March Delivery!</h5>
+      <div class="order-by-countdown mt-2 text-center js" aria-hidden>
+        <div class="countdown-block">
+          <div class="countdown-block-value" id="order-by-coundown-days"></div>
+          <span class="countdown-block-label">days</span>
+        </div>
+        <div class="countdown-block">
+          <div class="countdown-block-value" id="order-by-coundown-hours"></div>
+          <span class="countdown-block-label">hours</span>
+        </div>
+        <div class="countdown-block">
+          <div class="countdown-block-value" id="order-by-coundown-minutes"></div>
+          <span class="countdown-block-label">minutes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  'use strict'
+  const deadline = new Date(2020, 1, 28, 23, 59);
+  let intervalHandle;
+
+  function date_units_diff(a, b, unit_amounts) {
+    var time_data;
+    var split_to_whole_units = function (milliseconds, unit_amounts) {
+        time_data = [milliseconds];
+        for (var i = 0; i < unit_amounts.length; i++) {
+            time_data.push(parseInt(time_data[i] / unit_amounts[i]));
+            time_data[i] = time_data[i] % unit_amounts[i];
+        }; return time_data.reverse();
+    }; if (unit_amounts == undefined) {
+        unit_amounts = [1000, 60, 60, 24];
+    };
+    var utc_a = new Date(a.toUTCString());
+    var utc_b = new Date(b.toUTCString());
+    var diff = (utc_b - utc_a);
+    return split_to_whole_units(diff, unit_amounts);
+  }
+
+  function getCountdown(date1, date2) {
+    const d = date_units_diff(date1, date2);
+    return {
+      days: d[0],
+      hours: d[1],
+      minutes: d[2],
+    }
+  }
+
+  function updateDisplay(days, hours, minutes) {
+    document.getElementById('order-by-coundown-days').innerText = days;
+    document.getElementById('order-by-coundown-hours').innerText = hours;
+    document.getElementById('order-by-coundown-minutes').innerText = minutes;
+  }
+
+  function setCountdownDisplay() {
+    const now = new Date();
+    if (deadline.valueOf() < now.valueOf()) {
+      updateDisplay(0, 0, 0);
+      return window.clearInterval(intervalHandle);
+    }
+
+    const { days, hours, minutes } = getCountdown(now, deadline);
+    updateDisplay(days, hours, minutes);
+  }
+
+  function setupCountdown() {
+    setCountdownDisplay();
+    intervalHandle = setInterval(setCountdownDisplay, 60000);
+  }
+
+  setupCountdown();
+})();
+</script>
