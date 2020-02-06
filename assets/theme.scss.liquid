@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Circular Air";
   src: url('{{ "CircularAirPro-Medium.otf" | asset_url }}');
@@ -8460,6 +8461,34 @@ img.image-round {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#membership-questions .unconstrained-container {
+  position: relative;
+  height: 674px;
+}
+#membership-questions .unconstrained-image {
+  position: absolute;
+  width: 734px;
+  height: 674px;
+  background-image: url("https://picsum.photos/734/674");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  clip-path: polygon(
+    5% 0%,
+    33% 10%,
+    50% 15%,
+    75% 3%,
+    95% 22%,
+    100% 75%,
+    80% 93%,
+    55% 87%,
+    20% 100%,
+    2% 80%,
+    18% 50%,
+    0% 11%
+  );
 }
 
 /* TODO: remove */
