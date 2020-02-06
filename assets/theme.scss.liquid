@@ -8231,6 +8231,13 @@ label.memberships-overview__in-the-box-description {
   border: 1px solid #e8e8e8;
 }
 
+.membership__intro-text {
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 480px;
+}
+
 /* COUNTDOWN */
 .membership-info__order-by-container {
   margin: 0 auto;
@@ -8345,7 +8352,13 @@ dl.price dd {
 
 /* SECTION: PLANT OPTIONS */
 #plant-options {
-  background-image: url("https://picsum.photos/1280/600");
+  background-image: url("https://picsum.photos/1280/200");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.membership-info__plant-option {
+  flex-basis: 160px;
 }
 
 img.image-round {
@@ -8354,22 +8367,99 @@ img.image-round {
 
 /* SECTION: MEMBERSHIP TIMELINE */
 #membership-timeline {
+  position: relative;
+  color: $goldShade;
+}
+#membership-timeline p {
+  color: $goldShade;
+}
+.membership-timeline__image {
+  position: absolute;
+  left: 25px;
+  top: -40px;
+  @include media-query($medium-down) {
+    display: none;
+  }
 }
 
 .bg-gold-tint {
   background: $goldTint;
 }
 
+.membership-timeline__container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  @include media-query($small) {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.membership-timeline__month {
+  font-weight: bold;
+}
+
+.membership-timeline__item {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  flex-basis: 25%;
+  padding: 0;
+}
+
+.membership-timeline__info {
+  border-top: 1px solid $goldShade;
+  border-bottom: 1px solid $goldShade;
+  height: 175px;
+  position: relative;
+  padding: 0.5em 1em;
+  @include media-query($small) {
+    background: #f7e8bf;
+  }
+}
+
+.membership-timeline__info--alt {
+  background: #f7e8bf;
+}
+
+.timeline-plant {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: #ecb46c;
+  border-radius: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-plant--triplet-1 {
+  top: 30%;
+}
+.timeline-plant--triplet-2 {
+  top: 70%;
+  left: 30%;
+}
+.timeline-plant--triplet-3 {
+  top: 70%;
+  left: 70%;
+}
+
+.membership-timeline__description {
+  padding: 0.5em 1em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+
 /* SECTION: MEMBERSHIP ORGANIC */
-#membership-organic {
+#membership-sustainable {
   background-image: url("https://picsum.photos/1280/600");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.membership-info__plant-option {
-  flex-basis: 160px;
 }
 
 /* TODO: remove */
