@@ -110,6 +110,23 @@ dl.price dd {
   margin-bottom: 1.3em;
 }
 
+/* SECTION: PLANT OPTIONS */
+#plant-options {
+  background-image: url("https://picsum.photos/1280/600");
+}
+
+img.image-round {
+  border-radius: 50%;
+}
+
+/* SECTION: MEMBERSHIP TIMELINE */
+#membership-timeline {
+}
+
+.bg-gold-tint {
+  background: $goldTint;
+}
+
 /* SECTION: MEMBERSHIP ORGANIC */
 #membership-organic {
   background-image: url("https://picsum.photos/1280/600");
