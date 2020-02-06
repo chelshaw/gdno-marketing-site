@@ -97,16 +97,21 @@ dl.price dd {
   padding: 0;
 }
 
-/* SECTIONS */
-.membership-info__tiny-header {
+/* SECTION: MEMBERSHIP INCLUDES */
+.membership-includes__tiny-header {
   weight: bold;
   text-transform: uppercase;
   color: $gray;
   letter-spacing: 1px;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
-#membership-info__organic-sustainable {
+.membership-includes__icon {
+  margin-bottom: 1.3em;
+}
+
+/* SECTION: MEMBERSHIP ORGANIC */
+#membership-organic {
   background-image: url("https://picsum.photos/1280/600");
   background-position: center;
   background-repeat: no-repeat;
