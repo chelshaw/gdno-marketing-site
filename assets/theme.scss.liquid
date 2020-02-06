@@ -8231,16 +8231,35 @@ label.memberships-overview__in-the-box-description {
   border: 1px solid #e8e8e8;
 }
 
-.early-bird__ship-date {
-  background-color: $goldShade;
-  color: white;
-  padding: 2em;
-  margin-bottom: 1em;
+// .early-bird__ship-date {
+//   background-color: $goldShade;
+//   color: white;
+//   padding: 2em;
+//   margin-bottom: 1em;
+// }
+
+// .early-bird__details {
+//   background-color: $goldTint;
+//   padding: 1.2em 2em;
+// }
+
+.early-bird__info {
+  // floating outer box
+  padding: 1em;
 }
 
-.early-bird__details {
-  background-color: $goldTint;
-  padding: 1.2em 2em;
+.early-bird__info-box {
+  // info box with special deal
+  padding: 1em;
+  background-color: lighten($cyan, 40);
+  color: $cyan;
+}
+
+.cyan-divider {
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid $cyan;
+  margin: 1em 0;
 }
 
 .early-bird__details .shopify-payment-button__button--hidden {
@@ -8270,12 +8289,6 @@ label.memberships-overview__in-the-box-description {
     background-color: darken($cyan, 10);
     color: white;
   }
-}
-
-.early-bird__seasonal-billing {
-  display: block;
-  font-weight: lighter;
-  font-size: 0.8em;
 }
 
 .membership-info__tiny-header {
@@ -8331,6 +8344,33 @@ label.memberships-overview__in-the-box-description {
   letter-spacing: 1px;
 }
 
+dl.price {
+  margin-bottom: 50px;
+  font-size: 18px;
+  display: flex;
+}
+dl.price dt {
+  box-sizing: border-box;
+  padding: 5px;
+  flex-basis: 70%;
+  margin-bottom: 5px;
+}
+dl.price dd {
+  padding: 5px;
+  flex: 1;
+  text-align: right;
+}
+
+.price__sale--amount {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: $cyan;
+}
+.price__sale--label {
+  font-weight: bold;
+}
+
+/* TODO: remove */
 .placeholder {
   text-align: center;
   padding: 5em;
