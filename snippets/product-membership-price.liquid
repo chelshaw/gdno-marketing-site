@@ -16,58 +16,36 @@
 {%- assign money_price = price | money -%}
 
 <dl class="price{% if available and compare_at_price > price %} price--on-sale{% endif %}{% if available and variant.unit_price_measurement %} price--unit-available{% endif %}" data-price>
-  <div class="price__regular">
-    <dt>
-      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.regular_price' | t }}</span>
-    </dt>
-    <dd>
-      {% if available %}
-        {% if compare_at_price > price %}
-          <span class="price-item price-item--regular" data-regular-price>
-            {{ compare_at_price_per_mo | money }}/mo
-          </span>
-        {% else %}
-          <span class="price-item price-item--regular" data-regular-price>
-            {{ price_per_mo | money }}/mo
-          </span>
-        {% endif %}
-      {% else %}
-        <span class="price-item price-item--regular" data-regular-price>
-          {{ 'products.product.sold_out' | t }}
-        </span>
-      {% endif %}
-    </dd>
-  </div>
-  <div class="price__sale">
-    <dt>
-      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.sale_price' | t }}</span>
-    </dt>
-    <dd>
-      <span class="price-item price-item--sale" data-sale-price>
-        {{ price_per_mo | money }}/mo
-      </span>
-    </dd>
-  </div>
-  <div class="price__unit">
-    <dt>
-      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.unit_price_label' | t }}</span>
-    </dt>
-    <dd class="price-unit-price">
-      {%- capture unit_price_separator -%}
-        <span aria-hidden="true">/</span><span class="visually-hidden">{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
-      {%- endcapture -%}
-      {%- capture unit_price_base_unit -%}
-        <span data-unit-price-base-unit>
-          {%- if available and variant.unit_price_measurement -%}
-            {%- if variant.unit_price_measurement.reference_value != 1 -%}
-              {{- variant.unit_price_measurement.reference_value -}}
-            {%- endif -%}
-            {{ variant.unit_price_measurement.reference_unit }}
-          {%- endif -%}
-        </span>
-      {%- endcapture -%}
+  {% if available and compare_at_price > price %}
+    <div class="early-bird__info-box mb-1">
+      Get <strong>20% off</strong> your first season when you join Gardenio by February 28th and become an Original Gardener (OG).
+    </div>
+  {% endif %}
 
-      <span data-unit-price>{{ variant.unit_price | money }}</span>{{- unit_price_separator -}}{{- unit_price_base_unit -}}
-    </dd>
-  </div>
+  <div class="cyan-divider"></div>
+
+  {% if available and compare_at_price > price %}
+    <dt>First Season Normal Price: </dt>
+    <dd>{{ price | money }}</dd>
+
+    <dt>OG First Season Discount: </dt>
+    <dd>20% off</dd>
+
+    <dt>Shipping: </dt>
+    <dd>FREE</dd>
+
+    <dt class="price__sale--label">Your First Season: </dt>
+    <dd class="price__sale--amount">{{ compare_at_price | money }}</dd>
+  {% else %}
+    <dt>First Season: </dt>
+    <dd>{{ price | money }}</dd>
+
+    <dt>Shipping: </dt>
+    <dd>FREE</dd>
+  {% endif %}
+
+  <dt>Following Seasons (recurring): </dt>
+  <dd>$40</dd>
+
+  <div class="cyan-divider"></div>
 </dl>
