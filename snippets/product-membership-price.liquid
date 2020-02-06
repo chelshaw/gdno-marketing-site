@@ -13,12 +13,16 @@
   {%- assign available = true -%}
 {% endif %}
 
+{% capture discount_amt %}
+{{ product.compare_at_price_max | minus:product.price | times:100 | divided_by:product.compare_at_price_max }}%
+{% endcapture %}
+
 {%- assign money_price = price | money -%}
 
 <dl class="price{% if available and compare_at_price > price %} price--on-sale{% endif %}{% if available and variant.unit_price_measurement %} price--unit-available{% endif %}" data-price>
   {% if available and compare_at_price > price %}
-    <div class="early-bird__info-box mb-1">
-      Get <strong>20% off</strong> your first season when you join Gardenio by February 28th and become an Original Gardener (OG).
+    <div class="early-bird__info-box mt-1 text-center">
+      Get <strong>{{discount_amt}} off</strong> your first season when you join Gardenio by February 28th and become an Original Gardener (OG).
     </div>
   {% endif %}
 
@@ -26,16 +30,16 @@
 
   {% if available and compare_at_price > price %}
     <dt>First Season Normal Price: </dt>
-    <dd>{{ price | money }}</dd>
+    <dd>{{ compare_at_price | money }}</dd>
 
     <dt>OG First Season Discount: </dt>
-    <dd>20% off</dd>
+    <dd>{{discount_amt}} off</dd>
 
     <dt>Shipping: </dt>
     <dd>FREE</dd>
 
     <dt class="price__sale--label">Your First Season: </dt>
-    <dd class="price__sale--amount">{{ compare_at_price | money }}</dd>
+    <dd class="price__sale--amount">{{ price | money }}</dd>
   {% else %}
     <dt>First Season: </dt>
     <dd>{{ price | money }}</dd>
@@ -44,8 +48,10 @@
     <dd>FREE</dd>
   {% endif %}
 
-  <dt>Following Seasons (recurring): </dt>
-  <dd>$40</dd>
+  {% if recurring_membership_price %}
+    <dt>Following Seasons (recurring): </dt>
+    <dd>{{ recurring_membership_price | money }}</dd>
+  {% endif %}
 
   <div class="cyan-divider"></div>
 </dl>
