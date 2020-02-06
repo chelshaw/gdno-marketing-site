@@ -8231,85 +8231,7 @@ label.memberships-overview__in-the-box-description {
   border: 1px solid #e8e8e8;
 }
 
-// .early-bird__ship-date {
-//   background-color: $goldShade;
-//   color: white;
-//   padding: 2em;
-//   margin-bottom: 1em;
-// }
-
-// .early-bird__details {
-//   background-color: $goldTint;
-//   padding: 1.2em 2em;
-// }
-
-.early-bird__info {
-  // floating outer box
-  padding: 1em;
-}
-
-.early-bird__info-box {
-  // info box with special deal
-  padding: 1em;
-  background-color: lighten($cyan, 40);
-  color: $cyan;
-}
-
-.cyan-divider {
-  width: 100%;
-  height: 0;
-  border-bottom: 1px solid $cyan;
-  margin: 1em 0;
-}
-
-.early-bird__details .shopify-payment-button__button--hidden {
-  display: none;
-}
-
-.early-bird__price {
-  border-bottom: 1px solid $goldShade;
-  padding: 0.8em 0;
-  margin: 0.8em 0;
-}
-
-.early-bird__price .price .price-item {
-  font-size: 1.8em;
-}
-
-.early-bird__details button.shopify-payment-button__button--unbranded {
-  @extend .btn;
-  padding: $btn-padding-vertical $btn-padding-horizontal;
-  font-size: em(14);
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background-color: $cyan;
-  color: white;
-  &:hover {
-    background-color: darken($cyan, 10);
-    color: white;
-  }
-}
-
-.membership-info__tiny-header {
-  weight: bold;
-  text-transform: uppercase;
-  color: $gray;
-  letter-spacing: 1px;
-  font-size: 0.8em;
-}
-
-#membership-info__organic-sustainable {
-  background-image: url("https://picsum.photos/1280/600");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.membership-info__plant-option {
-  flex-basis: 160px;
-}
-
+/* COUNTDOWN */
 .membership-info__order-by-container {
   margin: 0 auto;
   max-width: 400px;
@@ -8344,8 +8266,37 @@ label.memberships-overview__in-the-box-description {
   letter-spacing: 1px;
 }
 
+/* INFO */
+.early-bird__floating-box {
+  // floating outer box
+  padding: 1em;
+}
+.early-bird__floating-box .product-single__description--alt {
+  padding-bottom: 0;
+}
+
+.early-bird__info-box {
+  // info box with special deal
+  padding: 1em 2em;
+  background-color: lighten($cyan, 40);
+  color: darken($cyan, 15);
+}
+
+.cyan-divider {
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid $cyan;
+  margin: 1em 0;
+}
+
+.early-bird__price {
+  border-bottom: 1px solid $goldShade;
+  padding: 0.8em 0;
+  margin: 0.8em 0;
+}
+
+/* PRICING */
 dl.price {
-  margin-bottom: 50px;
   font-size: 18px;
   display: flex;
 }
@@ -8368,6 +8319,35 @@ dl.price dd {
 }
 .price__sale--label {
   font-weight: bold;
+}
+
+.early-bird-membership__buy-button button.shopify-payment-button__button {
+  padding: 2em 1em;
+}
+.early-bird-membership__buy-button .shopify-payment-button__button--hidden {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* SECTIONS */
+.membership-info__tiny-header {
+  weight: bold;
+  text-transform: uppercase;
+  color: $gray;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+}
+
+#membership-info__organic-sustainable {
+  background-image: url("https://picsum.photos/1280/600");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.membership-info__plant-option {
+  flex-basis: 160px;
 }
 
 /* TODO: remove */
