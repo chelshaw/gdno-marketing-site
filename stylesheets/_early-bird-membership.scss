@@ -144,6 +144,16 @@ img.image-round {
   position: absolute;
   left: 25px;
   top: -40px;
+  clip-path: polygon(
+    14% 3%,
+    66% 0,
+    100% 34%,
+    96% 70%,
+    52% 100%,
+    0% 80%,
+    0% 64%,
+    8% 51%
+  );
   @include media-query($medium-down) {
     display: none;
   }
@@ -240,20 +250,50 @@ img.image-round {
   background-image: url("https://picsum.photos/734/674");
   background-position: left top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   clip-path: polygon(
-    5% 0%,
-    33% 10%,
-    50% 15%,
-    75% 3%,
-    95% 22%,
-    100% 75%,
-    80% 93%,
-    55% 87%,
-    20% 100%,
-    2% 80%,
-    18% 50%,
-    0% 11%
+    0.14% 21.53%,
+    7% 1px,
+    35.64% 3.55%,
+    76% 0px,
+    100% 8%,
+    97% 69%,
+    100% 85%,
+    70.82% 99.26%,
+    57.71% 95.93%,
+    15% 100%,
+    7px 77.99%,
+    3.68% 43.3%
+    );
+  );
+  @include media-query($small) {
+    width: 540px;
+    height: 480px;
+  }
+}
+
+/* SOCIAL VALIDATION */
+.social-validation__background {
+  background-image: url("https://picsum.photos/1000/448");
+  background-repeat: no-repeat;
+  background-size: 90% auto;
+  background-position: top center;
+}
+
+.clip-path {
+  clip-path: polygon(
+    0% 15%,
+    10% 0,
+    40% 4%,
+    76% 0,
+    100% 8%,
+    97% 69%,
+    100% 85%,
+    70% 100%,
+    43% 94%,
+    15% 100%,
+    0 86%,
+    6% 43%
   );
 }
 
