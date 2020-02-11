@@ -1,0 +1,471 @@
+{
+  "form": {
+    "id": "gGOtzq",
+    "name": "Registration",
+    "handle": "registration-206",
+    "theme_id": "77455130658",
+    "settings": {
+      "locales": {
+        "back": "Back",
+        "next": "Next",
+        "cancel": "Cancel",
+        "edit_link": "Edit account",
+        "fix_errors": "Please fix errors before continuing",
+        "is_invalid": "{{label}} is invalid",
+        "email_taken": "Email has already been taken",
+        "phone_taken": "Phone number has already been taken",
+        "step_counter": "Step {{current}} of {{total}}",
+        "verify_email": "Check your email for a verification link to activate your account.",
+        "not_available": "An error occurred while saving your account, please try again in a few minutes.",
+        "create_account": "Create account",
+        "update_account": "Update account",
+        "recaptcha_error": "Challenge verification failed, please try again",
+        "creating_account": "Creating account...",
+        "updating_account": "Updating account...",
+        "invalid_email_domain": "Email contains an invalid domain name"
+      },
+      "enableRecaptcha": false,
+      "whitelistedTags": "",
+      "recaptchaSiteKey": "",
+      "displayCancelButton": true,
+      "goBackAfterSubmission": false,
+      "cancelButtonRedirectUrl": "\/account",
+      "postSubmissionRedirectUrl": "\/account",
+      "goBackAfterCancelButtonClick": false
+    },
+    "install_locations": [
+      "manual",
+      "register",
+      "account_edit"
+    ],
+    "customers_count": 1,
+    "customers_today_count": 0,
+    "created_at": "2020-01-27T12:57:41Z",
+    "updated_at": "2020-01-31T12:18:39Z",
+    "revision_ids": [
+      "K0TRqq",
+      "kdT2oO",
+      "vbTd7L",
+      "7kToO9",
+      "p4TbLA",
+      "kdT2rY",
+      "mLTgEb",
+      "X1TKZA"
+    ]
+  },
+  "revision": {
+    "id": "K0TRqq",
+    "created_at": "2020-02-10T07:20:20Z",
+    "embed_version": "3.0.6",
+    "published_at": null,
+    "fields": [
+      {
+        "id": 0,
+        "dataColumn": {
+          "key": "first_name",
+          "label": "First name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 0,
+        "type": "text",
+        "stepId": 1,
+        "default": "",
+        "label": "First name",
+        "placeholder": "",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {},
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "first_name",
+        "autotag": null
+      },
+      {
+        "id": 1,
+        "dataColumn": {
+          "key": "last_name",
+          "label": "Last name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 1,
+        "type": "text",
+        "stepId": 1,
+        "default": "",
+        "label": "Last name",
+        "placeholder": "",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {},
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "last_name",
+        "autotag": null
+      },
+      {
+        "id": 2,
+        "dataColumn": {
+          "key": "email",
+          "label": "Email address",
+          "dataType": "email"
+        },
+        "parentId": null,
+        "position": 2,
+        "type": "email",
+        "stepId": 1,
+        "default": "",
+        "label": "Email address",
+        "placeholder": "",
+        "description": "Used for account login and order notifications",
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {},
+        "validations": [
+          {
+            "operator": "is_valid_email",
+            "comparand": null,
+            "errorMessage": "Please provide a valid email address"
+          },
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "email_address",
+        "autotag": null
+      },
+      {
+        "id": 3,
+        "dataColumn": {
+          "key": "password",
+          "label": "Password",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 3,
+        "type": "text",
+        "stepId": 1,
+        "default": "",
+        "label": "Password",
+        "placeholder": "",
+        "description": "",
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {},
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          },
+          {
+            "operator": "longer_than",
+            "comparand": 5,
+            "errorMessage": "Password is too short",
+            "metadata": {
+              "mandatory": true,
+              "staticOperator": true,
+              "comparandFieldProps": {
+                "min": 5
+              }
+            }
+          }
+        ],
+        "sensitive": true,
+        "preset": "password",
+        "autotag": null
+      },
+      {
+        "id": 792921,
+        "dataColumn": {
+          "key": "container_size",
+          "label": "1. What container size do you prefer?",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 0,
+        "type": "radio",
+        "stepId": 318724,
+        "default": "Small",
+        "label": "1. What container size do you prefer?",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+          {
+            "value": "Small",
+            "label": "Small"
+          },
+          {
+            "value": "Large",
+            "label": "Large, Up to 3x more yield, +$15 total"
+          },
+          {
+            "value": "I have my own containers",
+            "label": "I have my own containers"
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "end": 10,
+          "start": 1,
+          "enumType": "list",
+          "direction": "row",
+          "separateValues": true
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Please choose at least one",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 643640,
+        "dataColumn": {
+          "key": "planter_color",
+          "label": "2. What planter color are you into?",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 1,
+        "type": "radio",
+        "stepId": 318724,
+        "default": "Turquoise",
+        "label": "2. What planter color are you into?",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+          {
+            "value": "Turquoise",
+            "label": "Turquoise"
+          },
+          {
+            "value": "Harvest",
+            "label": "Harvest"
+          },
+          {
+            "value": "Tangerine",
+            "label": "Tangerine"
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "end": 10,
+          "start": 1,
+          "enumType": "list",
+          "direction": "row",
+          "separateValues": false
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Please choose at least one",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 140059,
+        "dataColumn": {
+          "key": "plants_to_send",
+          "label": "3. What plants should we send?",
+          "dataType": "list"
+        },
+        "parentId": null,
+        "position": 2,
+        "type": "checkbox_list",
+        "stepId": 318724,
+        "default": "",
+        "label": "3. What plants should we send?",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+          {
+            "value": "Option 1",
+            "label": "Option 1"
+          },
+          {
+            "value": "Option 2",
+            "label": "Option 2"
+          },
+          {
+            "value": "Option 3",
+            "label": "Option 3"
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "end": 10,
+          "start": 1,
+          "enumType": "list",
+          "direction": "row",
+          "separateValues": false
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Please choose at least one",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 667374,
+        "dataColumn": {
+          "key": "growing_where",
+          "label": "Growing Where",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 0,
+        "type": "radio",
+        "stepId": 717251,
+        "default": null,
+        "label": "Growing Where",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+          {
+            "value": "I'm growing on a balcony, patio, or porch",
+            "label": "I'm growing on a balcony, patio, or porch"
+          },
+          {
+            "value": "I'm growing in a yard",
+            "label": "I'm growing in a yard"
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "end": 10,
+          "start": 1,
+          "enumType": "list",
+          "direction": "row",
+          "hideLabel": true,
+          "separateValues": false
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Please choose at least one",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 427473,
+        "dataColumn": {
+          "key": "about_your_space",
+          "label": "About Your Space",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 1,
+        "type": "textarea",
+        "stepId": 717251,
+        "default": "",
+        "label": "About Your Space",
+        "placeholder": "Describe your space",
+        "description": "",
+        "enum": [],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "rows": 10
+        },
+        "validations": [],
+        "sensitive": false,
+        "preset": null,
+        "autotag": null
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "title": "Personal Information",
+        "description": ""
+      },
+      {
+        "id": 717251,
+        "title": "Your Space",
+        "description": ""
+      },
+      {
+        "id": 318724,
+        "title": "Preferences",
+        "description": ""
+      }
+    ],
+    "rules": []
+  }
+}

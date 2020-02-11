@@ -1,0 +1,9 @@
+jQuery(function($){
+  $(document).on('click', '.cf-next-step', function(){
+    if(!$('body').hasClass('template-customers-account')){
+      setTimeout(function(){
+      	$('[name="plants_to_send"]').trigger('click');   
+      }, 500);
+    }
+  });  
+});
