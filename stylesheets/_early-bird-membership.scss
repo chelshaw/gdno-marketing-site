@@ -332,12 +332,6 @@ img.image-round {
   );
 }
 
-/* TODO: remove */
-.placeholder {
-  text-align: center;
-  padding: 5em;
-  background: $lightGray;
-  font-weight: bold;
-  font-size: 2em;
-  border-bottom: 1px solid black;
+.text-shadow {
+  text-shadow: 0px 0px 8px $black;
 }
