@@ -222,7 +222,6 @@
   </div><!-- grid product-single -->
 </div><!-- product-template__container -->
 
-
 {% include 'membership-includes' %}
 {% include 'membership-plant-options' %}
 {% include 'membership-timeline' %}
@@ -230,6 +229,12 @@
 {% include 'membership-sustainable' %}
 {% include 'membership-social-validation' %}
 {% include 'join-mailing-list' %}
+
+{% unless product == empty %}
+  <script type="application/json" id="ProductJson-product-early-bird">
+    {{ product | json }}
+  </script>
+{% endunless %}
 
 {% schema %}
 {
