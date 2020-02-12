@@ -56,7 +56,7 @@
 
                         For more info on line item properties, visit:
                           - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
-                      
+                      {%- endcomment -%}
 
                       {%- assign properties = 'template ' | split: ' ' -%}
                       {%- if property_size > 0 -%}
@@ -81,11 +81,10 @@
                           </li>
                         {%- endunless -%}
                       {%- endfor -%}
-                      {%- endcomment -%}
                     </ul>
 
                     <p class="cart__remove">
-                      <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="text-link text-link--accent {{ bold_remove_class }}" aria-label="{{ 'cart.label.remove' | t: product: item.title }}" data-cart-remove>{{ 'cart.general.remove' | t }}</a>
+                      <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="text-link text-link--accent" aria-label="{{ 'cart.label.remove' | t: product: item.title }}" data-cart-remove>{{ 'cart.general.remove' | t }}</a>
                     </p>
                   </div>
                 </div>
@@ -93,7 +92,7 @@
               <td class="cart__price text-right">
 
                 {%- assign hasDiscount = false -%}
-                {%- if bold_item_line_price != item.final_price -%}
+                {%- if item.original_price != item.final_price -%}
                   {%- assign hasDiscount = true -%}
                 {%- endif -%}
 
@@ -107,7 +106,7 @@
                         <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
                       </dt>
                       <dd>
-                        <s data-cart-item-original-price>{{ bold_item_line_price | money }}</s>
+                        <s data-cart-item-original-price>{{ item.original_price | money }}</s>
                       </dd>
                       <dt>
                         <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
@@ -125,7 +124,7 @@
                         <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
                       </dt>
                       <dd data-cart-item-regular-price>
-                        {{ bold_item_line_price | money }}
+                        {{ item.original_price | money }}
                       </dd>
                     </div>
 
@@ -221,7 +220,7 @@
                   Markup template for regular price item
                 {%- endcomment -%}
                 <div {% if item.original_line_price != item.final_line_price %}class="hide" {% endif %}data-cart-item-regular-price-group>
-                  <span data-cart-item-regular-price>{{ bold_item_line_price | money }}</span>
+                  <span data-cart-item-regular-price>{{ item.original_line_price | money }}</span>
                 </div>
               </td>
             </tr>
@@ -258,7 +257,7 @@
 
             <div class="cart-subtotal">
               <span class="cart-subtotal__title">{{ 'cart.general.subtotal' | t }}</span>
-              <span class="cart-subtotal__price" data-cart-subtotal>{{ bold_cart_total_price | money_with_currency }}</span>
+              <span class="cart-subtotal__price" data-cart-subtotal>{{ cart.total_price | money_with_currency }}</span>
             </div>
 
             {%- capture taxes_shipping_checkout -%}
@@ -290,7 +289,7 @@
                 {% include 'icon-error' %}
                 <span class="cart__error-message" data-cart-error-message></span>
               </div>
-			  {{ bold_ro_cart }}
+
               {% if additional_checkout_buttons and show_paypal %}
                 <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
               {%- endif -%}
