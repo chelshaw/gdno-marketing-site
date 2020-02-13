@@ -1,6 +1,6 @@
 <div class="page-width">
   <div class="section-header text-center">
-    <h1>{{ 'customer.account.title' | t }}</h1>
+    <h1>Hey, friend!</h1>
     {{ 'layout.customer.log_out' | t | customer_logout_link }}
   </div>
 
@@ -48,6 +48,10 @@
     </div>
     <div class="grid__item myaccount__account-details">
       <h2>{{ 'customer.account.details' | t }}</h2>
+      <ul class="mb-2">
+        <li><strong>Name:</strong> {{ customer.first_name }} {{ customer.last_name }}</li>
+        <li><strong>Email:</strong> {{ customer.email }}</li>
+      </ul>
 
       {{ customer.default_address | format_address }}
 

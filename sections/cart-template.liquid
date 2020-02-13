@@ -31,6 +31,14 @@
                       </a>
                     </div>
 
+                    {%- if item.product.title contains 'Membership' -%}
+                      <ul>
+                        <li>Free shipping</li>
+                        <li>Billed seasonally (every 3 months)</li>
+                        <li>Future seasons $40</li>
+                      </ul>
+                    {%- endif -%}
+
                     {%- assign variant_options = 'template ' | split: ' ' -%}
                     {%- if item.product.has_only_default_variant != true -%}
                       {%- assign variant_options = item.options_with_values -%}
