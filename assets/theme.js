@@ -3529,6 +3529,7 @@ theme.Cart = (function() {
             }
 
             this._setCartCountBubble(state.item_count);
+            location.href="/cart"
           }.bind(this)
         )
         .fail(

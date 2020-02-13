@@ -170,8 +170,7 @@
             </div>
 
             <div class="product-form__item product-form__item--submit{% if section.settings.enable_payment_button %} product-form__item--payment-button{% endif %}{% if product.has_only_default_variant %} product-form__item--no-variants{% endif %}">
-              {%- comment -%}
-              >>> Add to Cart button >>>
+
               <button type="submit" name="add"
                 {% unless current_variant.available %} aria-disabled="true"{% endunless %}
                 aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
@@ -188,12 +187,15 @@
                   {% include 'icon-spinner' %}
                 </span>
               </button>
-              {%- endcomment -%}
+
+              {%- comment -%}
+              >>> Buy Now button >>>
               {% if section.settings.enable_payment_button %}
               <div class="early-bird-membership__buy-button">
                 {{ form | payment_button }}
               </div>
               {% endif %}
+              {%- endcomment -%}
 
             </div>
           {% endform %}
