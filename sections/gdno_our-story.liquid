@@ -10,7 +10,12 @@
   }
 
   .overlay {
-    background: pink;
+    background: rgba(0,0,0,0.6);
+  }
+
+  .close-button {
+    display: inline-block;
+    padding: 2em 1em;
   }
 </style>
 
@@ -18,14 +23,63 @@
   <div class="page-width text-white our-story__content pv-5">
     {% if section.settings.title != blank %}
       <div class="one-half small-one-whole">
-        <h2>
+        <h2 class="text-shadow">
         {{ section.settings.title | escape }}
         </h2>
-        <a class="button" id="open-home__our-story-video">Watch Video</a>
+        <a class="button" id="open-our-story-overlay">Watch Video</a>
       </div>
     {% endif %}
   </div>
 </div>
+
+<div id="our-story-overlay" class="overlay">
+  <div class="page-width">
+    <div class="one-whole text-right pb-7">
+      <a id="close-our-story-overlay" class="text-white button-text close-button">Close</a>
+    </div>
+    <div class="four-fifths small-one-whole centered-content pv-2">
+      {%- if section.settings.video_link != blank -%}
+        {% if section.settings.video_link.type == "youtube" %}
+          <div class="resp-container">
+            <iframe src="//www.youtube.com/embed/{{ section.settings.video_link.id }}?rel=0&showinfo=0&vq=720" frameborder="0" allowfullscreen class="resp-iframe"></iframe>
+          </div>
+        {% elsif section.settings.video_link.type == "vimeo" %}
+          <div class="resp-container">
+            <iframe src="//player.vimeo.com/video/{{ section.settings.video_link.id }}?byline=0&portrait=0&badge=0" frameborder="0" allowfullscreen class="resp-iframe"></iframe>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  function openModal() {
+    document.getElementById('our-story-overlay').classList.add('open');
+  }
+
+  function closeModal() {
+    document.getElementById('our-story-overlay').classList.remove('open');
+  }
+
+  document.addEventListener('click', function (event) {
+    if (
+      event.target.matches('#open-our-story-overlay')
+      || event.target.matches('.open-our-story-overlay')
+    ) {
+      event.preventDefault();
+      openModal();
+    } else if (event.target.matches('#close-our-story-overlay')) {
+      event.preventDefault();
+      closeModal();
+    }
+    return;
+  }, false);
+})();
+</script>
+
 
 {% schema %}
 {
