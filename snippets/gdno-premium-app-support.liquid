@@ -2,14 +2,17 @@
   <div class="page-width">
     <div class="grid">
       <div class="grid__item one-whole medium-up--five-twelfths">
-        <!-- <span class="membership-badge membership-badge--rose">Rose</span> -->
-        <!-- <span class="membership-badge__divider"> • </span> -->
+        <span class="membership-badge membership-badge--green"></span>
+        {% comment %}
+        <span class="membership-badge membership-badge--rose">Rose</span>
+        <span class="membership-badge__divider"> • </span>
         <span class="membership-badge membership-badge--gold">Gold</span>
+        {% endcomment %}
         <h3>
           {{ sectionTitle | escape }}
           <!-- Lastly, we hook you up with premium app support to help you as you grow -->
         </h3>
-        <p>Get connected to the world’s best localized knowledge base; to problem solving tools and supplies; and to other nearby growers on and offline. Got your own plantstuff? Cool, you want the Rose membership.</p>
+        <p>Get connected to the world’s best localized knowledge base; to problem solving tools and supplies; and to other nearby growers on and offline.</p>
         <div id="interactive__app-support">
           <div class="interactive-item selected" data-interactive="plantAdviceImage">
             <h4>Contextual plant advice</h4>
@@ -27,7 +30,7 @@
       </div>
       <div class="grid__item medium-up--one-quarter pb-1"></div>
       <div class="grid__item small--hidden medium-up--show medium-up--one-third">
-        <img id="interactive__app-support__image" class="floating" src="{{'gardenio_app_concept_gardening_growyourownfood_community.jpg'|asset_url}}" />
+        <img id="interactive__app-support__image" class="floating" src="{{'gardenio_app_concept_gardening_growyourownfood_notifications.jpg'|asset_url}}" alt="Screenshot of your phone telling you what you should do with your plants based on your local weather" />
       </div>
     </div>
   </div>

@@ -57,12 +57,13 @@
   <div id="curated-box-illo" class="small--hide"></div>
   <div class="page-width">
     <div class="one-whole medium-up--one-half">
-      <span class="membership-badge membership-badge--gold">Gold</span>
+      <span class="membership-badge membership-badge--green"></span>
+      {% comment %}<span class="membership-badge membership-badge--gold">Gold</span>{% endcomment %}
       <h3>
         {{ section.settings.title | escape }}
         <!-- First, we throw a curated box at your front door, every season -->
       </h3>
-      <p>We make it dang near impossible to make the wrong first step. Go Gold and every season you get a box with all this plant stuff in it for a single plant - right for your location, setup, and time of year. Pick your plant and container color. Customize it before your next order ships.</p>
+      <p>We make it dang near impossible to make the wrong first step. Your first growbox comes with <strong>three plantkits</strong> that have everything you need - right for your location, setup, and time of year. Customize your order, and get a new growbox with <strong>one plantkit</strong> every season after.</p>
     </div>
   </div>
   <div class="page-width pt-3 pos-rel">
@@ -114,7 +115,8 @@
   <div class="page-width">
     <div class="grid">
       <div class="grid__item one-whole medium-up--one-half mb-2">
-        <span class="membership-badge membership-badge--gold">Gold</span>
+        <span class="membership-badge membership-badge--green"></span>
+        {% comment %}<span class="membership-badge membership-badge--gold">Gold</span>{% endcomment %}
         <h3>
           {{ section.settings.title | escape }}
           <!-- Then, we'll send you plant meals on autopilot -->
@@ -140,14 +142,14 @@
   <div class="page-width">
     <div class="grid">
       <div class="grid__item one-whole medium-up--one-half medium-up--push-one-quarter text-center relative-image-wrapper">
-        <span class="membership-badge membership-badge--gold">Gold</span>
+        <span class="membership-badge membership-badge--green"></span>
+        {% comment %}<span class="membership-badge membership-badge--gold">Gold</span>{% endcomment %}
         <h3>
           {{ section.settings.title | escape }}
           <!-- Oh, you get infinite lives -->
         </h3>
         <p>
-          Listen, we don’t want you getting wound up in whether one specific plant lives or dies. <em>Gardeners grow</em> - that’s science. If your plant dies for any reason, we’ll send you a new one so you can keep the growin’ goin’ as long as you’re a member.<br />
-          We. Have. Your. Back.
+          Listen, we don’t want you getting wound up in whether one specific plant lives or dies. <em>Gardeners grow</em> - that’s science. If your plant dies for any reason, we’ll send you a new one so you can keep the growin’ goin’ as long as you’re a member. We. Have. Your. Back.
         </p>
       </div>
     </div>
@@ -170,7 +172,6 @@
 
 {% if section.settings.type == 'memberships-overview-premium-app-support' %}
 {% render 'gdno-premium-app-support' with section.settings.title as sectionTitle %}
-<div class="section-divider"></div>
 {% endif %}
 
 {% if section.settings.type == 'memberships-overview-start-free' %}
@@ -178,7 +179,8 @@
   <div class="page-width">
     <div class="grid">
       <div class="grid__item one-whole text-center">
-        <span class="membership-badge membership-badge--green">Green</span>
+        <span class="membership-badge membership-badge--green"></span>
+        {% comment %}<span class="membership-badge membership-badge--green">Green</span>{% endcomment %}
         <h2>
           {{ section.settings.title | escape }}
           <!-- Get Started Free -->
