@@ -1,0 +1,64 @@
+<style>
+  #home__our-story {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    {%- if section.settings.image != blank -%}
+      background-image: url('{{section.settings.image | img_url:"master"}}');
+    {%- endif -%}
+  }
+
+  .overlay {
+    background: pink;
+  }
+</style>
+
+<div id="home__our-story" class="pt-4">
+  <div class="page-width text-white our-story__content pv-5">
+    {% if section.settings.title != blank %}
+      <div class="one-half small-one-whole">
+        <h2>
+        {{ section.settings.title | escape }}
+        </h2>
+        <a class="button" id="open-home__our-story-video">Watch Video</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Gardenio Our Story",
+  "class": "gdno--static-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "We're a team on a mission to empower the next generation of urban food growers, until you become compost. Check out our story."
+    },
+    {
+      "type": "video_url",
+      "id": "video_link",
+      "label": "Video Link",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "GDNO Our Story",
+      "category": "Advanced layout"
+    }
+  ]
+}
+{% endschema %}
