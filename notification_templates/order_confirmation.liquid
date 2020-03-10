@@ -1,7 +1,8 @@
-{% capture email_title %}Thank you for your purchase! {% endcapture %}
+{% capture email_title %}We're excited! Are you excited?{% endcapture %}
 {% capture email_body %}
+    Hi {{ customer.first_name }}, we're delighted you're growing with us. As the first order of business, please fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSeG5iWFHZ2V1UjyNCa7KTpIWedsMYzELax9P5yCSyFp-s2fsQ/viewform?usp=sf_link">this form</a> to indicate which plants you're okay with getting during your membership (it takes less than 2 minutes, promise).
   {% if requires_shipping %}
-    Hi {{ customer.first_name }}! We're getting your order ready to be shipped. We'll let you know when it has been sent.
+    We'll send you another email when your order has been packed and shipped!
   {% endif %}
 {% endcapture %}
 
@@ -67,7 +68,7 @@
         <table class="container">
           <tr>
             <td>
-
+              
             <h2>{{ email_title }}</h2>
             <p>{{ email_body }}</p>
             {% if order_status_url %}
@@ -181,12 +182,6 @@
               {% endif %}
             {% endfor %}
           {% endif %}
-
-          {% if line_title contains "Early Bird Membership" %}
-            <p class="order-list__description">
-              Thanks for becoming an Early Blossom Member! When we are ready to ship Gardenio gold membership boxes, we'll send you an email with a coupon for 100% off your first season. Until then, just hang in there till spring!
-            </p>
-          {% endif %}
         </td>
           <td class="order-list__price-cell">
             {% if line.original_line_price != line.final_line_price %}
@@ -263,20 +258,33 @@
 </tr>
 
 
-        {% for line in tax_lines %}
+        {% if total_duties %}
 
 <tr class="subtotal-line">
   <td class="subtotal-line__title">
     <p>
-      <span>{{ line.title }}</span>
+      <span>Duties</span>
     </p>
   </td>
   <td class="subtotal-line__value">
-    <strong>{{ line.price | money }}</strong>
+    <strong>{{ current_total_duties | money }}</strong>
   </td>
 </tr>
 
-        {% endfor %}
+        {% endif %}
+
+
+<tr class="subtotal-line">
+  <td class="subtotal-line__title">
+    <p>
+      <span>Taxes</span>
+    </p>
+  </td>
+  <td class="subtotal-line__value">
+    <strong>{{ tax_price | money }}</strong>
+  </td>
+</tr>
+
 
         {% if total_tip and total_tip > 0 %}
 
@@ -333,7 +341,7 @@
               {% if transaction.payment_details.credit_card_company %}
                 {% capture transaction_name %}{{ transaction.payment_details.credit_card_company }} (ending in {{ transaction.payment_details.credit_card_last_four_digits }}){% endcapture %}
               {% else %}
-                {% capture transaction_name %}{{ transaction.gateway | replace: "_", " " | capitalize }}{% endcapture %}
+                {% capture transaction_name %}{{ transaction.gateway_display_name }}{% endcapture %}
               {% endif %}
 
 
@@ -439,7 +447,7 @@
                             <img src="{{ credit_card_url | shopify_asset_url }}" class="customer-info__item-credit" height="24">
                             <span>Payment method — <strong>{{ transaction.amount | money }}</strong></span>
                           {% else %}
-                            {{ transaction.gateway | replace: "_", " " | capitalize }} — <strong>{{ transaction.amount | money }}</strong>
+                            {{ transaction.gateway_display_name }} — <strong>{{ transaction.amount | money }}</strong>
                           {% endif %}
                         </p>
                       {% endif %}
