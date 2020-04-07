@@ -1,7 +1,9 @@
+{% include 'order-by-dates' %}
+
 <section id="membership-info__order-by">
   <div class="page-width pb-2">
     <div class="membership-info__order-by-container">
-      <h5 class="h2 text-center">Order by March 31 for April Delivery!</h5>
+      <h5 class="h2 text-center">Order by {{order_by_date}} for {{next_ship_month}} Delivery!</h5>
       <div class="order-by-countdown mt-2 text-center js" aria-hidden>
         <div class="countdown-block">
           <div class="countdown-block-value" id="order-by-coundown-days"></div>
@@ -23,7 +25,7 @@
 <script>
 (function(){
   'use strict'
-  const deadline = new Date(2020, 2, 31, 23, 59);
+  const deadline = new Date(2020, {{cutoff_month_number}}, {{cutoff_date_number}}, 23, 59);
   let intervalHandle;
 
   function date_units_diff(a, b, unit_amounts) {
