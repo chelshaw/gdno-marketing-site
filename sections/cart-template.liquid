@@ -32,11 +32,13 @@
                     </div>
 
                     {%- if item.product.title contains 'Membership' -%}
+                      {%- unless item.product.title contains 'Gift' -%}
                       <ul>
                         <li>Free shipping</li>
                         <li>Billed seasonally (every 3 months)</li>
                         <li>Future seasons $40</li>
                       </ul>
+                      {%- endunless -%}
                     {%- endif -%}
 
                     {%- assign variant_options = 'template ' | split: ' ' -%}
