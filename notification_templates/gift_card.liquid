@@ -1,0 +1,160 @@
+{% capture email_title %}
+You've Got a Gardenio Gift Card
+{% endcapture %}
+{% capture amount_description %}
+  {% assign amount = gift_card.balance %}
+  {% case amount %}
+  {% when 7500 %}toward a Gardenio membership, which covers your first season entirely.
+  {% when 12000 %}toward a Gardenio membership, which covers your first two seasons entirely.
+  {% when 16500 %}toward a Gardenio membership, which covers your first three seasons entirely.
+  {% when 21000 %}toward a Gardenio membership, which covers your whole first year.
+  {% else %}toward a Gardenio membership.
+  {% endcase %}
+{% endcapture %}
+{% capture email_body %}
+<p>Someone who cares about you just gifted you {{ gift_card.balance | money_without_trailing_zeros }} {{amount_description}} What's that mean?</p>
+
+<p><strong>What Is Gardenio?</strong></p>
+<p>Gardenio is a new kind of garden club membership that sends you everything you need to start growing your own organic food in small outdoor spaces (like a patio or balcony) with an app to help you as you grow – currently, we're focused on herbs. As a member, we also send you plant food in the amount you need it when you need it, and if your plant dies for any reason in the first season, let us know via the app and we'll send you a new one! Neat, right?</p><br/><br/>
+
+<p><strong>What's In a Membership?</strong></p>
+<p>So when you order at our site and become a member, you'll get three plant kits that include </p>
+<ul style="color:#777">
+  <li>the right sized container (made out of rice hulls)</li>
+  <li>organic soil</li>
+
+  <li>mulch</li>
+
+  <li>live plants</li>
+
+  <li>custom care guides. </li>
+</ul>
+<p>All with the support above for an entire season (three months) and the option to renew your membership after.</p><br/><br/>
+
+<p><strong>How Do I Redeem It?</strong></p>
+<p>Use this gift card code at checkout at <a href="{{shop.url}}">growgardenio.com</a> to sign up for a membership and tell us your plant preferences. We currently ship out our orders once a month, so be sure to get your order in soon!</p><br/><br/>
+
+<p>– Roman and Chelsea, Gardenio cofounders</p>
+{% endcapture %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>{{ email_title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="/assets/notifications/styles.css">
+  <style>
+    .button__cell { background: {{ shop.email_accent_color }}; }
+    a, a:hover, a:active, a:visited { color: {{ shop.email_accent_color }}; }
+  </style>
+</head>
+
+  <body>
+    <table class="body">
+      <tr>
+        <td>
+          <table class="header row">
+  <tr>
+    <td class="header__cell">
+      <center>
+
+        <table class="container">
+          <tr>
+            <td>
+
+              <table class="row">
+                <tr>
+                  <td class="shop-name__cell">
+                    {%- if shop.email_logo_url %}
+                      <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="{{ shop.email_logo_width }}">
+                    {%- else %}
+                      <h1 class="shop-name__text">
+                        <a href="{{shop.url}}">{{ shop.name }}</a>
+                      </h1>
+                    {%- endif %}
+                  </td>
+
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </table>
+
+      </center>
+    </td>
+  </tr>
+</table>
+
+          <table class="row content">
+  <tr>
+    <td class="content__cell">
+      <center>
+        <table class="container">
+          <tr>
+            <td>
+
+            <h2>{{ email_title }}</h2>
+            <p>{{ email_body }}</p>
+            <table class="row actions">
+  <tr>
+    <td class="empty-line"> </td>
+  </tr>
+  <tr>
+    <td class="actions__cell">
+      <table class="button main-action-cell">
+        <tr>
+          <td class="button__cell"><a href="{{ gift_card.url }}" class="button__text">View your gift card</a></td>
+        </tr>
+      </table>
+      {% if shop.url %}
+    <table class="link secondary-action-cell">
+      <tr>
+        <td class="link__cell">or <a href="{{ shop.url }}">Visit our store</a></td>
+      </tr>
+    </table>
+{% endif %}
+
+    </td>
+  </tr>
+</table>
+
+
+            {% if gift_card.pass_url %}
+              <a href="{{ gift_card.pass_url }}" class="apple-wallet-button">
+                <img src="{{ 'gift-card/add-to-apple-wallet.png' | shopify_asset_url }}" alt="Add to Apple Wallet" width="120" height="40">
+              </a>
+            {% endif %}
+
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+          <table class="row footer">
+  <tr>
+    <td class="footer__cell">
+      <center>
+        <table class="container">
+          <tr>
+            <td>
+
+              <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+
+<img src="{{ 'notifications/spacer.png' | shopify_asset_url }}" class="spacer" height="1" />
+
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
