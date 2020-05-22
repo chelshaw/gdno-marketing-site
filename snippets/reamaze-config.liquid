@@ -6,14 +6,13 @@
 
 <!-- reamaze_embeddable_12402_s -->
 <!-- Embeddable - Gardenio Chat / Contact Form Shoutbox -->
-<script type="text/javascript" async src="https://cdn.reamaze.com/assets/reamaze.js"></script>
 <script type="text/javascript">
   var _support = _support || { 'ui': {}, 'user': {} };
   _support['account'] = 'growgardenio';
-  _support['ui']['contactMode'] = 'mixed';
+  _support['ui']['contactMode'] = 'default';
   _support['ui']['enableKb'] = 'true';
   _support['ui']['styles'] = {
-    widgetColor: 'rgba(16, 162, 197, 1)',
+    widgetColor: 'rgb(65, 182, 172)',
     gradient: true,
   };
   _support['ui']['widget'] = {
@@ -29,7 +28,44 @@
   _support['apps'] = {
     faq: {"enabled":true},
     recentConversations: {},
-    orders: {}
+    orders: {"enabled":true}
   };
 </script>
 <!-- reamaze_embeddable_12402_e -->
+
+
+
+<!-- reamaze_cue_3623_s -->
+<!-- Cue - The Hookup -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support.outbounds = _support.outbounds || [];
+  _support.outbounds.push({
+    id: "3623",
+    name: "The Hookup",
+    message: "Want some sweet gardening tips and tomfoolery?",
+    sound: true,
+    transient: false,
+    botsEnabled: false,
+    disableCueClick: false,
+    enableCustomFields: false,
+    start: "",
+    end: "",
+    user: {
+      type: "team"
+    },
+    buttons: [
+      {
+        text: "Follow Us On Instagram",
+        url: "",
+      },
+    ],
+    rules: [
+      {
+        type: "leavingSite",
+        op: "isTrue",
+      },
+    ],
+  });
+</script>
+<!-- reamaze_cue_3623_e -->
