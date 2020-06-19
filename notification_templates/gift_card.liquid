@@ -1,5 +1,5 @@
 {% capture email_title %}
-You've Got a Gardenio Gift Card
+It's Party Thyme!
 {% endcapture %}
 {% capture amount_description %}
   {% assign amount = gift_card.balance %}
@@ -12,12 +12,12 @@ You've Got a Gardenio Gift Card
   {% endcase %}
 {% endcapture %}
 {% capture email_body %}
-<p>Someone who cares about you just gifted you {{ gift_card.balance | money_without_trailing_zeros }} {{amount_description}} What's that mean?</p>
+<p>Someone who cares about you just gifted you {{ gift_card.balance | money_without_trailing_zeros }} {{amount_description}} What does that mean?</p>
 
-<p><strong>What Is Gardenio?</strong></p>
+<p><strong>What is Gardenio?</strong></p>
 <p>Gardenio is a new kind of garden club membership that sends you everything you need to start growing your own organic food in small outdoor spaces (like a patio or balcony) with an app to help you as you grow – currently, we're focused on herbs. As a member, we also send you plant food in the amount you need it when you need it, and if your plant dies for any reason in the first season, let us know via the app and we'll send you a new one! Neat, right?</p><br/><br/>
 
-<p><strong>What's In a Membership?</strong></p>
+<p><strong>What's in a Membership?</strong></p>
 <p>So when you order at our site and become a member, you'll get three plant kits that include </p>
 <ul style="color:#777">
   <li>the right sized container (made out of rice hulls)</li>
@@ -34,7 +34,7 @@ You've Got a Gardenio Gift Card
 <p><strong>How Do I Redeem It?</strong></p>
 <p>Use this gift card code at checkout at <a href="{{shop.url}}">growgardenio.com</a> to sign up for a membership and tell us your plant preferences. We currently ship out our orders once a month, so be sure to get your order in soon!</p><br/><br/>
 
-<p>– Roman and Chelsea, Gardenio cofounders</p>
+<p>– Roman and Chelsea, Gardenio Co-founders</p>
 {% endcapture %}
 
 <!DOCTYPE html>
@@ -64,10 +64,10 @@ You've Got a Gardenio Gift Card
             <td>
 
               <table class="row">
-                <tr>
-                  <td class="shop-name__cell">
+                <tr style='text-align:center;'>
+                  <td class="shop-name__cell" style='margin-bottom: 30px;'>
                     {%- if shop.email_logo_url %}
-                      <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="{{ shop.email_logo_width }}">
+                      <img src='https://cdn.shopify.com/s/files/1/1845/3893/files/gardenio_logo_with_name.png?v=1592552759' style='height:50px;'> 
                     {%- else %}
                       <h1 class="shop-name__text">
                         <a href="{{shop.url}}">{{ shop.name }}</a>
@@ -95,7 +95,8 @@ You've Got a Gardenio Gift Card
           <tr>
             <td>
 
-            <h2>{{ email_title }}</h2>
+            <h1 style='font-weight: bold; text-align: center; margin-bottom: 15px;'>{{ email_title }}</h1>
+            <img src='https://cdn.shopify.com/s/files/1/1845/3893/files/founders.png?v=1592561407' style='width: 100%;'>
             <p>{{ email_body }}</p>
             <table class="row actions">
   <tr>
@@ -111,7 +112,7 @@ You've Got a Gardenio Gift Card
       {% if shop.url %}
     <table class="link secondary-action-cell">
       <tr>
-        <td class="link__cell">or <a href="{{ shop.url }}">Visit our store</a></td>
+        <td class="link__cell">Want to grow some food? <a href="{{ shop.url }}">Visit our store</a></td>
       </tr>
     </table>
 {% endif %}
@@ -140,9 +141,25 @@ You've Got a Gardenio Gift Card
       <center>
         <table class="container">
           <tr>
-            <td>
-
-              <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+            <td style="text-align: center;">
+              <p>Download Our App for iOS & Android</p>
+              <a href="https://apps.apple.com/us/app/gardenio/id1475726553?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2019-08-18&kind=iossoftware&bubble=ios_apps) no-repeat;width:135px;height:40px;"></a>
+              <a href='https://play.google.com/store/apps/details?id=com.growgardenio.gardenio&hl=en_US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width=135px alt='Get it on Google Play' src='https://lh3.googleusercontent.com/cjsqrWQKJQp9RFO7-hJ9AfpKzbUb_Y84vXfjlP0iRHBvladwAfXih984olktDhPnFqyZ0nu9A5jvFwOEQPXzv7hr3ce3QVsLN8kQ2Ao=s0'/></a>
+              <br>
+              <p>A New Kind of Garden Club</p>
+          </tr>
+  
+          <tr>
+            <td style="text-align: center;">
+              <a href='https://www.facebook.com/growgardenio/'><img height=35px alt='Facebook' src='https://blog-assets.hootsuite.com/wp-content/uploads/2018/09/flogo-RGB-HEX-Blk-58.png'/></a>
+              <a href='https://www.instagram.com/growgardenio/'><img height=35px alt='Instagram' src='https://en.instagram-brand.com/wp-content/themes/ig-branding/prj-ig-branding/assets/images/ig-logo-black.svg'/></a>
+              <a href='https://twitter.com/growgardenio'><img height=35px alt='Twitter' src='https://image.flaticon.com/icons/svg/733/733635.svg'/></a>
+              <a href='mailto:{{ shop.email }}'><img height=35px alt='Facebook' src='https://image.flaticon.com/icons/svg/561/561127.svg'/></a>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"?>
+              <a href='https://growgardenio.com/'>https://growgardenio.com/</a>
             </td>
           </tr>
         </table>
