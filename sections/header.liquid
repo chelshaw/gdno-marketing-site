@@ -131,13 +131,15 @@
           </button>
 
           {% if shop.customer_accounts_enabled %}
+            <!-- {{ routes.account_url }} -->
             {% if customer %}
-              <a href="{{ routes.account_url }}" class="site-header__icon site-header__account">
+              <a href="https://account.growgardenio.com" class="site-header__icon site-header__account">
                 {% include 'icon-login' %}
                 <span class="icon__fallback-text">{{ 'layout.customer.account' | t }}</span>
               </a>
             {% else %}
-              <a href="{{ routes.account_login_url }}" class="site-header__icon site-header__account">
+              <!-- {{ routes.account_login_url }} -->
+              <a href="https://account.growgardenio.com" class="site-header__icon site-header__account">
                 {% include 'icon-login' %}
                 <span class="icon__fallback-text">{{ 'layout.customer.log_in' | t }}</span>
               </a>
