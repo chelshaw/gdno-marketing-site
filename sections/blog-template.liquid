@@ -114,7 +114,7 @@
       <li class="border-top">
         <div class="page-width">
           <div class="grid">
-            <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+            <div class="grid__item medium-up--one-whole">
               <div class="article-listing">
                 <h2 class="article__title h3"><a href="{{ article.url }}">{{ article.title }}</a></h2>
                 {% if section.settings.blog_show_author %}
@@ -156,7 +156,7 @@
                   </noscript>
                 {% endif %}
 
-                <div class="rte">
+                <div class="rte large-type">
                   {% if article.excerpt.size > 0 %}
                     {{ article.excerpt }}
                   {% else %}
