@@ -1,0 +1,15 @@
+development:
+  password: iuytre3456789ijhgr567u76r2
+  theme_id: "0987654321"
+  store: dev-example.myshopify.com
+  ignore_files:
+  - config/settings_data.json
+  - stylesheets
+  timeout: 2m0s
+production:
+  password: 98ygbnjkiuygbnjuyghbnmju
+  theme_id: "1234567890"
+  store: production-example.myshopify.com
+  ignore_files:
+  - config/settings_data.json
+  - stylesheets
